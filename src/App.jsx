@@ -158,14 +158,15 @@ export default function App() {
         const overheadSeconds = syncCycles * CONNECTION_OVERHEAD_SECONDS;
         const uploadSeconds = baseUploadSeconds + overheadSeconds;
 
+        // Round all values to avoid floating-point precision display issues
         setResults({
-            totalFiles,
-            uploadSeconds,
-            baseUploadSeconds,
-            overheadSeconds,
-            dataHours: hours,
-            storageKB,
-            syncCycles,
+            totalFiles: Math.round(totalFiles),
+            uploadSeconds: Math.round(uploadSeconds),
+            baseUploadSeconds: Math.round(baseUploadSeconds),
+            overheadSeconds: Math.round(overheadSeconds),
+            dataHours: Math.round(hours * 100) / 100,  // 2 decimal places
+            storageKB: Math.round(storageKB * 100) / 100,
+            syncCycles: Math.round(syncCycles),
             breakdown
         });
     }, [days, networkLevel, activityLevel, petType, powerMode, offBodyPercent, enabledDataTypes]);
