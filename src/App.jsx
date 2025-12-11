@@ -264,15 +264,15 @@ export default function App() {
                             </label>
                             <input
                                 type="range"
-                                min="0.5"
+                                min="0.2"
                                 max="7"
-                                step="0.5"
+                                step="0.2"
                                 value={days}
                                 onChange={(e) => setDays(parseFloat(e.target.value))}
                                 className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer"
                             />
                             <div className="flex justify-between text-sm text-gray-600 mt-1">
-                                <span>0.5 days</span>
+                                <span>0.2 days</span>
                                 <span className="text-lg font-bold text-indigo-600">{days} days</span>
                                 <span>7 days</span>
                             </div>
