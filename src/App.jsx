@@ -144,7 +144,7 @@ export default function App() {
             totalFiles += files;
         });
 
-        const uploadSeconds = Math.round(totalFiles * secondsPerFile);
+        const baseUploadSeconds = Math.round(totalFiles * secondsPerFile);
         const storageKB = Math.round((totalFiles * FILE_SIZE_BYTES) / 1024);
 
         // Sync cycles in battery mode (every 15 min = 0.25 hours)
@@ -152,9 +152,17 @@ export default function App() {
             ? Math.ceil(hours / 0.25)
             : 1;
 
+        // Connection overhead per sync cycle (WiFi connect, MQTT handshake, auth)
+        // Based on CONNECTION_MANAGER configs: ~5 seconds per connection establishment
+        const CONNECTION_OVERHEAD_SECONDS = 5;
+        const overheadSeconds = syncCycles * CONNECTION_OVERHEAD_SECONDS;
+        const uploadSeconds = baseUploadSeconds + overheadSeconds;
+
         setResults({
             totalFiles,
             uploadSeconds,
+            baseUploadSeconds,
+            overheadSeconds,
             dataHours: hours,
             storageKB,
             syncCycles,
@@ -362,6 +370,11 @@ export default function App() {
                             <div className="col-span-2 md:col-span-4 bg-white bg-opacity-20 rounded-lg p-6 text-center">
                                 <div className="text-sm opacity-90 mb-2">Total Upload Duration</div>
                                 <div className="text-4xl md:text-5xl font-bold">{formatTime(results.uploadSeconds)}</div>
+                                {results.overheadSeconds > 0 && (
+                                    <div className="text-sm mt-2 opacity-80">
+                                        ({formatTime(results.baseUploadSeconds || 0)} data + {formatTime(results.overheadSeconds || 0)} connection overhead)
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
