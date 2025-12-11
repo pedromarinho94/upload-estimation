@@ -287,7 +287,7 @@ export default function App() {
                             <input
                                 type="range"
                                 min="0"
-                                max="50"
+                                max="90"
                                 step="5"
                                 value={offBodyPercent}
                                 onChange={(e) => setOffBodyPercent(parseInt(e.target.value))}
@@ -296,7 +296,7 @@ export default function App() {
                             <div className="flex justify-between text-sm text-gray-600 mt-1">
                                 <span>0%</span>
                                 <span className="font-medium text-indigo-600">{offBodyPercent}% off-body</span>
-                                <span>50%</span>
+                                <span>90%</span>
                             </div>
                         </div>
 
