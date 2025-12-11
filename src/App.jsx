@@ -1,25 +1,54 @@
 import React, { useState, useEffect } from 'react';
-import { Clock, Database, Wifi, Calendar } from 'lucide-react';
+import { Clock, Database, Wifi, Calendar, Battery, Zap, Activity, Heart, Dog, Cat } from 'lucide-react';
 
 export default function App() {
-    // From your logs: 14.83 hours of data uploaded in 62 seconds
-    const baseDataHours = 14.83;
-    const baseUploadSeconds = 62;
-    const baseFilesUploaded = 33;
+    // File size from Kconfig: DATA_SAVER_MAX_FILE_SIZE = 1024 bytes
+    const FILE_SIZE_BYTES = 1024;
 
-    // Calculate rates from logs
-    const filesPerHour = baseFilesUploaded / baseDataHours; // ~2.23 files/hour
-    const secondsPerFile = baseUploadSeconds / baseFilesUploaded; // ~1.88 seconds/file
+    // Per-data-type file rates (files per hour of data) based on codebase analysis
+    const dataTypeConfigs = {
+        activity: {
+            label: 'Activity',
+            icon: '🏃',
+            baseRate: 4,           // 4 files/hour (15s windows = 240 samples/hour, ~4 files)
+            activityScales: true,
+            color: 'bg-blue-500'
+        },
+        respiratory: {
+            label: 'Respiratory',
+            icon: '🫁',
+            baseRate: 1,           // 1 file/hour (60s FFT windows)
+            sleepBoost: 1.5,
+            color: 'bg-green-500'
+        },
+        behaviors: {
+            label: 'Behaviors',
+            icon: '🐕',
+            baseRate: 0.5,         // ~0.5 events/hour (drinking, shaking)
+            activityScales: true,
+            color: 'bg-yellow-500'
+        },
+        heartRate: {
+            label: 'Heart Rate',
+            icon: '❤️',
+            baseRate: 1.5,         // 1.5 files/hour when eligible
+            sleepBoost: 2,
+            color: 'bg-red-500'
+        },
+        notifications: {
+            label: 'Notifications',
+            icon: '🔔',
+            baseRate: 0.1,         // rare system events
+            color: 'bg-purple-500'
+        }
+    };
 
-    const [days, setDays] = useState(2);
-    const [networkLevel, setNetworkLevel] = useState('good');
-    const [activityLevel, setActivityLevel] = useState('normal');
-
+    // Network upload speeds (seconds per file)
     const networkLevels = {
-        excellent: { label: 'Excellent', multiplier: 0.7, icon: '🚀' },
-        good: { label: 'Good', multiplier: 1.0, icon: '✅' },
-        fair: { label: 'Fair', multiplier: 1.5, icon: '⚠️' },
-        poor: { label: 'Poor', multiplier: 2.5, icon: '🐌' }
+        excellent: { label: 'Excellent', secondsPerFile: 1.5, icon: '🚀' },
+        good: { label: 'Good', secondsPerFile: 1.88, icon: '✅' },
+        fair: { label: 'Fair', secondsPerFile: 2.8, icon: '⚠️' },
+        poor: { label: 'Poor', secondsPerFile: 4.7, icon: '🐌' }
     };
 
     const activityLevels = {
@@ -29,29 +58,109 @@ export default function App() {
         veryActive: { label: 'Very Active', multiplier: 1.8, icon: '⚡' }
     };
 
+    const petTypes = {
+        dog: { label: 'Dog', activityMultiplier: 1.0, icon: '🐕' },
+        cat: { label: 'Cat', activityMultiplier: 0.7, icon: '🐱' }
+    };
+
+    const powerModes = {
+        charging: { label: 'Charging', syncIntervalHours: 0, icon: '🔌', description: 'Continuous sync' },
+        battery: { label: 'Battery', syncIntervalHours: 0.25, icon: '🔋', description: '15 min intervals' }
+    };
+
+    // State
+    const [days, setDays] = useState(2);
+    const [networkLevel, setNetworkLevel] = useState('good');
+    const [activityLevel, setActivityLevel] = useState('normal');
+    const [petType, setPetType] = useState('dog');
+    const [powerMode, setPowerMode] = useState('charging');
+    const [offBodyPercent, setOffBodyPercent] = useState(10);
+    const [enabledDataTypes, setEnabledDataTypes] = useState({
+        activity: true,
+        respiratory: true,
+        behaviors: true,
+        heartRate: true,
+        notifications: true
+    });
+
     const [results, setResults] = useState({
         totalFiles: 0,
         uploadSeconds: 0,
-        uploadMinutes: 0,
-        dataHours: 0
+        dataHours: 0,
+        storageKB: 0,
+        syncCycles: 0,
+        breakdown: {}
     });
 
+    // Toggle data type
+    const toggleDataType = (type) => {
+        setEnabledDataTypes(prev => ({
+            ...prev,
+            [type]: !prev[type]
+        }));
+    };
+
+    // Calculate results
     useEffect(() => {
         const hours = days * 24;
         const activityMult = activityLevels[activityLevel].multiplier;
-        const networkMult = networkLevels[networkLevel].multiplier;
+        const petMult = petTypes[petType].activityMultiplier;
+        const onBodyPercent = (100 - offBodyPercent) / 100;
+        const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
 
-        const totalFiles = Math.round(filesPerHour * hours * activityMult);
-        const uploadSeconds = Math.round(secondsPerFile * totalFiles * networkMult);
-        const uploadMinutes = (uploadSeconds / 60).toFixed(1);
+        // Calculate files per data type
+        const breakdown = {};
+        let totalFiles = 0;
+
+        Object.entries(dataTypeConfigs).forEach(([type, config]) => {
+            if (!enabledDataTypes[type]) {
+                breakdown[type] = { files: 0, seconds: 0 };
+                return;
+            }
+
+            let rate = config.baseRate;
+
+            // Apply activity multiplier for activity-dependent types
+            if (config.activityScales) {
+                rate *= activityMult * petMult;
+            }
+
+            // Apply sleep boost (assume ~33% of day is sleep-like rest)
+            if (config.sleepBoost) {
+                rate = rate * 0.67 + (rate * config.sleepBoost) * 0.33;
+            }
+
+            // Calculate files for this type
+            let files = Math.round(rate * hours * onBodyPercent);
+
+            // Activity type generates empty files when off-body, so it's always generated
+            if (type === 'activity') {
+                files = Math.round(rate * hours);
+            }
+
+            const uploadTime = Math.round(files * secondsPerFile);
+
+            breakdown[type] = { files, seconds: uploadTime };
+            totalFiles += files;
+        });
+
+        const uploadSeconds = Math.round(totalFiles * secondsPerFile);
+        const storageKB = Math.round((totalFiles * FILE_SIZE_BYTES) / 1024);
+
+        // Sync cycles in battery mode (every 15 min = 0.25 hours)
+        const syncCycles = powerMode === 'battery'
+            ? Math.ceil(hours / 0.25)
+            : 1;
 
         setResults({
             totalFiles,
             uploadSeconds,
-            uploadMinutes,
-            dataHours: hours
+            dataHours: hours,
+            storageKB,
+            syncCycles,
+            breakdown
         });
-    }, [days, networkLevel, activityLevel]);
+    }, [days, networkLevel, activityLevel, petType, powerMode, offBodyPercent, enabledDataTypes]);
 
     const formatTime = (seconds) => {
         if (seconds < 60) return `${seconds}s`;
@@ -64,24 +173,82 @@ export default function App() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
-            <div className="max-w-4xl mx-auto">
-                <div className="bg-white rounded-2xl shadow-xl p-8">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 md:p-8">
+            <div className="max-w-5xl mx-auto">
+                <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-6">
                         <Database className="w-8 h-8 text-indigo-600" />
-                        <h1 className="text-3xl font-bold text-gray-800">Smart Collar Upload Calculator</h1>
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Smart Collar Upload Calculator</h1>
                     </div>
 
-                    <div className="bg-indigo-50 rounded-lg p-4 mb-6">
-                        <h2 className="text-sm font-semibold text-indigo-900 mb-2">Reference Data (from logs)</h2>
-                        <div className="grid grid-cols-3 gap-4 text-sm text-indigo-700">
-                            <div>📊 {baseFilesUploaded} files</div>
-                            <div>⏱️ {baseUploadSeconds}s upload</div>
-                            <div>📅 {baseDataHours.toFixed(1)}h of data</div>
+                    {/* Data Types Section */}
+                    <div className="mb-6">
+                        <label className="flex items-center gap-2 text-gray-700 font-medium mb-3">
+                            <Activity className="w-5 h-5 text-indigo-600" />
+                            Data Types to Sync
+                        </label>
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+                            {Object.entries(dataTypeConfigs).map(([type, config]) => (
+                                <button
+                                    key={type}
+                                    onClick={() => toggleDataType(type)}
+                                    className={`p-3 rounded-lg border-2 transition-all ${enabledDataTypes[type]
+                                        ? 'border-indigo-600 bg-indigo-50 shadow-md'
+                                        : 'border-gray-200 bg-gray-50 opacity-60'
+                                        }`}
+                                >
+                                    <div className="text-xl mb-1">{config.icon}</div>
+                                    <div className="text-xs font-medium">{config.label}</div>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Quick Settings Row */}
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                        {/* Pet Type */}
+                        <div>
+                            <label className="text-sm text-gray-600 font-medium mb-2 block">Pet Type</label>
+                            <div className="flex gap-2">
+                                {Object.entries(petTypes).map(([type, config]) => (
+                                    <button
+                                        key={type}
+                                        onClick={() => setPetType(type)}
+                                        className={`flex-1 p-3 rounded-lg border-2 transition-all ${petType === type
+                                            ? 'border-indigo-600 bg-indigo-50 shadow-md'
+                                            : 'border-gray-200 bg-white hover:border-indigo-300'
+                                            }`}
+                                    >
+                                        <div className="text-2xl">{config.icon}</div>
+                                        <div className="text-xs font-medium">{config.label}</div>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Power Mode */}
+                        <div>
+                            <label className="text-sm text-gray-600 font-medium mb-2 block">Power Mode</label>
+                            <div className="flex gap-2">
+                                {Object.entries(powerModes).map(([mode, config]) => (
+                                    <button
+                                        key={mode}
+                                        onClick={() => setPowerMode(mode)}
+                                        className={`flex-1 p-3 rounded-lg border-2 transition-all ${powerMode === mode
+                                            ? 'border-indigo-600 bg-indigo-50 shadow-md'
+                                            : 'border-gray-200 bg-white hover:border-indigo-300'
+                                            }`}
+                                    >
+                                        <div className="text-2xl">{config.icon}</div>
+                                        <div className="text-xs font-medium">{config.description}</div>
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
                     <div className="space-y-6 mb-8">
+                        {/* Days slider */}
                         <div>
                             <label className="flex items-center gap-2 text-gray-700 font-medium mb-2">
                                 <Calendar className="w-5 h-5 text-indigo-600" />
@@ -103,6 +270,29 @@ export default function App() {
                             </div>
                         </div>
 
+                        {/* Off-body percentage */}
+                        <div>
+                            <label className="flex items-center gap-2 text-gray-700 font-medium mb-2">
+                                <span className="text-indigo-600">📍</span>
+                                Off-Body Time
+                            </label>
+                            <input
+                                type="range"
+                                min="0"
+                                max="50"
+                                step="5"
+                                value={offBodyPercent}
+                                onChange={(e) => setOffBodyPercent(parseInt(e.target.value))}
+                                className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer"
+                            />
+                            <div className="flex justify-between text-sm text-gray-600 mt-1">
+                                <span>0%</span>
+                                <span className="font-medium text-indigo-600">{offBodyPercent}% off-body</span>
+                                <span>50%</span>
+                            </div>
+                        </div>
+
+                        {/* Network Conditions */}
                         <div>
                             <label className="flex items-center gap-2 text-gray-700 font-medium mb-2">
                                 <Wifi className="w-5 h-5 text-indigo-600" />
@@ -125,6 +315,7 @@ export default function App() {
                             </div>
                         </div>
 
+                        {/* Pet Activity Level */}
                         <div>
                             <label className="flex items-center gap-2 text-gray-700 font-medium mb-2">
                                 <Clock className="w-5 h-5 text-indigo-600" />
@@ -148,32 +339,72 @@ export default function App() {
                         </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white">
+                    {/* Results Section */}
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white mb-6">
                         <h2 className="text-2xl font-bold mb-4">Estimated Upload Time</h2>
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             <div className="bg-white bg-opacity-20 rounded-lg p-4">
                                 <div className="text-sm opacity-90 mb-1">Total Files</div>
-                                <div className="text-3xl font-bold">{results.totalFiles}</div>
+                                <div className="text-2xl font-bold">{results.totalFiles}</div>
                             </div>
                             <div className="bg-white bg-opacity-20 rounded-lg p-4">
                                 <div className="text-sm opacity-90 mb-1">Data Period</div>
-                                <div className="text-3xl font-bold">{results.dataHours}h</div>
+                                <div className="text-2xl font-bold">{results.dataHours}h</div>
                             </div>
-                            <div className="col-span-2 bg-white bg-opacity-20 rounded-lg p-6 text-center">
-                                <div className="text-sm opacity-90 mb-2">Upload Duration</div>
-                                <div className="text-5xl font-bold">{formatTime(results.uploadSeconds)}</div>
-                                <div className="text-lg mt-2 opacity-90">({results.uploadMinutes} minutes)</div>
+                            <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                                <div className="text-sm opacity-90 mb-1">Storage Used</div>
+                                <div className="text-2xl font-bold">{results.storageKB} KB</div>
+                            </div>
+                            <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                                <div className="text-sm opacity-90 mb-1">Sync Cycles</div>
+                                <div className="text-2xl font-bold">{results.syncCycles}</div>
+                            </div>
+                            <div className="col-span-2 md:col-span-4 bg-white bg-opacity-20 rounded-lg p-6 text-center">
+                                <div className="text-sm opacity-90 mb-2">Total Upload Duration</div>
+                                <div className="text-4xl md:text-5xl font-bold">{formatTime(results.uploadSeconds)}</div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                    {/* Breakdown by Data Type */}
+                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                        <h3 className="font-semibold text-gray-700 mb-3">Breakdown by Data Type</h3>
+                        <div className="space-y-2">
+                            {Object.entries(dataTypeConfigs).map(([type, config]) => {
+                                const data = results.breakdown[type] || { files: 0, seconds: 0 };
+                                const widthPercent = results.totalFiles > 0
+                                    ? (data.files / results.totalFiles) * 100
+                                    : 0;
+
+                                return (
+                                    <div key={type} className={`${!enabledDataTypes[type] ? 'opacity-40' : ''}`}>
+                                        <div className="flex justify-between text-sm mb-1">
+                                            <span>{config.icon} {config.label}</span>
+                                            <span className="text-gray-600">
+                                                {data.files} files ({formatTime(data.seconds)})
+                                            </span>
+                                        </div>
+                                        <div className="w-full bg-gray-200 rounded-full h-2">
+                                            <div
+                                                className={`${config.color} h-2 rounded-full transition-all`}
+                                                style={{ width: `${widthPercent}%` }}
+                                            />
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Calculation Details */}
+                    <div className="p-4 bg-gray-50 rounded-lg">
                         <h3 className="font-semibold text-gray-700 mb-2">Calculation Details</h3>
                         <ul className="text-sm text-gray-600 space-y-1">
-                            <li>• Base rate: ~{filesPerHour.toFixed(2)} files per hour</li>
-                            <li>• Upload speed: ~{secondsPerFile.toFixed(2)} seconds per file</li>
-                            <li>• Activity: {activityLevels[activityLevel].label} ({activityLevels[activityLevel].multiplier}x files)</li>
-                            <li>• Network: {networkLevels[networkLevel].label} ({networkLevels[networkLevel].multiplier}x time)</li>
+                            <li>• File size: {FILE_SIZE_BYTES} bytes (from firmware config)</li>
+                            <li>• Upload speed: ~{networkLevels[networkLevel].secondsPerFile}s per file ({networkLevels[networkLevel].label})</li>
+                            <li>• Pet type: {petTypes[petType].label} ({petTypes[petType].activityMultiplier}x activity)</li>
+                            <li>• Activity level: {activityLevels[activityLevel].label} ({activityLevels[activityLevel].multiplier}x)</li>
+                            <li>• Power mode: {powerModes[powerMode].label} - {powerModes[powerMode].description}</li>
                         </ul>
                     </div>
                 </div>
