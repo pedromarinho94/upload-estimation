@@ -1,0 +1,1235 @@
+[1765452800] <inf> mqtt_lib: MQTT  IN  t=$aws/things/05080101000008A7/shadow/update/delta len=1761 msg_id=0
+[1765452800] <inf> mqtt_lib: Received shadow update delta
+[1765452800] <inf> conn_mngr: Shadow: delta
+[1765452800] <inf> mqtt_lib: MQTT ACK  msg_id: 2
+[1765452800] <inf> conn_mngr_requests: (0xFFFFFFFF) -> CONNECTED
+[1765452800] <inf> conn_mngr_requests: 	 Last Comm: 1765452800
+[1765452800] <inf> conn_mngr_requests: 	 Rssi: -64dB
+[1765452800] <inf> conn_mngr_requests: 	 Batt Level: Charging (100%)
+[1765452800] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/connection-status/05080101000008A7 len=189 msg_id=3
+[1765452800] <inf> mqtt_lib: MQTT ACK  msg_id: 3
+[1765452800] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452800] <inf> data_bridge: No more data to fetch
+[1765452800] <inf> data_activity: Activity size to decode: 360
+[1765452800] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452800] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452800] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452800] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452800] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=4
+[1765452800] <inf> mqtt_lib: MQTT ACK  msg_id: 4
+[1765452800] <inf> data_activity: Activity size to decode: 240
+[1765452800] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452800] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452800] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452800] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452800] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1492 msg_id=5
+[1765452801] <inf> mqtt_lib: MQTT ACK  msg_id: 5
+[1765452801] <inf> data_activity: Activity size to decode: 120
+[1765452801] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452801] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452801] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452801] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452801] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=6
+[1765452801] <inf> mqtt_lib: MQTT ACK  msg_id: 6
+[1765452801] <inf> data_activity: Activity size to decode: 0
+[1765452801] <inf> data_activity: No more Activity data to decode.
+[1765452801] <inf> data_bridge: Send complete successful
+[1765452801] <inf> data_bridge: send data
+[1765452801] <inf> data_bridge: Offline data sent successfully
+[1765452801] <inf> data_saver: Removed File '/root/activity/1765399011_190_30'.
+[1765452802] <inf> data_bridge: New offline data is available 4 file size 390
+[1765452802] <inf> data_bridge: No more data to fetch
+[1765452802] <inf> data_activity: Activity size to decode: 390
+[1765452802] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452802] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452802] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452802] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452802] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=7
+[1765452802] <inf> mqtt_lib: MQTT ACK  msg_id: 7
+[1765452802] <inf> data_activity: Activity size to decode: 270
+[1765452802] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452802] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452802] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452802] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452802] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1418 msg_id=8
+[1765452803] <inf> mqtt_lib: MQTT ACK  msg_id: 8
+[1765452803] <inf> data_activity: Activity size to decode: 150
+[1765452803] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452803] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452803] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452803] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452803] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1400 msg_id=9
+[1765452803] <inf> mqtt_lib: MQTT ACK  msg_id: 9
+[1765452803] <inf> data_activity: Activity size to decode: 30
+[1765452803] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452803] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=421 msg_id=10
+[1765452803] <inf> mqtt_lib: MQTT ACK  msg_id: 10
+[1765452803] <inf> data_activity: Activity size to decode: 0
+[1765452803] <inf> data_activity: No more Activity data to decode.
+[1765452803] <inf> data_bridge: Send complete successful
+[1765452803] <inf> data_bridge: send data
+[1765452803] <inf> data_bridge: Offline data sent successfully
+[1765452803] <inf> data_saver: Removed File '/root/activity/1765402573_190_30'.
+[1765452803] <inf> ble_bas_svc: BLE BAS BATTERY LEVEL: notification disabled
+[1765452803] <inf> ble_bas_svc: BLE BAS BATTERY POWER STATE: notification disabled
+[1765452803] <inf> ble_cmds_svc: BLE CMDS TRX: notification disabled
+[1765452803] <wrn> ble_interface: BLE Disconnected! (reason 19)
+[1765452803] <inf> device_mngr: -----------------------
+[1765452803] <inf> device_mngr: * Self has disconnected from a Client device! *
+[1765452803] <inf> device_mngr: -----------------------
+[1765452804] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452804] <inf> data_bridge: No more data to fetch
+[1765452804] <inf> data_activity: Activity size to decode: 360
+[1765452804] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452804] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452804] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452804] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452804] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1603 msg_id=11
+[1765452805] <inf> mqtt_lib: MQTT ACK  msg_id: 11
+[1765452805] <inf> data_activity: Activity size to decode: 240
+[1765452805] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452805] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452805] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452805] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452805] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1497 msg_id=12
+[1765452805] <inf> mqtt_lib: MQTT ACK  msg_id: 12
+[1765452805] <inf> data_activity: Activity size to decode: 120
+[1765452805] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452805] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452805] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452805] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452805] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1410 msg_id=13
+[1765452805] <inf> mqtt_lib: MQTT ACK  msg_id: 13
+[1765452805] <inf> data_activity: Activity size to decode: 0
+[1765452805] <inf> data_activity: No more Activity data to decode.
+[1765452805] <inf> data_bridge: Send complete successful
+[1765452805] <inf> data_bridge: send data
+[1765452805] <inf> data_bridge: Offline data sent successfully
+[1765452806] <inf> data_saver: Removed File '/root/activity/1765406464_190_30'.
+[1765452807] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452807] <inf> data_bridge: No more data to fetch
+[1765452807] <inf> data_activity: Activity size to decode: 360
+[1765452807] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452807] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1400 msg_id=14
+[1765452807] <inf> mqtt_lib: MQTT ACK  msg_id: 14
+[1765452807] <inf> data_activity: Activity size to decode: 240
+[1765452807] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452807] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1398 msg_id=15
+[1765452807] <inf> mqtt_lib: MQTT ACK  msg_id: 15
+[1765452807] <inf> data_activity: Activity size to decode: 120
+[1765452807] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452807] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452807] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1406 msg_id=16
+[1765452808] <inf> mqtt_lib: MQTT ACK  msg_id: 16
+[1765452808] <inf> data_activity: Activity size to decode: 0
+[1765452808] <inf> data_activity: No more Activity data to decode.
+[1765452808] <inf> data_bridge: Send complete successful
+[1765452808] <inf> data_bridge: send data
+[1765452808] <inf> data_bridge: Offline data sent successfully
+[1765452808] <inf> data_saver: Removed File '/root/activity/1765410032_190_30'.
+[1765452809] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452809] <inf> data_bridge: No more data to fetch
+[1765452809] <inf> data_activity: Activity size to decode: 360
+[1765452809] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452809] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1448 msg_id=17
+[1765452809] <inf> mqtt_lib: MQTT ACK  msg_id: 17
+[1765452809] <inf> data_activity: Activity size to decode: 240
+[1765452809] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452809] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=18
+[1765452809] <inf> mqtt_lib: MQTT ACK  msg_id: 18
+[1765452809] <inf> data_activity: Activity size to decode: 120
+[1765452809] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452809] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452809] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=19
+[1765452810] <inf> mqtt_lib: MQTT ACK  msg_id: 19
+[1765452810] <inf> data_activity: Activity size to decode: 0
+[1765452810] <inf> data_activity: No more Activity data to decode.
+[1765452810] <inf> data_bridge: Send complete successful
+[1765452810] <inf> data_bridge: send data
+[1765452810] <inf> data_bridge: Offline data sent successfully
+[1765452810] <inf> data_saver: Removed File '/root/activity/1765413638_190_30'.
+[1765452811] <inf> data_bridge: New offline data is available 4 file size 390
+[1765452811] <inf> data_bridge: No more data to fetch
+[1765452811] <inf> data_activity: Activity size to decode: 390
+[1765452811] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452811] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=20
+[1765452811] <inf> mqtt_lib: MQTT ACK  msg_id: 20
+[1765452811] <inf> data_activity: Activity size to decode: 270
+[1765452811] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452811] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=21
+[1765452811] <inf> mqtt_lib: MQTT ACK  msg_id: 21
+[1765452811] <inf> data_activity: Activity size to decode: 150
+[1765452811] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452811] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452811] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=22
+[1765452812] <inf> mqtt_lib: MQTT ACK  msg_id: 22
+[1765452812] <inf> data_activity: Activity size to decode: 30
+[1765452812] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452812] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=431 msg_id=23
+[1765452812] <inf> mqtt_lib: MQTT ACK  msg_id: 23
+[1765452812] <inf> data_activity: Activity size to decode: 0
+[1765452812] <inf> data_activity: No more Activity data to decode.
+[1765452812] <inf> data_bridge: Send complete successful
+[1765452812] <inf> data_bridge: send data
+[1765452812] <inf> data_bridge: Offline data sent successfully
+[1765452812] <inf> data_saver: Removed File '/root/activity/1765417209_190_30'.
+[1765452813] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452813] <inf> data_bridge: No more data to fetch
+[1765452813] <inf> data_activity: Activity size to decode: 360
+[1765452813] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452813] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452813] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452813] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452813] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=24
+[1765452813] <inf> mqtt_lib: MQTT ACK  msg_id: 24
+[1765452813] <inf> data_activity: Activity size to decode: 240
+[1765452813] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452813] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452813] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452813] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452813] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=25
+[1765452814] <inf> mqtt_lib: MQTT ACK  msg_id: 25
+[1765452814] <inf> data_activity: Activity size to decode: 120
+[1765452814] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452814] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452814] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452814] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452814] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=26
+[1765452814] <inf> mqtt_lib: MQTT ACK  msg_id: 26
+[1765452814] <inf> data_activity: Activity size to decode: 0
+[1765452814] <inf> data_activity: No more Activity data to decode.
+[1765452814] <inf> data_bridge: Send complete successful
+[1765452814] <inf> data_bridge: send data
+[1765452814] <inf> data_bridge: Offline data sent successfully
+[1765452814] <inf> data_saver: Removed File '/root/activity/1765421067_190_30'.
+[1765452815] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452815] <inf> data_bridge: No more data to fetch
+[1765452815] <inf> data_activity: Activity size to decode: 360
+[1765452815] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452815] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452815] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452815] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452815] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=27
+[1765452815] <inf> mqtt_lib: MQTT ACK  msg_id: 27
+[1765452815] <inf> data_activity: Activity size to decode: 240
+[1765452815] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452815] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452815] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452815] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452815] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=28
+[1765452816] <inf> mqtt_lib: MQTT ACK  msg_id: 28
+[1765452816] <inf> data_activity: Activity size to decode: 120
+[1765452816] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452816] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452816] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452816] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452816] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=29
+[1765452816] <inf> mqtt_lib: MQTT ACK  msg_id: 29
+[1765452816] <inf> data_activity: Activity size to decode: 0
+[1765452816] <inf> data_activity: No more Activity data to decode.
+[1765452816] <inf> data_bridge: Send complete successful
+[1765452816] <inf> data_bridge: send data
+[1765452816] <inf> data_bridge: Offline data sent successfully
+[1765452816] <inf> data_saver: Removed File '/root/activity/1765424628_190_30'.
+[1765452817] <inf> data_bridge: New offline data is available 4 file size 390
+[1765452817] <inf> data_bridge: No more data to fetch
+[1765452817] <inf> data_activity: Activity size to decode: 390
+[1765452817] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452817] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452817] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452817] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452817] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=30
+[1765452817] <inf> mqtt_lib: MQTT ACK  msg_id: 30
+[1765452817] <inf> data_activity: Activity size to decode: 270
+[1765452817] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452817] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452817] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452817] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452817] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=31
+[1765452818] <inf> mqtt_lib: MQTT ACK  msg_id: 31
+[1765452818] <inf> data_activity: Activity size to decode: 150
+[1765452818] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452818] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452818] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452818] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452818] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=32
+[1765452818] <inf> mqtt_lib: MQTT ACK  msg_id: 32
+[1765452818] <inf> data_activity: Activity size to decode: 30
+[1765452818] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452818] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=431 msg_id=33
+[1765452818] <inf> mqtt_lib: MQTT ACK  msg_id: 33
+[1765452818] <inf> data_activity: Activity size to decode: 0
+[1765452818] <inf> data_activity: No more Activity data to decode.
+[1765452818] <inf> data_bridge: Send complete successful
+[1765452818] <inf> data_bridge: send data
+[1765452818] <inf> data_bridge: Offline data sent successfully
+[1765452818] <inf> data_saver: Removed File '/root/activity/1765428188_190_30'.
+[1765452819] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452819] <inf> data_bridge: No more data to fetch
+[1765452819] <inf> data_activity: Activity size to decode: 360
+[1765452819] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452819] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452819] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452819] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452819] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=34
+[1765452820] <inf> mqtt_lib: MQTT ACK  msg_id: 34
+[1765452820] <inf> data_activity: Activity size to decode: 240
+[1765452820] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452820] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452820] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452820] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452820] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=35
+[1765452820] <inf> mqtt_lib: MQTT ACK  msg_id: 35
+[1765452820] <inf> data_activity: Activity size to decode: 120
+[1765452820] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452820] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452820] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452820] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452820] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=36
+[1765452820] <inf> mqtt_lib: MQTT ACK  msg_id: 36
+[1765452820] <inf> data_activity: Activity size to decode: 0
+[1765452820] <inf> data_activity: No more Activity data to decode.
+[1765452820] <inf> data_bridge: Send complete successful
+[1765452820] <inf> data_bridge: send data
+[1765452820] <inf> data_bridge: Offline data sent successfully
+[1765452820] <inf> data_saver: Removed File '/root/activity/1765432046_190_30'.
+[1765452821] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452821] <inf> data_bridge: No more data to fetch
+[1765452821] <inf> data_activity: Activity size to decode: 360
+[1765452821] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452821] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452821] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452821] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452821] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=37
+[1765452822] <inf> mqtt_lib: MQTT ACK  msg_id: 37
+[1765452822] <inf> data_activity: Activity size to decode: 240
+[1765452822] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452822] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452822] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452822] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452822] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=38
+[1765452822] <inf> mqtt_lib: MQTT ACK  msg_id: 38
+[1765452822] <inf> data_activity: Activity size to decode: 120
+[1765452822] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452822] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452822] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452822] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452822] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=39
+[1765452822] <inf> mqtt_lib: MQTT ACK  msg_id: 39
+[1765452822] <inf> data_activity: Activity size to decode: 0
+[1765452822] <inf> data_activity: No more Activity data to decode.
+[1765452822] <inf> data_bridge: Send complete successful
+[1765452822] <inf> data_bridge: send data
+[1765452822] <inf> data_bridge: Offline data sent successfully
+[1765452822] <inf> data_saver: Removed File '/root/activity/1765435606_190_30'.
+[1765452823] <inf> data_bridge: New offline data is available 4 file size 390
+[1765452823] <inf> data_bridge: No more data to fetch
+[1765452823] <inf> data_activity: Activity size to decode: 390
+[1765452823] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452823] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452823] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452823] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452823] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=40
+[1765452824] <inf> mqtt_lib: MQTT ACK  msg_id: 40
+[1765452824] <inf> data_activity: Activity size to decode: 270
+[1765452824] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452824] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452824] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452824] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452824] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=41
+[1765452824] <inf> mqtt_lib: MQTT ACK  msg_id: 41
+[1765452824] <inf> data_activity: Activity size to decode: 150
+[1765452824] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452824] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452824] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452824] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452824] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=42
+[1765452824] <inf> mqtt_lib: MQTT ACK  msg_id: 42
+[1765452824] <inf> data_activity: Activity size to decode: 30
+[1765452824] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452824] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=431 msg_id=43
+[1765452825] <inf> mqtt_lib: MQTT ACK  msg_id: 43
+[1765452825] <inf> data_activity: Activity size to decode: 0
+[1765452825] <inf> data_activity: No more Activity data to decode.
+[1765452825] <inf> data_bridge: Send complete successful
+[1765452825] <inf> data_bridge: send data
+[1765452825] <inf> data_bridge: Offline data sent successfully
+[1765452825] <inf> data_saver: Removed File '/root/activity/1765439167_190_30'.
+[1765452826] <inf> data_bridge: New offline data is available 4 file size 360
+[1765452826] <inf> data_bridge: No more data to fetch
+[1765452826] <inf> data_activity: Activity size to decode: 360
+[1765452826] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452826] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=44
+[1765452826] <inf> mqtt_lib: MQTT ACK  msg_id: 44
+[1765452826] <inf> data_activity: Activity size to decode: 240
+[1765452826] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452826] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=45
+[1765452826] <inf> mqtt_lib: MQTT ACK  msg_id: 45
+[1765452826] <inf> data_activity: Activity size to decode: 120
+[1765452826] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452826] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452826] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=46
+[1765452827] <inf> mqtt_lib: MQTT ACK  msg_id: 46
+[1765452827] <inf> data_activity: Activity size to decode: 0
+[1765452827] <inf> data_activity: No more Activity data to decode.
+[1765452827] <inf> data_bridge: Send complete successful
+[1765452827] <inf> data_bridge: send data
+[1765452827] <inf> data_bridge: Offline data sent successfully
+[1765452827] <inf> data_saver: Removed File '/root/activity/1765443024_190_30'.
+[1765452828] <inf> data_bridge: New offline data is available 4 file size 600
+[1765452828] <inf> data_bridge: No more data to fetch
+[1765452828] <inf> data_activity: Activity size to decode: 600
+[1765452828] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452828] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=47
+[1765452828] <inf> conn_mngr_requests: (0xFFFFFFFF) -> CONNECTED
+[1765452828] <inf> conn_mngr_requests: 	 Last Comm: 1765452828
+[1765452828] <inf> conn_mngr_requests: 	 Rssi: -61dB
+[1765452828] <inf> conn_mngr_requests: 	 Batt Level: Charging (100%)
+[1765452828] <inf> device_mngr: Sending keep-alive request to slave
+[1765452828] <inf> device_mngr: Keep-alive response received from slave
+[1765452828] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/connection-status/05080101000008A7 len=189 msg_id=48
+[1765452828] <inf> mqtt_lib: MQTT ACK  msg_id: 47
+[1765452828] <inf> data_activity: Activity size to decode: 480
+[1765452828] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452828] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=49
+[1765452828] <inf> mqtt_lib: MQTT ACK  msg_id: 48
+[1765452828] <inf> mqtt_lib: MQTT ACK  msg_id: 49
+[1765452828] <inf> data_activity: Activity size to decode: 360
+[1765452828] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452828] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452828] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1598 msg_id=50
+[1765452829] <inf> mqtt_lib: MQTT ACK  msg_id: 50
+[1765452829] <inf> data_activity: Activity size to decode: 240
+[1765452829] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452829] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452829] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452829] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452829] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1597 msg_id=51
+[1765452829] <inf> mqtt_lib: MQTT ACK  msg_id: 51
+[1765452829] <inf> data_activity: Activity size to decode: 120
+[1765452829] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765452829] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765452829] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765452829] <inf> data_activity: Decode Activity entry 3 of size 30
+[1765452829] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1588 msg_id=52
+[1765452830] <inf> mqtt_lib: MQTT ACK  msg_id: 52
+[1765452830] <inf> data_activity: Activity size to decode: 0
+[1765452830] <inf> data_activity: No more Activity data to decode.
+[1765452830] <inf> data_bridge: Send complete successful
+[1765452830] <inf> data_bridge: send data
+[1765452830] <inf> data_bridge: Offline data sent successfully
+[1765452830] <inf> data_saver: Removed File '/root/activity/1765446585_190_30'.
+[1765452831] <inf> data_saver: No more data of type 4 to synch.
+[1765452831] <inf> data_bridge: New offline data is available 3 file size 315
+[1765452831] <inf> data_bridge: No more data to fetch
+[1765452831] <inf> data_respiratory: Respiratory size to decode: 315
+[1765452831] <inf> data_respiratory: Respiratory entry size: 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452831] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=53
+[1765452831] <inf> mqtt_lib: MQTT ACK  msg_id: 53
+[1765452831] <inf> data_respiratory: Respiratory size to decode: 165
+[1765452831] <inf> data_respiratory: Respiratory entry size: 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452831] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=54
+[1765452831] <inf> mqtt_lib: MQTT ACK  msg_id: 54
+[1765452831] <inf> data_respiratory: Respiratory size to decode: 15
+[1765452831] <inf> data_respiratory: Respiratory entry size: 15
+[1765452831] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452831] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=149 msg_id=55
+[1765452831] <inf> mqtt_lib: MQTT ACK  msg_id: 55
+[1765452831] <inf> data_respiratory: Respiratory size to decode: 0
+[1765452831] <inf> data_respiratory: No more Respiratory data to decode.
+[1765452831] <inf> data_bridge: Send complete successful
+[1765452831] <inf> data_bridge: send data
+[1765452831] <inf> data_bridge: Offline data sent successfully
+[1765452831] <inf> data_saver: Removed File '/root/respiratory/1765404539_6_15'.
+[1765452832] <inf> data_saver: No more data of type 4 to synch.
+[1765452833] <inf> data_bridge: New offline data is available 3 file size 75
+[1765452833] <inf> data_bridge: No more data to fetch
+[1765452833] <inf> data_respiratory: Respiratory size to decode: 75
+[1765452833] <inf> data_respiratory: Respiratory entry size: 15
+[1765452833] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452833] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452833] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452833] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452833] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452833] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=569 msg_id=56
+[1765452833] <inf> mqtt_lib: MQTT ACK  msg_id: 56
+[1765452833] <inf> data_respiratory: Respiratory size to decode: 0
+[1765452833] <inf> data_respiratory: No more Respiratory data to decode.
+[1765452833] <inf> data_bridge: Send complete successful
+[1765452833] <inf> data_bridge: send data
+[1765452833] <inf> data_bridge: Offline data sent successfully
+[1765452833] <inf> data_saver: Removed File '/root/respiratory/1765409547_6_15'.
+[1765452834] <inf> data_saver: No more data of type 4 to synch.
+[1765452834] <inf> data_bridge: New offline data is available 3 file size 825
+[1765452834] <inf> data_bridge: No more data to fetch
+[1765452834] <inf> data_respiratory: Respiratory size to decode: 825
+[1765452834] <inf> data_respiratory: Respiratory entry size: 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452834] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=57
+[1765452834] <inf> mqtt_lib: MQTT ACK  msg_id: 57
+[1765452834] <inf> data_respiratory: Respiratory size to decode: 675
+[1765452834] <inf> data_respiratory: Respiratory entry size: 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452834] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=58
+[1765452834] <inf> mqtt_lib: MQTT ACK  msg_id: 58
+[1765452834] <inf> data_respiratory: Respiratory size to decode: 525
+[1765452834] <inf> data_respiratory: Respiratory entry size: 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452834] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=59
+[1765452834] <inf> mqtt_lib: MQTT ACK  msg_id: 59
+[1765452834] <inf> data_respiratory: Respiratory size to decode: 375
+[1765452834] <inf> data_respiratory: Respiratory entry size: 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452834] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452834] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=60
+[1765452835] <inf> mqtt_lib: MQTT ACK  msg_id: 60
+[1765452835] <inf> data_respiratory: Respiratory size to decode: 225
+[1765452835] <inf> data_respiratory: Respiratory entry size: 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452835] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=61
+[1765452835] <inf> mqtt_lib: MQTT ACK  msg_id: 61
+[1765452835] <inf> data_respiratory: Respiratory size to decode: 75
+[1765452835] <inf> data_respiratory: Respiratory entry size: 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452835] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452835] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=569 msg_id=62
+[1765452835] <inf> mqtt_lib: MQTT ACK  msg_id: 62
+[1765452835] <inf> data_respiratory: Respiratory size to decode: 0
+[1765452835] <inf> data_respiratory: No more Respiratory data to decode.
+[1765452835] <inf> data_bridge: Send complete successful
+[1765452835] <inf> data_bridge: send data
+[1765452835] <inf> data_bridge: Offline data sent successfully
+[1765452835] <inf> data_saver: Removed File '/root/respiratory/1765409906_6_15'.
+[1765452836] <inf> data_saver: No more data of type 4 to synch.
+[1765452836] <inf> data_bridge: New offline data is available 3 file size 255
+[1765452836] <inf> data_bridge: No more data to fetch
+[1765452836] <inf> data_respiratory: Respiratory size to decode: 255
+[1765452836] <inf> data_respiratory: Respiratory entry size: 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765452836] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=63
+[1765452836] <inf> mqtt_lib: MQTT ACK  msg_id: 63
+[1765452836] <inf> data_respiratory: Respiratory size to decode: 105
+[1765452836] <inf> data_respiratory: Respiratory entry size: 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765452836] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765452836] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=779 msg_id=64
+[1765452837] <inf> mqtt_lib: MQTT ACK  msg_id: 64
+[1765452837] <inf> data_respiratory: Respiratory size to decode: 0
+[1765452837] <inf> data_respiratory: No more Respiratory data to decode.
+[1765452837] <inf> data_bridge: Send complete successful
+[1765452837] <inf> data_bridge: send data
+[1765452837] <inf> data_bridge: Offline data sent successfully
+[1765452837] <inf> data_saver: Removed File '/root/respiratory/1765413543_6_15'.
+[1765452838] <inf> data_saver: No more data of type 4 to synch.
+[1765452838] <inf> data_saver: No more data of type 3 to synch.
+[1765452838] <inf> data_bridge: New offline data is available 5 file size 90
+[1765452838] <inf> data_bridge: No more data to fetch
+[1765452838] <inf> data_behaviors: Behaviors size to decode: 90
+[1765452838] <inf> data_behaviors: Decode Behaviors entry 0 of size 18
+[1765452838] <inf> data_behaviors: Decode Behaviors entry 1 of size 18
+[1765452838] <inf> data_behaviors: Decode Behaviors entry 2 of size 18
+[1765452838] <inf> data_behaviors: Decode Behaviors entry 3 of size 18
+[1765452838] <inf> data_behaviors: Decode Behaviors entry 4 of size 18
+[1765452838] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/events/05080101000008A7 len=799 msg_id=65
+[1765452838] <inf> mqtt_lib: MQTT ACK  msg_id: 65
+[1765452838] <inf> data_behaviors: Behaviors size to decode: 0
+[1765452838] <inf> data_behaviors: No more Behaviors data to decode.
+[1765452838] <inf> data_bridge: Send complete successful
+[1765452838] <inf> data_bridge: send data
+[1765452838] <inf> data_bridge: Offline data sent successfully
+[1765452838] <inf> data_saver: Removed File '/root/behaviors/1765400154_3_18'.
+[1765452839] <inf> data_saver: No more data of type 4 to synch.
+[1765452839] <inf> data_saver: No more data of type 3 to synch.
+[1765452839] <inf> data_bridge: New offline data is available 5 file size 126
+[1765452839] <inf> data_bridge: No more data to fetch
+[1765452839] <inf> data_behaviors: Behaviors size to decode: 126
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 0 of size 18
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 1 of size 18
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 2 of size 18
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 3 of size 18
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 4 of size 18
+[1765452839] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/events/05080101000008A7 len=799 msg_id=66
+[1765452839] <inf> mqtt_lib: MQTT ACK  msg_id: 66
+[1765452839] <inf> data_behaviors: Behaviors size to decode: 36
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 0 of size 18
+[1765452839] <inf> data_behaviors: Decode Behaviors entry 1 of size 18
+[1765452839] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/events/05080101000008A7 len=346 msg_id=67
+[1765452839] <inf> mqtt_lib: MQTT ACK  msg_id: 67
+[1765452839] <inf> data_behaviors: Behaviors size to decode: 0
+[1765452839] <inf> data_behaviors: No more Behaviors data to decode.
+[1765452839] <inf> data_bridge: Send complete successful
+[1765452839] <inf> data_bridge: send data
+[1765452839] <inf> data_bridge: Offline data sent successfully
+[1765452839] <inf> data_saver: Removed File '/root/behaviors/1765402579_3_18'.
+[1765452840] <inf> data_saver: No more data of type 4 to synch.
+[1765452840] <inf> data_saver: No more data of type 3 to synch.
+[1765452840] <inf> data_bridge: New offline data is available 5 file size 54
+[1765452840] <inf> data_bridge: No more data to fetch
+[1765452840] <inf> data_behaviors: Behaviors size to decode: 54
+[1765452840] <inf> data_behaviors: Decode Behaviors entry 0 of size 18
+[1765452840] <inf> data_behaviors: Decode Behaviors entry 1 of size 18
+[1765452840] <inf> data_behaviors: Decode Behaviors entry 2 of size 18
+[1765452840] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/events/05080101000008A7 len=497 msg_id=68
+[1765452841] <inf> mqtt_lib: MQTT ACK  msg_id: 68
+[1765452841] <inf> data_behaviors: Behaviors size to decode: 0
+[1765452841] <inf> data_behaviors: No more Behaviors data to decode.
+[1765452841] <inf> data_bridge: Send complete successful
+[1765452841] <inf> data_bridge: send data
+[1765452841] <inf> data_bridge: Offline data sent successfully
+[1765452841] <inf> data_saver: Removed File '/root/behaviors/1765406702_3_18'.
+[1765452842] <inf> data_saver: No more data of type 4 to synch.
+[1765452842] <inf> data_saver: No more data of type 3 to synch.
+[1765452842] <inf> data_bridge: New offline data is available 5 file size 54
+[1765452842] <inf> data_bridge: No more data to fetch
+[1765452842] <inf> data_behaviors: Behaviors size to decode: 54
+[1765452842] <inf> data_behaviors: Decode Behaviors entry 0 of size 18
+[1765452842] <inf> data_behaviors: Decode Behaviors entry 1 of size 18
+[1765452842] <inf> data_behaviors: Decode Behaviors entry 2 of size 18
+[1765452842] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/events/05080101000008A7 len=497 msg_id=69
+[1765452842] <inf> mqtt_lib: MQTT ACK  msg_id: 69
+[1765452842] <inf> data_behaviors: Behaviors size to decode: 0
+[1765452842] <inf> data_behaviors: No more Behaviors data to decode.
+[1765452842] <inf> data_bridge: Send complete successful
+[1765452842] <inf> data_bridge: send data
+[1765452842] <inf> data_bridge: Offline data sent successfully
+[1765452842] <inf> data_saver: Removed File '/root/behaviors/1765451593_3_18'.
+[1765452843] <inf> data_saver: No more data of type 4 to synch.
+[1765452843] <inf> data_saver: No more data of type 3 to synch.
+[1765452843] <inf> data_saver: No more data of type 5 to synch.
+[1765452843] <inf> data_bridge: New offline data is available 7 file size 228
+[1765452843] <inf> data_bridge: No more data to fetch
+[1765452843] <inf> data_heart_rate: Heart rate size to decode: 228
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452843] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1103 msg_id=70
+[1765452843] <inf> mqtt_lib: MQTT ACK  msg_id: 70
+[1765452843] <inf> data_heart_rate: Heart rate size to decode: 38
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452843] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452843] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=256 msg_id=71
+[1765452843] <inf> mqtt_lib: MQTT ACK  msg_id: 71
+[1765452843] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452843] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452843] <inf> data_bridge: Send complete successful
+[1765452843] <inf> data_bridge: send data
+[1765452843] <inf> data_bridge: Offline data sent successfully
+[1765452843] <inf> data_saver: Removed File '/root/heart_rate/1765400353_3_19'.
+[1765452845] <inf> data_saver: No more data of type 4 to synch.
+[1765452845] <inf> data_saver: No more data of type 3 to synch.
+[1765452845] <inf> data_saver: No more data of type 5 to synch.
+[1765452845] <inf> data_bridge: New offline data is available 7 file size 1007
+[1765452845] <inf> data_bridge: No more data to fetch
+[1765452845] <inf> data_heart_rate: Heart rate size to decode: 1007
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452845] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1103 msg_id=72
+[1765452845] <inf> mqtt_lib: MQTT ACK  msg_id: 72
+[1765452845] <inf> data_heart_rate: Heart rate size to decode: 817
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452845] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1103 msg_id=73
+[1765452845] <inf> mqtt_lib: MQTT ACK  msg_id: 73
+[1765452845] <inf> data_heart_rate: Heart rate size to decode: 627
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452845] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=74
+[1765452845] <inf> mqtt_lib: MQTT ACK  msg_id: 74
+[1765452845] <inf> data_heart_rate: Heart rate size to decode: 437
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452845] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452845] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1103 msg_id=75
+[1765452846] <inf> mqtt_lib: MQTT ACK  msg_id: 75
+[1765452846] <inf> data_heart_rate: Heart rate size to decode: 247
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452846] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=76
+[1765452846] <inf> mqtt_lib: MQTT ACK  msg_id: 76
+[1765452846] <inf> data_heart_rate: Heart rate size to decode: 57
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452846] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452846] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=362 msg_id=77
+[1765452846] <inf> mqtt_lib: MQTT ACK  msg_id: 77
+[1765452846] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452846] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452846] <inf> data_bridge: Send complete successful
+[1765452846] <inf> data_bridge: send data
+[1765452846] <inf> data_bridge: Offline data sent successfully
+[1765452846] <inf> data_saver: Removed File '/root/heart_rate/1765403749_3_19'.
+[1765452847] <inf> data_saver: No more data of type 4 to synch.
+[1765452847] <inf> data_saver: No more data of type 3 to synch.
+[1765452847] <inf> data_saver: No more data of type 5 to synch.
+[1765452847] <inf> data_bridge: New offline data is available 7 file size 152
+[1765452847] <inf> data_bridge: No more data to fetch
+[1765452847] <inf> data_heart_rate: Heart rate size to decode: 152
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452847] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452847] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=889 msg_id=78
+[1765452847] <inf> mqtt_lib: MQTT ACK  msg_id: 78
+[1765452847] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452847] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452847] <inf> data_bridge: Send complete successful
+[1765452847] <inf> data_bridge: send data
+[1765452847] <inf> data_bridge: Offline data sent successfully
+[1765452847] <inf> data_saver: Removed File '/root/heart_rate/1765405501_3_19'.
+[1765452848] <inf> data_saver: No more data of type 4 to synch.
+[1765452848] <inf> data_saver: No more data of type 3 to synch.
+[1765452848] <inf> data_saver: No more data of type 5 to synch.
+[1765452848] <inf> data_bridge: New offline data is available 7 file size 1007
+[1765452848] <inf> data_bridge: No more data to fetch
+[1765452848] <inf> data_heart_rate: Heart rate size to decode: 1007
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452848] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=79
+[1765452848] <inf> mqtt_lib: MQTT ACK  msg_id: 79
+[1765452848] <inf> data_heart_rate: Heart rate size to decode: 817
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452848] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452848] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=80
+New offline data[1765452849] <inf> mqtt_lib: MQTT ACK  msg_id: 80
+[1765452849] <inf> data_heart_rate: Heart rate size to decode: 627
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452849] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=81
+[1765452849] <inf> mqtt_lib: MQTT ACK  msg_id: 81
+[1765452849] <inf> data_heart_rate: Heart rate size to decode: 437
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452849] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=82
+[1765452849] <inf> mqtt_lib: MQTT ACK  msg_id: 82
+[1765452849] <inf> data_heart_rate: Heart rate size to decode: 247
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452849] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=83
+[1765452849] <inf> mqtt_lib: MQTT ACK  msg_id: 83
+[1765452849] <inf> data_heart_rate: Heart rate size to decode: 57
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452849] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452849] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=362 msg_id=84
+[1765452849] <inf> mqtt_lib: MQTT ACK  msg_id: 84
+[1765452849] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452849] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452849] <inf> data_bridge: Send complete successful
+[1765452849] <inf> data_bridge: send data
+[1765452849] <inf> data_bridge: Offline data sent successfully
+[1765452849] <inf> data_saver: Removed File '/root/heart_rate/1765407748_3_19'.
+[1765452850] <inf> data_saver: No more data of type 4 to synch.
+[1765452850] <inf> data_saver: No more data of type 3 to synch.
+[1765452850] <inf> data_saver: No more data of type 5 to synch.
+[1765452850] <inf> data_bridge: New offline data is available 7 file size 57
+[1765452850] <inf> data_bridge: No more data to fetch
+[1765452850] <inf> data_heart_rate: Heart rate size to decode: 57
+[1765452850] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452850] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452850] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452850] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=362 msg_id=85
+[1765452851] <inf> mqtt_lib: MQTT ACK  msg_id: 85
+[1765452851] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452851] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452851] <inf> data_bridge: Send complete successful
+[1765452851] <inf> data_bridge: send data
+[1765452851] <inf> data_bridge: Offline data sent successfully
+[1765452851] <inf> data_saver: Removed File '/root/heart_rate/1765409757_3_19'.
+[1765452852] <inf> data_saver: No more data of type 4 to synch.
+[1765452852] <inf> data_saver: No more data of type 3 to synch.
+[1765452852] <inf> data_saver: No more data of type 5 to synch.
+[1765452852] <inf> data_bridge: New offline data is available 7 file size 1007
+[1765452852] <inf> data_bridge: No more data to fetch
+[1765452852] <inf> data_heart_rate: Heart rate size to decode: 1007
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452852] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=86
+[1765452852] <inf> mqtt_lib: MQTT ACK  msg_id: 86
+[1765452852] <inf> data_heart_rate: Heart rate size to decode: 817
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452852] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1103 msg_id=87
+[1765452852] <inf> mqtt_lib: MQTT ACK  msg_id: 87
+[1765452852] <inf> data_heart_rate: Heart rate size to decode: 627
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452852] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=88
+[1765452852] <inf> mqtt_lib: MQTT ACK  msg_id: 88
+[1765452852] <inf> data_heart_rate: Heart rate size to decode: 437
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452852] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452852] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=89
+[1765452852] <inf> mqtt_lib: MQTT ACK  msg_id: 89
+[1765452853] <inf> data_heart_rate: Heart rate size to decode: 247
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452853] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=90
+[1765452853] <inf> mqtt_lib: MQTT ACK  msg_id: 90
+[1765452853] <inf> data_heart_rate: Heart rate size to decode: 57
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452853] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452853] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=362 msg_id=91
+[1765452853] <inf> mqtt_lib: MQTT ACK  msg_id: 91
+[1765452853] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452853] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452853] <inf> data_bridge: Send complete successful
+[1765452853] <inf> data_bridge: send data
+[1765452853] <inf> data_bridge: Offline data sent successfully
+[1765452853] <inf> data_saver: Removed File '/root/heart_rate/1765409875_3_19'.
+[1765452854] <inf> data_saver: No more data of type 4 to synch.
+[1765452854] <inf> data_saver: No more data of type 3 to synch.
+[1765452854] <inf> data_saver: No more data of type 5 to synch.
+[1765452854] <inf> data_bridge: New offline data is available 7 file size 1007
+[1765452854] <inf> data_bridge: No more data to fetch
+[1765452854] <inf> data_heart_rate: Heart rate size to decode: 1007
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452854] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=92
+[1765452854] <inf> mqtt_lib: MQTT ACK  msg_id: 92
+[1765452854] <inf> data_heart_rate: Heart rate size to decode: 817
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452854] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=93
+[1765452854] <inf> mqtt_lib: MQTT ACK  msg_id: 93
+[1765452854] <inf> data_heart_rate: Heart rate size to decode: 627
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452854] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452854] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=94
+[1765452855] <inf> mqtt_lib: MQTT ACK  msg_id: 94
+[1765452855] <inf> data_heart_rate: Heart rate size to decode: 437
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452855] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=95
+[1765452855] <inf> mqtt_lib: MQTT ACK  msg_id: 95
+[1765452855] <inf> data_heart_rate: Heart rate size to decode: 247
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452855] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=96
+[1765452855] <inf> mqtt_lib: MQTT ACK  msg_id: 96
+[1765452855] <inf> data_heart_rate: Heart rate size to decode: 57
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452855] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452855] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=362 msg_id=97
+[1765452855] <inf> mqtt_lib: MQTT ACK  msg_id: 97
+[1765452855] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452855] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452855] <inf> data_bridge: Send complete successful
+[1765452855] <inf> data_bridge: send data
+[1765452855] <inf> data_bridge: Offline data sent successfully
+[1765452855] <inf> data_saver: Removed File '/root/heart_rate/1765411633_3_19'.
+[1765452856] <inf> data_saver: No more data of type 4 to synch.
+[1765452857] <inf> data_saver: No more data of type 3 to synch.
+[1765452857] <inf> data_saver: No more data of type 5 to synch.
+[1765452857] <inf> data_bridge: New offline data is available 7 file size 95
+[1765452857] <inf> data_bridge: No more data to fetch
+[1765452857] <inf> data_heart_rate: Heart rate size to decode: 95
+[1765452857] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452857] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452857] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452857] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452857] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452857] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=573 msg_id=98
+[1765452857] <inf> mqtt_lib: MQTT ACK  msg_id: 98
+[1765452857] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452857] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452857] <inf> data_bridge: Send complete successful
+[1765452857] <inf> data_bridge: send data
+[1765452857] <inf> data_bridge: Offline data sent successfully
+[1765452857] <inf> data_saver: Removed File '/root/heart_rate/1765413385_3_19'.
+[1765452858] <inf> data_saver: No more data of type 4 to synch.
+[1765452858] <inf> data_saver: No more data of type 3 to synch.
+[1765452858] <inf> data_saver: No more data of type 5 to synch.
+[1765452858] <inf> data_bridge: New offline data is available 7 file size 627
+[1765452858] <inf> data_bridge: No more data to fetch
+[1765452858] <inf> data_heart_rate: Heart rate size to decode: 627
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452858] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=99
+[1765452858] <inf> conn_mngr_requests: (0xFFFFFFFF) -> CONNECTED
+[1765452858] <inf> conn_mngr_requests: 	 Last Comm: 1765452858
+[1765452858] <inf> conn_mngr_requests: 	 Rssi: -65dB
+[1765452858] <inf> conn_mngr_requests: 	 Batt Level: Charging (100%)
+[1765452858] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/connection-status/05080101000008A7 len=191 msg_id=100
+[1765452858] <inf> device_mngr: Sending keep-alive request to slave
+[1765452858] <inf> device_mngr: Keep-alive response received from slave
+[1765452858] <inf> mqtt_lib: MQTT ACK  msg_id: 99
+[1765452858] <inf> data_heart_rate: Heart rate size to decode: 437
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452858] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=101
+[1765452858] <inf> mqtt_lib: MQTT ACK  msg_id: 100
+[1765452858] <inf> mqtt_lib: MQTT ACK  msg_id: 101
+[1765452858] <inf> data_heart_rate: Heart rate size to decode: 247
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765452858] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=102
+[1765452858] <inf> mqtt_lib: MQTT ACK  msg_id: 102
+[1765452858] <inf> data_heart_rate: Heart rate size to decode: 57
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765452858] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765452858] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=362 msg_id=103
+[1765452859] <inf> mqtt_lib: MQTT ACK  msg_id: 103
+[1765452859] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452859] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452859] <inf> data_bridge: Send complete successful
+[1765452859] <inf> data_bridge: send data
+[1765452859] <inf> data_bridge: Offline data sent successfully
+[1765452859] <inf> data_saver: Removed File '/root/heart_rate/1765413543_3_19'.
+[1765452860] <inf> data_saver: No more data of type 4 to synch.
+[1765452860] <inf> data_saver: No more data of type 3 to synch.
+[1765452860] <inf> data_saver: No more data of type 5 to synch.
+[1765452860] <inf> data_bridge: New offline data is available 7 file size 19
+[1765452860] <inf> data_bridge: No more data to fetch
+[1765452860] <inf> data_heart_rate: Heart rate size to decode: 19
+[1765452860] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765452860] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=149 msg_id=104
+[1765452860] <inf> mqtt_lib: MQTT ACK  msg_id: 104
+[1765452860] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765452860] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765452860] <inf> data_bridge: Send complete successful
+[1765452860] <inf> data_bridge: send data
+[1765452860] <inf> data_bridge: Offline data sent successfully
+[1765452860] <inf> data_saver: Removed File '/root/heart_rate/1765451490_3_19'.
+[1765452861] <inf> data_saver: No more data of type 4 to synch.
+[1765452861] <inf> data_saver: No more data of type 3 to synch.
+[1765452861] <inf> data_saver: No more data of type 5 to synch.
+[1765452861] <inf> data_saver: No more data of type 7 to synch.
+[1765452861] <inf> data_bridge: New offline data is available 2 file size 6
+[1765452861] <inf> data_bridge: No more data to fetch
+[1765452861] <inf> data_notifications: Notifications size to decode: 6
+[1765452861] <inf> data_notifications: Decode Notifications entry 0 of size 6
+[1765452861] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/events/05080101000008A7 len=140 msg_id=105
+[1765452861] <inf> mqtt_lib: MQTT ACK  msg_id: 105
+[1765452861] <inf> data_notifications: Notifications size to decode: 0
+[1765452861] <inf> data_notifications: No more Notifications data to decode.
+[1765452861] <inf> data_bridge: Send complete successful
+[1765452861] <inf> data_bridge: send data
+[1765452861] <inf> data_bridge: Offline data sent successfully
+[1765452861] <inf> data_saver: Removed File '/root/notifications/1765452385_1_6'.
+[1765452862] <inf> data_saver: No more data of type 4 to synch.
+[1765452862] <inf> data_saver: No more data of type 3 to synch.
+[1765452862] <inf> data_saver: No more data of type 5 to synch.
+[1765452862] <inf> data_saver: No more data of type 7 to synch.
+[1765452862] <inf> data_saver: No more data of type 2 to synch.
+[1765452862] <inf> data_saver: No more data to synch.
+[1765452862] <inf> data_bridge: Sync is complete!
+[1765452862] <inf> conn_mngr: All data synced!
+[1765452862] <inf> conn_mngr: Data sync complete (Periodic mode disabled). Remaining online.

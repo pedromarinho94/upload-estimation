@@ -5,40 +5,41 @@ export default function App() {
     // File size from Kconfig: DATA_SAVER_MAX_FILE_SIZE = 1024 bytes
     const FILE_SIZE_BYTES = 1024;
 
-    // Per-data-type file rates (files per hour of data) based on codebase analysis
+    // Per-data-type file rates (files per hour) - derived from real device logs
+    // Reference: 14 hours offline produced 33 files (14 activity, 4 respiratory, 4 behaviors, 10 HR, 1 notification)
     const dataTypeConfigs = {
         activity: {
             label: 'Activity',
             icon: '🏃',
-            baseRate: 4,           // 4 files/hour (15s windows = 240 samples/hour, ~4 files)
-            activityScales: true,
+            baseRate: 1.0,           // 14 files / 14 hours = 1.0 files/hour (from logs)
+            activityScales: true,    // More activity = more files
             color: 'bg-blue-500'
         },
         respiratory: {
             label: 'Respiratory',
             icon: '🫁',
-            baseRate: 1,           // 1 file/hour (60s FFT windows)
-            sleepBoost: 1.5,
+            baseRate: 0.29,          // 4 files / 14 hours = 0.29 files/hour (from logs)
+            sleepBoost: 1.5,         // More readings during rest
             color: 'bg-green-500'
         },
         behaviors: {
             label: 'Behaviors',
             icon: '🐕',
-            baseRate: 0.5,         // ~0.5 events/hour (drinking, shaking)
-            activityScales: true,
+            baseRate: 0.29,          // 4 files / 14 hours = 0.29 files/hour (from logs)
+            activityScales: true,    // More shaking/drinking when active
             color: 'bg-yellow-500'
         },
         heartRate: {
             label: 'Heart Rate',
             icon: '❤️',
-            baseRate: 1.5,         // 1.5 files/hour when eligible
-            sleepBoost: 2,
+            baseRate: 0.71,          // 10 files / 14 hours = 0.71 files/hour (from logs)
+            sleepBoost: 1.5,         // More HR readings during rest
             color: 'bg-red-500'
         },
         notifications: {
             label: 'Notifications',
             icon: '🔔',
-            baseRate: 0.1,         // rare system events
+            baseRate: 0.07,          // 1 file / 14 hours = 0.07 files/hour (from logs)
             color: 'bg-purple-500'
         }
     };
@@ -188,6 +189,17 @@ export default function App() {
                     <div className="flex items-center gap-3 mb-6">
                         <Database className="w-8 h-8 text-indigo-600" />
                         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Smart Collar Upload Calculator</h1>
+                    </div>
+
+                    {/* Reference Data */}
+                    <div className="bg-indigo-50 rounded-lg p-4 mb-6">
+                        <h2 className="text-sm font-semibold text-indigo-900 mb-2">Based on Real Device Logs</h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-indigo-700">
+                            <div>📅 14 hours offline</div>
+                            <div>📊 33 files total</div>
+                            <div>⏱️ 62s upload time</div>
+                            <div>📶 ~1.88s per file</div>
+                        </div>
                     </div>
 
                     {/* Data Types Section */}

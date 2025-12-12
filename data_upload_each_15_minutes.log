@@ -1,0 +1,1242 @@
+[1765471036] <inf> device_mngr: Sending keep-alive request to slave
+[1765471036] <inf> device_mngr: Keep-alive response received from slave
+[1765471037] <inf> batt_monitor: Battery reading: 100%
+[1765471037] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471038] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471038] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471038] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471038] <inf> data_saver: Creating file '/root/respiratory/1765471038_6_15'.
+[1765471066] <inf> device_mngr: Sending keep-alive request to slave
+[1765471066] <inf> device_mngr: Keep-alive response received from slave
+[1765471068] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471068] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471068] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471068] <inf> data_saver: Creating file '/root/heart_rate/1765471068_3_19'.
+[1765471096] <inf> device_mngr: Sending keep-alive request to slave
+[1765471096] <inf> device_mngr: Keep-alive response received from slave
+[1765471097] <inf> batt_monitor: Battery reading: 100%
+[1765471097] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471098] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471098] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471098] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471098] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 19 bytes.
+[1765471098] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471098] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471098] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 15 bytes.
+[1765471098] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471126] <inf> device_mngr: Sending keep-alive request to slave
+[1765471126] <inf> device_mngr: Keep-alive response received from slave
+[1765471128] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471128] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471128] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471128] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 38 bytes.
+[1765471156] <inf> device_mngr: Sending keep-alive request to slave
+[1765471156] <inf> device_mngr: Keep-alive response received from slave
+[1765471157] <inf> batt_monitor: Battery reading: 100%
+[1765471157] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471159] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471159] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471159] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471159] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 30 bytes.
+[1765471186] <inf> device_mngr: Sending keep-alive request to slave
+[1765471186] <inf> device_mngr: Keep-alive response received from slave
+[1765471216] <inf> device_mngr: Sending keep-alive request to slave
+[1765471216] <inf> device_mngr: Keep-alive response received from slave
+[1765471217] <inf> batt_monitor: Battery reading: 100%
+[1765471217] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471218] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471218] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471218] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471218] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 45 bytes.
+[1765471246] <inf> device_mngr: Sending keep-alive request to slave
+[1765471246] <inf> device_mngr: Keep-alive response received from slave
+[1765471248] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471248] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471248] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471248] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 57 bytes.
+[1765471269] <inf> data_bridge: Data bridge data added to queue: 4
+[1765471269] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765471269] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471269] <inf> data_saver: Creating file '/root/activity/1765471269_190_30'.
+[1765471276] <inf> device_mngr: Sending keep-alive request to slave
+[1765471276] <inf> device_mngr: Keep-alive response received from slave
+[1765471277] <inf> batt_monitor: Battery reading: 100%
+[1765471277] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471278] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471278] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471278] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471278] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 60 bytes.
+[1765471306] <inf> device_mngr: Sending keep-alive request to slave
+[1765471306] <inf> device_mngr: Keep-alive response received from slave
+[1765471336] <inf> device_mngr: Sending keep-alive request to slave
+[1765471336] <inf> device_mngr: Keep-alive response received from slave
+[1765471337] <inf> batt_monitor: Battery reading: 100%
+[1765471337] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471339] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471339] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471339] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471339] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471339] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471339] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 76 bytes.
+[1765471339] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 75 bytes.
+[1765471339] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471366] <inf> device_mngr: Sending keep-alive request to slave
+[1765471366] <inf> device_mngr: Keep-alive response received from slave
+[1765471369] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471369] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471369] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471369] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 95 bytes.
+[1765471396] <inf> device_mngr: Sending keep-alive request to slave
+[1765471396] <inf> device_mngr: Keep-alive response received from slave
+[1765471397] <inf> batt_monitor: Battery reading: 100%
+[1765471397] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471398] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471398] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471398] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471398] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 90 bytes.
+[1765471426] <inf> device_mngr: Sending keep-alive request to slave
+[1765471426] <inf> device_mngr: Keep-alive response received from slave
+[1765471456] <inf> device_mngr: Sending keep-alive request to slave
+[1765471456] <inf> device_mngr: Keep-alive response received from slave
+[1765471457] <inf> batt_monitor: Battery reading: 100%
+[1765471457] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471459] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471459] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471459] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471459] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 105 bytes.
+[1765471486] <inf> device_mngr: Sending keep-alive request to slave
+[1765471486] <inf> device_mngr: Keep-alive response received from slave
+[1765471489] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471489] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471489] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471489] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 114 bytes.
+[1765471516] <inf> device_mngr: Sending keep-alive request to slave
+[1765471516] <inf> device_mngr: Keep-alive response received from slave
+[1765471517] <inf> batt_monitor: Battery reading: 100%
+[1765471517] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471519] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471519] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471519] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471519] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 120 bytes.
+[1765471546] <inf> device_mngr: Sending keep-alive request to slave
+[1765471546] <inf> device_mngr: Keep-alive response received from slave
+[1765471549] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471549] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471549] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471549] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 133 bytes.
+[1765471570] <inf> data_bridge: Data bridge data added to queue: 4
+[1765471570] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765471570] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471570] <inf> data_saver: Opening file '/root/activity/1765471269_190_30' with size 30 bytes.
+[1765471576] <inf> device_mngr: Sending keep-alive request to slave
+[1765471576] <inf> device_mngr: Keep-alive response received from slave
+[1765471577] <inf> batt_monitor: Battery reading: 100%
+[1765471577] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471579] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471579] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471579] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471579] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471579] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471579] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 152 bytes.
+[1765471579] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 135 bytes.
+[1765471579] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471606] <inf> device_mngr: Sending keep-alive request to slave
+[1765471606] <inf> device_mngr: Keep-alive response received from slave
+[1765471636] <inf> device_mngr: Sending keep-alive request to slave
+[1765471636] <inf> device_mngr: Keep-alive response received from slave
+[1765471637] <inf> batt_monitor: Battery reading: 100%
+[1765471637] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471640] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471640] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471640] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471640] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 171 bytes.
+[1765471666] <inf> device_mngr: Sending keep-alive request to slave
+[1765471666] <inf> device_mngr: Keep-alive response received from slave
+[1765471669] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471669] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471669] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471669] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 190 bytes.
+[1765471696] <inf> device_mngr: Sending keep-alive request to slave
+[1765471696] <inf> device_mngr: Keep-alive response received from slave
+[1765471697] <inf> batt_monitor: Battery reading: 100%
+[1765471697] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471700] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471700] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471700] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471700] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471700] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471700] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 209 bytes.
+[1765471700] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 150 bytes.
+[1765471700] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471726] <inf> device_mngr: Sending keep-alive request to slave
+[1765471726] <inf> device_mngr: Keep-alive response received from slave
+[1765471729] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471729] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471729] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471729] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 228 bytes.
+[1765471756] <inf> device_mngr: Sending keep-alive request to slave
+[1765471756] <inf> device_mngr: Keep-alive response received from slave
+[1765471757] <inf> batt_monitor: Battery reading: 100%
+[1765471757] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471760] <inf> data_bridge: Data bridge data added to queue: 7
+[1765471760] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765471760] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471760] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471760] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471760] <inf> data_saver: Opening file '/root/heart_rate/1765471068_3_19' with size 247 bytes.
+[1765471760] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 165 bytes.
+[1765471760] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471786] <inf> device_mngr: Sending keep-alive request to slave
+[1765471786] <inf> device_mngr: Keep-alive response received from slave
+[1765471816] <inf> device_mngr: Sending keep-alive request to slave
+[1765471816] <inf> device_mngr: Keep-alive response received from slave
+[1765471817] <inf> batt_monitor: Battery reading: 100%
+[1765471817] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471820] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471820] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471820] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471820] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 180 bytes.
+[1765471846] <inf> device_mngr: Sending keep-alive request to slave
+[1765471846] <inf> device_mngr: Keep-alive response received from slave
+[1765471871] <inf> data_bridge: Data bridge data added to queue: 4
+[1765471871] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765471871] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471871] <inf> data_saver: Opening file '/root/activity/1765471269_190_30' with size 60 bytes.
+[1765471876] <inf> device_mngr: Sending keep-alive request to slave
+[1765471876] <inf> device_mngr: Keep-alive response received from slave
+[1765471877] <inf> batt_monitor: Battery reading: 100%
+[1765471877] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471880] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471880] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471880] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471880] <inf> data_saver: Opening file '/root/respiratory/1765471038_6_15' with size 195 bytes.
+[1765471906] <inf> device_mngr: Sending keep-alive request to slave
+[1765471906] <inf> device_mngr: Keep-alive response received from slave
+[1765471907] <wrn> conn_mngr: CONN_MNGR_HSM_EVT_RECOVER_CONNECTION
+[1765471907] <inf> conn_mngr: Attempting to connect to best available stored WiFi network...
+[1765471907] <inf> wifi_interface: Found 1 stored WiFi network(s)
+[1765471907] <inf> wifi_interface:   Stored SSID[0]: teste1 
+[1765471907] <inf> wifi_nrf: Configuring SLEEP CTRL GPIO control register
+
+[1765471908] <inf> wifi_supplicant: Network interface 1 (0x20002f28) up
+[1765471910] <inf> wifi_interface: Num  | SSID                             (len) | Chan | RSSI | Security       | BSSID
+[1765471910] <inf> wifi_interface: 1    | DIRECT-09-HP M140 LaserJet       26    | 6    | -45  | (1)WPA2-PSK    | 6E:0B:5E:96:FE:09
+[1765471910] <inf> wifi_interface: 2    | SWORDHealth-Clinical             20    | 6    | -47  | (1)WPA2-PSK    | 60:D0:2C:68:C2:49
+[1765471910] <inf> wifi_interface: 3    | Findster                         8     | 6    | -48  | (9)WPA-PSK     | 60:D0:2C:A8:C2:49
+[1765471910] <inf> wifi_interface: 4    | Office                           6     | 6    | -48  | (9)WPA-PSK     | 60:D0:2C:28:C2:48
+[1765471910] <inf> wifi_interface: 5    | SWORDHealth-Guest                17    | 6    | -48  | (1)WPA2-PSK    | 60:D0:2C:A8:C2:48
+[1765471910] <inf> wifi_interface: 6    | sword_printer                    13    | 6    | -49  | (1)WPA2-PSK    | 60:D0:2C:E8:C2:49
+[1765471910] <inf> wifi_interface: 7    | SWORDHealth                      11    | 6    | -49  | (1)WPA2-PSK    | 60:D0:2C:28:C2:49
+[1765471910] <inf> wifi_interface: 8    | SWORDHealth-R&D                  15    | 6    | -49  | (1)WPA2-PSK    | 60:D0:2C:E8:C2:48
+[1765471910] <inf> wifi_interface: 9    | Office_Guest                     12    | 6    | -49  | (1)WPA2-PSK    | 60:D0:2C:68:C2:48
+[1765471910] <inf> wifi_interface: 10   | MOMAPORTO                        9     | 10   | -59  | (9)WPA-PSK     | D0:EF:C1:F8:44:94
+[1765471910] <inf> wifi_interface: 11   | teste1                           6     | 1    | -61  | (3)WPA3-SAE-HNP | B4:B0:24:DB:9B:27
+[1765471910] <inf> wifi_interface: 12   | SWORDHealth-Clinical             20    | 11   | -67  | (1)WPA2-PSK    | 60:D0:2C:68:BD:09
+[1765471910] <inf> wifi_interface: 13   | SWORDHealth                      11    | 11   | -68  | (1)WPA2-PSK    | 60:D0:2C:28:BD:09
+[1765471910] <inf> wifi_interface: 14   | sword_printer                    13    | 11   | -69  | (1)WPA2-PSK    | 60:D0:2C:E8:BD:09
+[1765471910] <inf> wifi_interface: 15   | Findster                         8     | 11   | -69  | (9)WPA-PSK     | 60:D0:2C:A8:BD:09
+[1765471910] <inf> wifi_interface: 16   | MEO-WiFi                         8     | 11   | -69  | (0)OPEN        | 1C:57:3E:FB:6F:02
+[1765471910] <inf> wifi_interface: 17   | SWORDHealth-Clinical             20    | 6    | -70  | (1)WPA2-PSK    | 60:D0:2C:69:43:19
+[1765471910] <inf> wifi_interface: 18   | GOSTOS&PALADARES                 16    | 1    | -70  | (1)WPA2-PSK    | 00:06:91:8F:64:C0
+[1765471910] <inf> wifi_interface: 19   | MEO-FB6F00                       10    | 11   | -71  | (1)WPA2-PSK    | 1C:57:3E:FB:6F:00
+[1765471910] <inf> wifi_interface: 20   | Findster                         8     | 6    | -72  | (9)WPA-PSK     | 60:D0:2C:A9:43:19
+[1765471910] <inf> wifi_interface: Scan request finished and has found: 20 networks
+[1765471910] <inf> wifi_interface: Wi-Fi scan finished!
+[1765471910] <inf> wifi_interface: WiFi scan found 14 network(s)
+[1765471910] <inf> wifi_interface: Found matching network: teste1 (RSSI: -61 dBm)
+[1765471910] <inf> wifi_interface: Connecting to best network: teste1 (RSSI: -61 dBm)
+[1765471910] <inf> wifi_interface: Connecting to SSID: teste1 (len: 6, security: 3, pass: 'qwertyui')
+[1765471913] <inf> wifi_interface: Wi-Fi connected!
+[1765471913] <inf> wifi_interface: DHCP IP address: 192.168.2.143
+[1765471913] <inf> wifi_interface: Network connectivity established
+[1765471913] <inf> sntp_client: SNTP initialized!
+[1765471914] <inf> calendar: DATE&TIME @ Thursday, December 11, 2025 16:51:54
+[1765471914] <inf> mqtt_lib: Connecting to AWS IoT
+[1765471917] <inf> mqtt_lib: AWS_IOT_EVT_CONNECTED
+[1765471917] <inf> data_bridge: Connection is up, go to Data Bridge connected state.
+[1765471917] <inf> conn_mngr: CONN_MNGR_HSM_EVT_GET_SHADOW!
+[1765471917] <inf> mqtt_lib: MQTT OUT  t=shadow len=0 msg_id=0
+[1765471917] <inf> conn_mngr: CONN_MNGR_HSM_EVT_GET_PENDING_JOBS!
+[1765471917] <inf> conn_mngr: Device with valid WiFi but not USB connected, skipping FOTA check
+[1765471917] <inf> mqtt_lib: MQTT  IN  t=$aws/things/05080101000008A7/shadow/get/accepted len=4156 msg_id=0
+[1765471917] <inf> mqtt_lib: Received shadow get accepted
+[1765471917] <inf> conn_mngr: Shadow: full
+[1765471917] <inf> conn_mngr_requests: (0xFFFFFFFF) -> CONNECTED
+[1765471917] <inf> conn_mngr_requests: 	 Last Comm: 1765471917
+[1765471917] <inf> conn_mngr_requests: 	 Rssi: -62dB
+[1765471917] <inf> conn_mngr_requests: 	 Batt Level: Discharging (100%)
+[1765471917] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/connection-status/05080101000008A7 len=189 msg_id=7
+[1765471918] <inf> mqtt_lib: MQTT ACK  msg_id: 7
+[1765471918] <inf> data_bridge: New offline data is available 4 file size 90
+[1765471918] <inf> data_bridge: No more data to fetch
+[1765471918] <inf> data_activity: Activity size to decode: 90
+[1765471918] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765471918] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765471918] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765471918] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1059 msg_id=8
+[1765471918] <inf> mqtt_lib: MQTT ACK  msg_id: 8
+[1765471918] <inf> data_activity: Activity size to decode: 0
+[1765471918] <inf> data_activity: No more Activity data to decode.
+[1765471918] <inf> data_bridge: Send complete successful
+[1765471918] <inf> data_bridge: send data
+[1765471918] <inf> data_bridge: Offline data sent successfully
+[1765471918] <inf> data_saver: Removed File '/root/activity/1765471269_190_30'.
+[1765471919] <inf> data_saver: No more data of type 4 to synch.
+[1765471919] <inf> data_bridge: New offline data is available 3 file size 210
+[1765471919] <inf> data_bridge: No more data to fetch
+[1765471919] <inf> data_respiratory: Respiratory size to decode: 210
+[1765471919] <inf> data_respiratory: Respiratory entry size: 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765471919] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765471919] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=9
+[1765471920] <inf> mqtt_lib: MQTT ACK  msg_id: 9
+[1765471920] <inf> data_respiratory: Respiratory size to decode: 60
+[1765471920] <inf> data_respiratory: Respiratory entry size: 15
+[1765471920] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765471920] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765471920] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765471920] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765471920] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=464 msg_id=10
+[1765471920] <inf> mqtt_lib: MQTT ACK  msg_id: 10
+[1765471920] <inf> data_respiratory: Respiratory size to decode: 0
+[1765471920] <inf> data_respiratory: No more Respiratory data to decode.
+[1765471920] <inf> data_bridge: Send complete successful
+[1765471920] <inf> data_bridge: send data
+[1765471920] <inf> data_bridge: Offline data sent successfully
+[1765471920] <inf> data_saver: Removed File '/root/respiratory/1765471038_6_15'.
+[1765471921] <inf> data_saver: No more data of type 4 to synch.
+[1765471921] <inf> data_saver: No more data of type 3 to synch.
+[1765471921] <inf> data_saver: No more data of type 5 to synch.
+[1765471921] <inf> data_bridge: New offline data is available 7 file size 266
+[1765471921] <inf> data_bridge: No more data to fetch
+[1765471921] <inf> data_heart_rate: Heart rate size to decode: 266
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765471921] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1102 msg_id=11
+[1765471921] <inf> mqtt_lib: MQTT ACK  msg_id: 11
+[1765471921] <inf> data_heart_rate: Heart rate size to decode: 76
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765471921] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765471921] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=468 msg_id=12
+[1765471921] <inf> mqtt_lib: MQTT ACK  msg_id: 12
+[1765471921] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765471921] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765471921] <inf> data_bridge: Send complete successful
+[1765471921] <inf> data_bridge: send data
+[1765471921] <inf> data_bridge: Offline data sent successfully
+[1765471921] <inf> data_saver: Removed File '/root/heart_rate/1765471068_3_19'.
+[1765471922] <inf> data_saver: No more data of type 4 to synch.
+[1765471922] <inf> data_saver: No more data of type 3 to synch.
+[1765471922] <inf> data_saver: No more data of type 5 to synch.
+[1765471922] <inf> data_saver: No more data of type 7 to synch.
+[1765471922] <inf> data_saver: No more data of type 2 to synch.
+[1765471922] <inf> data_saver: No more data to synch.
+[1765471922] <inf> data_bridge: Sync is complete!
+[1765471922] <inf> conn_mngr: All data synced!
+[1765471922] <inf> conn_mngr: Data sync complete on battery. Disconnecting WiFi to save power.
+[1765471922] <inf> mqtt_lib: AWS_IOT_EVT_DISCONNECTED
+[1765471922] <inf> conn_mngr: MQTT disconnected (intentional), error -> 10
+[1765471922] <inf> wifi_interface: Disconnection Result done (0), reason: 0
+[1765471922] <inf> conn_mngr: Wi-Fi disconnected (intentional), reason -> 4
+[1765471922] <inf> wifi_interface: Network connectivity lost
+[1765471922] <inf> wifi_supplicant: Network interface 1 (0x20002f28) down
+[1765471922] <inf> conn_mngr: Starting recover timer: 900 seconds.
+[1765471922] <wrn> data_bridge: Connection is down, go to Data Bridge disconnected state.
+[1765471937] <inf> device_mngr: Sending keep-alive request to slave
+[1765471937] <inf> device_mngr: Keep-alive response received from slave
+[1765471938] <inf> batt_monitor: Battery reading: 100%
+[1765471938] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765471941] <inf> data_bridge: Data bridge data added to queue: 3
+[1765471941] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765471941] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765471941] <inf> data_saver: Creating file '/root/respiratory/1765471941_6_15'.
+[1765471967] <inf> device_mngr: Sending keep-alive request to slave
+[1765471967] <inf> device_mngr: Keep-alive response received from slave
+[1765471997] <inf> device_mngr: Sending keep-alive request to slave
+[1765471997] <inf> device_mngr: Keep-alive response received from slave
+[1765471998] <inf> batt_monitor: Battery reading: 100%
+[1765471998] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472001] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472001] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472001] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472001] <inf> data_saver: Creating file '/root/heart_rate/1765472001_3_19'.
+[1765472001] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472001] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472001] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 15 bytes.
+[1765472001] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472027] <inf> device_mngr: Sending keep-alive request to slave
+[1765472027] <inf> device_mngr: Keep-alive response received from slave
+[1765472031] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472031] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472031] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472031] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 19 bytes.
+[1765472057] <inf> device_mngr: Sending keep-alive request to slave
+[1765472057] <inf> device_mngr: Keep-alive response received from slave
+[1765472058] <inf> batt_monitor: Battery reading: 100%
+[1765472058] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472087] <inf> device_mngr: Sending keep-alive request to slave
+[1765472087] <inf> device_mngr: Keep-alive response received from slave
+[1765472091] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472091] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472091] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472091] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 38 bytes.
+[1765472117] <inf> device_mngr: Sending keep-alive request to slave
+[1765472117] <inf> device_mngr: Keep-alive response received from slave
+[1765472118] <inf> batt_monitor: Battery reading: 100%
+[1765472118] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472122] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472122] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472122] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472122] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472122] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472122] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 57 bytes.
+[1765472122] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 30 bytes.
+[1765472122] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472147] <inf> device_mngr: Sending keep-alive request to slave
+[1765472147] <inf> device_mngr: Keep-alive response received from slave
+[1765472172] <inf> data_bridge: Data bridge data added to queue: 4
+[1765472172] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765472172] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472172] <inf> data_saver: Creating file '/root/activity/1765472172_190_30'.
+[1765472177] <inf> device_mngr: Sending keep-alive request to slave
+[1765472177] <inf> device_mngr: Keep-alive response received from slave
+[1765472178] <inf> batt_monitor: Battery reading: 100%
+[1765472178] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472182] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472182] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472182] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472182] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 45 bytes.
+[1765472207] <inf> device_mngr: Sending keep-alive request to slave
+[1765472207] <inf> device_mngr: Keep-alive response received from slave
+[1765472211] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472211] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472211] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472211] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 76 bytes.
+[1765472237] <inf> device_mngr: Sending keep-alive request to slave
+[1765472237] <inf> device_mngr: Keep-alive response received from slave
+[1765472238] <inf> batt_monitor: Battery reading: 100%
+[1765472238] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472242] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472242] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472242] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472242] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 60 bytes.
+[1765472267] <inf> device_mngr: Sending keep-alive request to slave
+[1765472267] <inf> device_mngr: Keep-alive response received from slave
+[1765472271] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472271] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472271] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472271] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 95 bytes.
+[1765472297] <inf> device_mngr: Sending keep-alive request to slave
+[1765472297] <inf> device_mngr: Keep-alive response received from slave
+[1765472298] <inf> batt_monitor: Battery reading: 100%
+[1765472298] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472302] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472302] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472302] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472302] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472302] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472302] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 114 bytes.
+[1765472302] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 75 bytes.
+[1765472302] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472327] <inf> device_mngr: Sending keep-alive request to slave
+[1765472327] <inf> device_mngr: Keep-alive response received from slave
+[1765472357] <inf> device_mngr: Sending keep-alive request to slave
+[1765472357] <inf> device_mngr: Keep-alive response received from slave
+[1765472358] <inf> batt_monitor: Battery reading: 100%
+[1765472358] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472362] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472362] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472362] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472362] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 90 bytes.
+[1765472387] <inf> device_mngr: Sending keep-alive request to slave
+[1765472387] <inf> device_mngr: Keep-alive response received from slave
+[1765472417] <inf> device_mngr: Sending keep-alive request to slave
+[1765472417] <inf> device_mngr: Keep-alive response received from slave
+[1765472418] <inf> batt_monitor: Battery reading: 100%
+[1765472418] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472422] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472422] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472422] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472422] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 133 bytes.
+[1765472447] <inf> device_mngr: Sending keep-alive request to slave
+[1765472447] <inf> device_mngr: Keep-alive response received from slave
+[1765472473] <inf> data_bridge: Data bridge data added to queue: 4
+[1765472473] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765472473] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472473] <inf> data_saver: Opening file '/root/activity/1765472172_190_30' with size 30 bytes.
+[1765472477] <inf> device_mngr: Sending keep-alive request to slave
+[1765472477] <inf> device_mngr: Keep-alive response received from slave
+[1765472478] <inf> batt_monitor: Battery reading: 100%
+[1765472478] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472507] <inf> device_mngr: Sending keep-alive request to slave
+[1765472507] <inf> device_mngr: Keep-alive response received from slave
+[1765472512] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472512] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472512] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472512] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 152 bytes.
+[1765472537] <inf> device_mngr: Sending keep-alive request to slave
+[1765472537] <inf> device_mngr: Keep-alive response received from slave
+[1765472538] <inf> batt_monitor: Battery reading: 100%
+[1765472538] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472543] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472543] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472543] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472543] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472543] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472543] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 171 bytes.
+[1765472543] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 105 bytes.
+[1765472543] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472567] <inf> device_mngr: Sending keep-alive request to slave
+[1765472567] <inf> device_mngr: Keep-alive response received from slave
+[1765472572] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472572] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472572] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472572] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 190 bytes.
+[1765472597] <inf> device_mngr: Sending keep-alive request to slave
+[1765472597] <inf> device_mngr: Keep-alive response received from slave
+[1765472598] <inf> batt_monitor: Battery reading: 100%
+[1765472598] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472603] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472603] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472603] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472603] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472603] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472603] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 209 bytes.
+[1765472603] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 120 bytes.
+[1765472603] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472627] <inf> device_mngr: Sending keep-alive request to slave
+[1765472627] <inf> device_mngr: Keep-alive response received from slave
+[1765472632] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472632] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472632] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472632] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 228 bytes.
+[1765472657] <inf> device_mngr: Sending keep-alive request to slave
+[1765472657] <inf> device_mngr: Keep-alive response received from slave
+[1765472658] <inf> batt_monitor: Battery reading: 100%
+[1765472658] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472663] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472663] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472663] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472663] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472663] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472663] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 247 bytes.
+[1765472663] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 135 bytes.
+[1765472663] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472687] <inf> device_mngr: Sending keep-alive request to slave
+[1765472687] <inf> device_mngr: Keep-alive response received from slave
+[1765472693] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472693] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472693] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472693] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 266 bytes.
+[1765472717] <inf> device_mngr: Sending keep-alive request to slave
+[1765472717] <inf> device_mngr: Keep-alive response received from slave
+[1765472718] <inf> batt_monitor: Battery reading: 100%
+[1765472718] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472723] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472723] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472723] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472723] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472723] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472723] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 285 bytes.
+[1765472723] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 150 bytes.
+[1765472723] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472747] <inf> device_mngr: Sending keep-alive request to slave
+[1765472747] <inf> device_mngr: Keep-alive response received from slave
+[1765472774] <inf> data_bridge: Data bridge data added to queue: 4
+[1765472774] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765472774] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472774] <inf> data_saver: Opening file '/root/activity/1765472172_190_30' with size 60 bytes.
+[1765472777] <inf> device_mngr: Sending keep-alive request to slave
+[1765472777] <inf> device_mngr: Keep-alive response received from slave
+[1765472778] <inf> batt_monitor: Battery reading: 100%
+[1765472778] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472783] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472783] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472783] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472783] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472783] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472783] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 304 bytes.
+[1765472783] <inf> data_saver: Opening file '/root/respiratory/1765471941_6_15' with size 165 bytes.
+[1765472783] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472807] <inf> device_mngr: Sending keep-alive request to slave
+[1765472807] <inf> device_mngr: Keep-alive response received from slave
+[1765472813] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472813] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472813] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472813] <inf> data_saver: Opening file '/root/heart_rate/1765472001_3_19' with size 323 bytes.
+[1765472822] <wrn> conn_mngr: CONN_MNGR_HSM_EVT_RECOVER_CONNECTION
+[1765472822] <inf> conn_mngr: Attempting to connect to best available stored WiFi network...
+[1765472822] <inf> wifi_interface: Found 1 stored WiFi network(s)
+[1765472822] <inf> wifi_interface:   Stored SSID[0]: teste1 
+[1765472822] <inf> wifi_nrf: Configuring SLEEP CTRL GPIO control register
+
+[1765472823] <inf> wifi_supplicant: Network interface 1 (0x20002f28) up
+[1765472825] <inf> wifi_interface: Num  | SSID                             (len) | Chan | RSSI | Security       | BSSID
+[1765472825] <inf> wifi_interface: 1    | SWORDHealth-Guest                17    | 6    | -46  | (1)WPA2-PSK    | 60:D0:2C:A8:C2:48
+[1765472825] <inf> wifi_interface: 2    | Office_Guest                     12    | 6    | -46  | (1)WPA2-PSK    | 60:D0:2C:68:C2:48
+[1765472825] <inf> wifi_interface: 3    | Office                           6     | 6    | -47  | (9)WPA-PSK     | 60:D0:2C:28:C2:48
+[1765472825] <inf> wifi_interface: 4    | Findster                         8     | 6    | -48  | (9)WPA-PSK     | 60:D0:2C:A8:C2:49
+[1765472825] <inf> wifi_interface: 5    | SWORDHealth-Clinical             20    | 6    | -48  | (1)WPA2-PSK    | 60:D0:2C:68:C2:49
+[1765472825] <inf> wifi_interface: 6    | SWORDHealth                      11    | 6    | -48  | (1)WPA2-PSK    | 60:D0:2C:28:C2:49
+[1765472825] <inf> wifi_interface: 7    | SWORDHealth-R&D                  15    | 6    | -48  | (1)WPA2-PSK    | 60:D0:2C:E8:C2:48
+[1765472825] <inf> wifi_interface: 8    | sword_printer                    13    | 6    | -49  | (1)WPA2-PSK    | 60:D0:2C:E8:C2:49
+[1765472825] <inf> wifi_interface: 9    | MOMAPORTO                        9     | 10   | -59  | (9)WPA-PSK     | D0:EF:C1:F8:44:94
+[1765472825] <inf> wifi_interface: 10   | SWORDHealth-Clinical             20    | 11   | -65  | (1)WPA2-PSK    | 60:D0:2C:68:BD:09
+[1765472825] <inf> wifi_interface: 11   | SWORDHealth-Guest                17    | 11   | -66  | (1)WPA2-PSK    | 60:D0:2C:A8:BD:08
+[1765472825] <inf> wifi_interface: 12   | Office_Guest                     12    | 11   | -66  | (1)WPA2-PSK    | 60:D0:2C:68:BD:08
+[1765472825] <inf> wifi_interface: 13   | Office                           6     | 11   | -66  | (9)WPA-PSK     | 60:D0:2C:28:BD:08
+[1765472825] <inf> wifi_interface: 14   | SWORDHealth                      11    | 11   | -67  | (1)WPA2-PSK    | 60:D0:2C:28:BD:09
+[1765472825] <inf> wifi_interface: 15   | SWORDHealth-R&D                  15    | 11   | -67  | (1)WPA2-PSK    | 60:D0:2C:E8:BD:08
+[1765472825] <inf> wifi_interface: 16   | teste1                           6     | 1    | -67  | (3)WPA3-SAE-HNP | B4:B0:24:DB:9B:27
+[1765472825] <inf> wifi_interface: 17   | sword_printer                    13    | 11   | -68  | (1)WPA2-PSK    | 60:D0:2C:E8:BD:09
+[1765472825] <inf> wifi_interface: 18   | Findster                         8     | 11   | -68  | (9)WPA-PSK     | 60:D0:2C:A8:BD:09
+[1765472825] <inf> wifi_interface: 19   |                                  0     | 1    | -69  | (1)WPA2-PSK    | D6:B0:24:DB:9B:27
+[1765472825] <inf> wifi_interface: 20   | MEO-WiFi                         8     | 11   | -70  | (0)OPEN        | 1C:57:3E:FB:6F:02
+[1765472825] <inf> wifi_interface: Scan request finished and has found: 20 networks
+[1765472825] <inf> wifi_interface: Wi-Fi scan finished!
+[1765472825] <inf> wifi_interface: WiFi scan found 12 network(s)
+[1765472825] <inf> wifi_interface: Found matching network: teste1 (RSSI: -67 dBm)
+[1765472825] <inf> wifi_interface: Connecting to best network: teste1 (RSSI: -67 dBm)
+[1765472825] <inf> wifi_interface: Connecting to SSID: teste1 (len: 6, security: 3, pass: 'qwertyui')
+[1765472828] <inf> wifi_interface: Wi-Fi connected!
+[1765472828] <inf> wifi_interface: DHCP IP address: 192.168.2.143
+[1765472828] <inf> wifi_interface: Network connectivity established
+[1765472828] <inf> sntp_client: SNTP initialized!
+[1765472828] <inf> calendar: DATE&TIME @ Thursday, December 11, 2025 17:07:08
+[1765472828] <inf> mqtt_lib: Connecting to AWS IoT
+[1765472831] <inf> mqtt_lib: AWS_IOT_EVT_CONNECTED
+[1765472831] <inf> data_bridge: Connection is up, go to Data Bridge connected state.
+[1765472831] <inf> conn_mngr: CONN_MNGR_HSM_EVT_GET_SHADOW!
+[1765472831] <inf> mqtt_lib: MQTT OUT  t=shadow len=0 msg_id=0
+[1765472831] <inf> conn_mngr: CONN_MNGR_HSM_EVT_GET_PENDING_JOBS!
+[1765472831] <inf> conn_mngr: Device with valid WiFi but not USB connected, skipping FOTA check
+[1765472832] <inf> mqtt_lib: MQTT  IN  t=$aws/things/05080101000008A7/shadow/get/accepted len=4156 msg_id=0
+[1765472832] <inf> mqtt_lib: Received shadow get accepted
+[1765472832] <inf> conn_mngr: Shadow: full
+[1765472832] <inf> conn_mngr_requests: (0xFFFFFFFF) -> CONNECTED
+[1765472832] <inf> conn_mngr_requests: 	 Last Comm: 1765472832
+[1765472832] <inf> conn_mngr_requests: 	 Rssi: -69dB
+[1765472832] <inf> conn_mngr_requests: 	 Batt Level: Discharging (100%)
+[1765472832] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/connection-status/05080101000008A7 len=191 msg_id=13
+[1765472832] <inf> mqtt_lib: MQTT ACK  msg_id: 13
+[1765472832] <inf> data_bridge: New offline data is available 4 file size 90
+[1765472832] <inf> data_bridge: No more data to fetch
+[1765472832] <inf> data_activity: Activity size to decode: 90
+[1765472832] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765472832] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765472832] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765472832] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1059 msg_id=14
+[1765472832] <inf> mqtt_lib: MQTT ACK  msg_id: 14
+[1765472832] <inf> data_activity: Activity size to decode: 0
+[1765472832] <inf> data_activity: No more Activity data to decode.
+[1765472832] <inf> data_bridge: Send complete successful
+[1765472832] <inf> data_bridge: send data
+[1765472832] <inf> data_bridge: Offline data sent successfully
+[1765472832] <inf> data_saver: Removed File '/root/activity/1765472172_190_30'.
+[1765472833] <inf> data_saver: No more data of type 4 to synch.
+[1765472833] <inf> data_bridge: New offline data is available 3 file size 180
+[1765472833] <inf> data_bridge: No more data to fetch
+[1765472833] <inf> data_respiratory: Respiratory size to decode: 180
+[1765472833] <inf> data_respiratory: Respiratory entry size: 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765472833] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765472833] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=15
+[1765472834] <inf> mqtt_lib: MQTT ACK  msg_id: 15
+[1765472834] <inf> data_respiratory: Respiratory size to decode: 30
+[1765472834] <inf> data_respiratory: Respiratory entry size: 15
+[1765472834] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765472834] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765472834] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=254 msg_id=16
+[1765472834] <inf> mqtt_lib: MQTT ACK  msg_id: 16
+[1765472834] <inf> data_respiratory: Respiratory size to decode: 0
+[1765472834] <inf> data_respiratory: No more Respiratory data to decode.
+[1765472834] <inf> data_bridge: Send complete successful
+[1765472834] <inf> data_bridge: send data
+[1765472834] <inf> data_bridge: Offline data sent successfully
+[1765472834] <inf> data_saver: Removed File '/root/respiratory/1765471941_6_15'.
+[1765472835] <inf> data_saver: No more data of type 4 to synch.
+[1765472835] <inf> data_saver: No more data of type 3 to synch.
+[1765472835] <inf> data_saver: No more data of type 5 to synch.
+[1765472835] <inf> data_bridge: New offline data is available 7 file size 342
+[1765472835] <inf> data_bridge: No more data to fetch
+[1765472835] <inf> data_heart_rate: Heart rate size to decode: 342
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765472835] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1095 msg_id=17
+[1765472835] <inf> mqtt_lib: MQTT ACK  msg_id: 17
+[1765472835] <inf> data_heart_rate: Heart rate size to decode: 152
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765472835] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765472835] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=892 msg_id=18
+[1765472835] <inf> mqtt_lib: MQTT ACK  msg_id: 18
+[1765472835] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765472835] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765472835] <inf> data_bridge: Send complete successful
+[1765472835] <inf> data_bridge: send data
+[1765472835] <inf> data_bridge: Offline data sent successfully
+[1765472835] <inf> data_saver: Removed File '/root/heart_rate/1765472001_3_19'.
+[1765472836] <inf> data_saver: No more data of type 4 to synch.
+[1765472836] <inf> data_saver: No more data of type 3 to synch.
+[1765472836] <inf> data_saver: No more data of type 5 to synch.
+[1765472836] <inf> data_saver: No more data of type 7 to synch.
+[1765472836] <inf> data_saver: No more data of type 2 to synch.
+[1765472836] <inf> data_saver: No more data to synch.
+[1765472836] <inf> data_bridge: Sync is complete!
+[1765472836] <inf> conn_mngr: All data synced!
+[1765472836] <inf> conn_mngr: Data sync complete on battery. Disconnecting WiFi to save power.
+[1765472836] <inf> mqtt_lib: AWS_IOT_EVT_DISCONNECTED
+[1765472836] <inf> conn_mngr: MQTT disconnected (intentional), error -> 10
+[1765472836] <inf> wifi_interface: Disconnection Result done (0), reason: 0
+[1765472836] <inf> conn_mngr: Wi-Fi disconnected (intentional), reason -> 4
+[1765472836] <inf> wifi_interface: Network connectivity lost
+[1765472836] <inf> wifi_supplicant: Network interface 1 (0x20002f28) down
+[1765472836] <inf> conn_mngr: Starting recover timer: 900 seconds.
+[1765472836] <wrn> data_bridge: Connection is down, go to Data Bridge disconnected state.
+[1765472837] <inf> device_mngr: Sending keep-alive request to slave
+[1765472837] <inf> device_mngr: Keep-alive response received from slave
+[1765472838] <inf> batt_monitor: Battery reading: 100%
+[1765472838] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472843] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472843] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472843] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472843] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472843] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472843] <inf> data_saver: Creating file '/root/heart_rate/1765472843_3_19'.
+[1765472843] <inf> data_saver: Creating file '/root/respiratory/1765472843_6_15'.
+[1765472843] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472867] <inf> device_mngr: Sending keep-alive request to slave
+[1765472867] <inf> device_mngr: Keep-alive response received from slave
+[1765472873] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472873] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472873] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472873] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 19 bytes.
+[1765472897] <inf> device_mngr: Sending keep-alive request to slave
+[1765472897] <inf> device_mngr: Keep-alive response received from slave
+[1765472898] <inf> batt_monitor: Battery reading: 100%
+[1765472898] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472903] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472903] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472903] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472903] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472903] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472903] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 38 bytes.
+[1765472903] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 15 bytes.
+[1765472903] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472927] <inf> device_mngr: Sending keep-alive request to slave
+[1765472927] <inf> device_mngr: Keep-alive response received from slave
+[1765472933] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472933] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472933] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472933] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 57 bytes.
+[1765472957] <inf> device_mngr: Sending keep-alive request to slave
+[1765472957] <inf> device_mngr: Keep-alive response received from slave
+[1765472958] <inf> batt_monitor: Battery reading: 100%
+[1765472958] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765472964] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472964] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472964] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472964] <inf> data_bridge: Data bridge data added to queue: 3
+[1765472964] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765472964] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 76 bytes.
+[1765472964] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 30 bytes.
+[1765472964] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472987] <inf> device_mngr: Sending keep-alive request to slave
+[1765472987] <inf> device_mngr: Keep-alive response received from slave
+[1765472993] <inf> data_bridge: Data bridge data added to queue: 7
+[1765472993] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765472993] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765472993] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 95 bytes.
+[1765473017] <inf> device_mngr: Sending keep-alive request to slave
+[1765473017] <inf> device_mngr: Keep-alive response received from slave
+[1765473018] <inf> batt_monitor: Battery reading: 100%
+[1765473018] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473024] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473024] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473024] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473024] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 114 bytes.
+[1765473024] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473024] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473024] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 45 bytes.
+[1765473024] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473047] <inf> device_mngr: Sending keep-alive request to slave
+[1765473047] <inf> device_mngr: Keep-alive response received from slave
+[1765473053] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473053] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473053] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473053] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 133 bytes.
+[1765473074] <inf> data_bridge: Data bridge data added to queue: 4
+[1765473074] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765473074] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473074] <inf> data_saver: Creating file '/root/activity/1765473074_190_30'.
+[1765473077] <inf> device_mngr: Sending keep-alive request to slave
+[1765473077] <inf> device_mngr: Keep-alive response received from slave
+[1765473078] <inf> batt_monitor: Battery reading: 100%
+[1765473078] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473084] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473084] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473084] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473084] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473084] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473084] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 152 bytes.
+[1765473084] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 60 bytes.
+[1765473084] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473107] <inf> device_mngr: Sending keep-alive request to slave
+[1765473107] <inf> device_mngr: Keep-alive response received from slave
+[1765473113] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473113] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473113] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473113] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 171 bytes.
+[1765473137] <inf> device_mngr: Sending keep-alive request to slave
+[1765473137] <inf> device_mngr: Keep-alive response received from slave
+[1765473138] <inf> batt_monitor: Battery reading: 100%
+[1765473138] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473144] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473144] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473144] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473144] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473144] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473144] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 190 bytes.
+[1765473144] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 75 bytes.
+[1765473144] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473167] <inf> device_mngr: Sending keep-alive request to slave
+[1765473167] <inf> device_mngr: Keep-alive response received from slave
+[1765473173] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473173] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473173] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473173] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 209 bytes.
+[1765473197] <inf> device_mngr: Sending keep-alive request to slave
+[1765473197] <inf> device_mngr: Keep-alive response received from slave
+[1765473198] <inf> batt_monitor: Battery reading: 100%
+[1765473198] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473204] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473204] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473204] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473204] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 90 bytes.
+[1765473227] <inf> device_mngr: Sending keep-alive request to slave
+[1765473227] <inf> device_mngr: Keep-alive response received from slave
+[1765473234] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473234] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473234] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473234] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 228 bytes.
+[1765473257] <inf> device_mngr: Sending keep-alive request to slave
+[1765473257] <inf> device_mngr: Keep-alive response received from slave
+[1765473258] <inf> batt_monitor: Battery reading: 100%
+[1765473258] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473264] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473264] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473264] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473264] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473264] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473264] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 247 bytes.
+[1765473264] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 105 bytes.
+[1765473264] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473287] <inf> device_mngr: Sending keep-alive request to slave
+[1765473287] <inf> device_mngr: Keep-alive response received from slave
+[1765473294] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473294] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473294] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473294] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 266 bytes.
+[1765473317] <inf> device_mngr: Sending keep-alive request to slave
+[1765473317] <inf> device_mngr: Keep-alive response received from slave
+[1765473318] <inf> batt_monitor: Battery reading: 100%
+[1765473318] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473324] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473324] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473324] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473324] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473324] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473324] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 285 bytes.
+[1765473324] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 120 bytes.
+[1765473324] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473347] <inf> device_mngr: Sending keep-alive request to slave
+[1765473347] <inf> device_mngr: Keep-alive response received from slave
+[1765473375] <inf> data_bridge: Data bridge data added to queue: 4
+[1765473375] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765473375] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473375] <inf> data_saver: Opening file '/root/activity/1765473074_190_30' with size 30 bytes.
+[1765473377] <inf> device_mngr: Sending keep-alive request to slave
+[1765473377] <inf> device_mngr: Keep-alive response received from slave
+[1765473378] <inf> batt_monitor: Battery reading: 100%
+[1765473378] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473384] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473384] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473384] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473384] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473384] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473384] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 304 bytes.
+[1765473385] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 135 bytes.
+[1765473385] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473407] <inf> device_mngr: Sending keep-alive request to slave
+[1765473407] <inf> device_mngr: Keep-alive response received from slave
+[1765473414] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473414] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473414] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473414] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 323 bytes.
+[1765473437] <inf> device_mngr: Sending keep-alive request to slave
+[1765473437] <inf> device_mngr: Keep-alive response received from slave
+[1765473438] <inf> batt_monitor: Battery reading: 100%
+[1765473438] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473444] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473444] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473444] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473444] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473444] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473444] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 342 bytes.
+[1765473444] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 150 bytes.
+[1765473444] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473467] <inf> device_mngr: Sending keep-alive request to slave
+[1765473467] <inf> device_mngr: Keep-alive response received from slave
+[1765473474] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473474] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473474] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473474] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 361 bytes.
+[1765473497] <inf> device_mngr: Sending keep-alive request to slave
+[1765473497] <inf> device_mngr: Keep-alive response received from slave
+[1765473498] <inf> batt_monitor: Battery reading: 100%
+[1765473498] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473505] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473505] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473505] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473505] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473505] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473505] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 380 bytes.
+[1765473505] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 165 bytes.
+[1765473505] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473527] <inf> device_mngr: Sending keep-alive request to slave
+[1765473527] <inf> device_mngr: Keep-alive response received from slave
+[1765473534] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473534] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473534] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473534] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 399 bytes.
+[1765473557] <inf> device_mngr: Sending keep-alive request to slave
+[1765473557] <inf> device_mngr: Keep-alive response received from slave
+[1765473558] <inf> batt_monitor: Battery reading: 100%
+[1765473558] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473565] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473565] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473565] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473565] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473565] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473565] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 418 bytes.
+[1765473565] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 180 bytes.
+[1765473565] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473587] <inf> device_mngr: Sending keep-alive request to slave
+[1765473587] <inf> device_mngr: Keep-alive response received from slave
+[1765473595] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473595] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473595] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473595] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 437 bytes.
+[1765473617] <inf> device_mngr: Sending keep-alive request to slave
+[1765473617] <inf> device_mngr: Keep-alive response received from slave
+[1765473618] <inf> batt_monitor: Battery reading: 100%
+[1765473618] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473625] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473625] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473625] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473625] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473625] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473625] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 456 bytes.
+[1765473625] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 195 bytes.
+[1765473625] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473647] <inf> device_mngr: Sending keep-alive request to slave
+[1765473647] <inf> device_mngr: Keep-alive response received from slave
+[1765473655] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473655] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473655] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473655] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 475 bytes.
+[1765473674] <inf> thread_analyzer: Thread analyze:
+[1765473674] <inf> thread_analyzer:  mvn_data_bridge     : STACK: unused 1912 usage 2184 / 4096 (53 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 88589647
+[1765473674] <inf> thread_analyzer:  mvn_ipc_protocol    : STACK: unused 1320 usage 728 / 2048 (35 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 3750729
+[1765473674] <inf> thread_analyzer:  mvn_connection_manager: STACK: unused 2960 usage 5232 / 8192 (63 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 535757325
+[1765473674] <inf> thread_analyzer:  downloader          : STACK: unused 3896 usage 200 / 4096 (4 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 650
+[1765473674] <inf> thread_analyzer:  mvn_slave_fota      : STACK: unused 3872 usage 224 / 4096 (5 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 688
+[1765473674] <inf> thread_analyzer:  mvn_setup           : STACK: unused 1384 usage 664 / 2048 (32 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 61102
+[1765473674] <inf> thread_analyzer:  mvn_power_mngr      : STACK: unused 800 usage 224 / 1024 (21 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 977
+[1765473674] <inf> thread_analyzer:  mvn_batt_monitor    : STACK: unused 376 usage 648 / 1024 (63 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 596961
+[1765473674] <inf> thread_analyzer:  mbox_wq #0          : STACK: unused 644 usage 380 / 1024 (37 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 134940
+[1765473674] <inf> thread_analyzer:  BT RX WQ            : STACK: unused 808 usage 216 / 1024 (21 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 574
+[1765473674] <inf> thread_analyzer:  mvn_troubleshoot    : STACK: unused 1824 usage 224 / 2048 (10 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 812
+[1765473674] <inf> thread_analyzer:  thread_analyzer     : STACK: unused 424 usage 600 / 1024 (58 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 603393
+[1765473674] <inf> thread_analyzer:  mqtt_helper_thread  : STACK: unused 2616 usage 1992 / 4608 (43 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 14612131
+[1765473674] <inf> thread_analyzer:  0x200064c0          : STACK: unused 824 usage 4296 / 5120 (83 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 138930
+[1765473674] <inf> thread_analyzer:  conn_mgr_monitor    : STACK: unused 296 usage 216 / 512 (42 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 50501
+[1765473674] <inf> thread_analyzer:  0x200065c0          : STACK: unused 1016 usage 5128 / 6144 (83 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 699636250
+[1765473674] <inf> thread_analyzer:  net_socket_service  : STACK: unused 456 usage 744 / 1200 (62 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 260304
+[1765473674] <inf> thread_analyzer:  rx_q[0]             : STACK: unused 1144 usage 904 / 2048 (44 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 4842852
+[1765473674] <inf> thread_analyzer:  tx_q[0]             : STACK: unused 1320 usage 728 / 2048 (35 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 13981930
+[1765473674] <inf> thread_analyzer:  net_mgmt            : STACK: unused 1152 usage 4480 / 5632 (79 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 1650355
+[1765473674] <inf> thread_analyzer:  tcp_work            : STACK: unused 440 usage 584 / 1024 (57 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 758580
+[1765473674] <inf> thread_analyzer:  BT LW WQ            : STACK: unused 648 usage 1152 / 1800 (64 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 79114
+[1765473674] <inf> thread_analyzer:  sysworkq            : STACK: unused 2296 usage 776 / 3072 (25 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 4756487
+[1765473674] <inf> thread_analyzer:  nrf70_intr_wq       : STACK: unused 1416 usage 632 / 2048 (30 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 49653081
+[1765473674] <inf> thread_analyzer:  nrf70_bh_wq         : STACK: unused 832 usage 1216 / 2048 (59 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 21435411
+[1765473674] <inf> thread_analyzer:  logging             : STACK: unused 1360 usage 688 / 2048 (33 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 18715423
+[1765473674] <inf> thread_analyzer:  idle                : STACK: unused 208 usage 112 / 320 (35 %); CPU: 99 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 228299123457
+[1765473674] <inf> thread_analyzer:  main                : STACK: unused 744 usage 1304 / 2048 (63 %); CPU: 0 %
+[1765473674] <inf> thread_analyzer:                      : Total CPU cycles used: 7465240
+[1765473674] <inf> thread_analyzer:  ISR0                : STACK: unused 1104 usage 944 / 2048 (46 %)
+[1765473676] <inf> data_bridge: Data bridge data added to queue: 4
+[1765473676] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 0
+[1765473676] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473676] <inf> data_saver: Opening file '/root/activity/1765473074_190_30' with size 60 bytes.
+[1765473677] <inf> device_mngr: Sending keep-alive request to slave
+[1765473677] <inf> device_mngr: Keep-alive response received from slave
+[1765473678] <inf> batt_monitor: Battery reading: 100%
+[1765473678] <inf> batt_monitor: * New Battery Average: 100% ... Current Battery Average: 100% *
+[1765473685] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473685] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473685] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473685] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473685] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473685] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 494 bytes.
+[1765473685] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 210 bytes.
+[1765473685] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473707] <inf> device_mngr: Sending keep-alive request to slave
+[1765473707] <inf> device_mngr: Keep-alive response received from slave
+[1765473715] <inf> data_bridge: Data bridge data added to queue: 7
+[1765473715] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 4
+[1765473715] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473715] <inf> data_saver: Opening file '/root/heart_rate/1765472843_3_19' with size 513 bytes.
+[1765473736] <wrn> conn_mngr: CONN_MNGR_HSM_EVT_RECOVER_CONNECTION
+[1765473736] <inf> conn_mngr: Attempting to connect to best available stored WiFi network...
+[1765473736] <inf> wifi_interface: Found 1 stored WiFi network(s)
+[1765473736] <inf> wifi_interface:   Stored SSID[0]: teste1 
+[1765473736] <inf> wifi_nrf: Configuring SLEEP CTRL GPIO control register
+
+[1765473737] <inf> wifi_supplicant: Network interface 1 (0x20002f28) up
+[1765473737] <inf> device_mngr: Sending keep-alive request to slave
+[1765473737] <inf> device_mngr: Keep-alive response received from slave
+[1765473738] <wrn> batt_monitor: skip reading battery level in periodic mode and conn status is 2
+[1765473739] <inf> wifi_interface: Num  | SSID                             (len) | Chan | RSSI | Security       | BSSID
+[1765473739] <inf> wifi_interface: 1    | DIRECT-09-HP M140 LaserJet       26    | 6    | -41  | (1)WPA2-PSK    | 6E:0B:5E:96:FE:09
+[1765473739] <inf> wifi_interface: 2    | SWORDHealth-Guest                17    | 6    | -52  | (1)WPA2-PSK    | 60:D0:2C:A8:C2:48
+[1765473739] <inf> wifi_interface: 3    | sword_printer                    13    | 6    | -53  | (1)WPA2-PSK    | 60:D0:2C:E8:C2:49
+[1765473739] <inf> wifi_interface: 4    | Findster                         8     | 6    | -53  | (9)WPA-PSK     | 60:D0:2C:A8:C2:49
+[1765473739] <inf> wifi_interface: 5    | SWORDHealth-Clinical             20    | 6    | -54  | (1)WPA2-PSK    | 60:D0:2C:68:C2:49
+[1765473739] <inf> wifi_interface: 6    | SWORDHealth                      11    | 6    | -54  | (1)WPA2-PSK    | 60:D0:2C:28:C2:49
+[1765473739] <inf> wifi_interface: 7    | SWORDHealth-R&D                  15    | 6    | -54  | (1)WPA2-PSK    | 60:D0:2C:E8:C2:48
+[1765473739] <inf> wifi_interface: 8    | Office                           6     | 6    | -54  | (9)WPA-PSK     | 60:D0:2C:28:C2:48
+[1765473739] <inf> wifi_interface: 9    | Office_Guest                     12    | 6    | -54  | (1)WPA2-PSK    | 60:D0:2C:68:C2:48
+[1765473739] <inf> wifi_interface: 10   | MOMAPORTO                        9     | 10   | -60  | (9)WPA-PSK     | D0:EF:C1:F8:44:94
+[1765473739] <inf> wifi_interface: 11   | SWORDHealth                      11    | 11   | -65  | (1)WPA2-PSK    | 60:D0:2C:28:BD:09
+[1765473739] <inf> wifi_interface: 12   | SWORDHealth-Guest                17    | 11   | -66  | (1)WPA2-PSK    | 60:D0:2C:A8:BD:08
+[1765473739] <inf> wifi_interface: 13   | Office                           6     | 11   | -67  | (9)WPA-PSK     | 60:D0:2C:28:BD:08
+[1765473739] <inf> wifi_interface: 14   | SWORDHealth-R&D                  15    | 11   | -67  | (1)WPA2-PSK    | 60:D0:2C:E8:BD:08
+[1765473739] <inf> wifi_interface: 15   | teste1                           6     | 1    | -67  | (3)WPA3-SAE-HNP | B4:B0:24:DB:9B:27
+[1765473739] <inf> wifi_interface: 16   | Office_Guest                     12    | 11   | -68  | (1)WPA2-PSK    | 60:D0:2C:68:BD:08
+[1765473739] <inf> wifi_interface: 17   | MEO-FB6F00                       10    | 11   | -71  | (1)WPA2-PSK    | 1C:57:3E:FB:6F:00
+[1765473739] <inf> wifi_interface: 18   | Chocolataria Equador             20    | 1    | -72  | (1)WPA2-PSK    | CC:19:A8:4C:AC:00
+[1765473739] <inf> wifi_interface: 19   | SWORDHealth-Clinical             20    | 11   | -75  | (1)WPA2-PSK    | 44:1E:98:53:94:09
+[1765473739] <inf> wifi_interface: 20   | Office                           6     | 11   | -76  | (9)WPA-PSK     | 44:1E:98:13:94:08
+[1765473739] <inf> wifi_interface: Scan request finished and has found: 20 networks
+[1765473739] <inf> wifi_interface: Wi-Fi scan finished!
+[1765473739] <inf> wifi_interface: WiFi scan found 13 network(s)
+[1765473739] <inf> wifi_interface: Found matching network: teste1 (RSSI: -67 dBm)
+[1765473739] <inf> wifi_interface: Connecting to best network: teste1 (RSSI: -67 dBm)
+[1765473739] <inf> wifi_interface: Connecting to SSID: teste1 (len: 6, security: 3, pass: 'qwertyui')
+[1765473742] <inf> wifi_interface: Wi-Fi connected!
+[1765473742] <inf> wifi_interface: DHCP IP address: 192.168.2.143
+[1765473742] <inf> wifi_interface: Network connectivity established
+[1765473742] <inf> sntp_client: SNTP initialized!
+[1765473742] <inf> calendar: DATE&TIME @ Thursday, December 11, 2025 17:22:22
+[1765473742] <inf> mqtt_lib: Connecting to AWS IoT
+[1765473745] <inf> data_bridge: Data bridge data added to queue: 3
+[1765473745] <inf> data_bridge: Data Bridge Success Hshake to cmd_id 2
+[1765473745] <inf> data_bridge: DATA_EVT_DATA_BRIDGE_DATA_RECEIVED processed on root
+[1765473745] <inf> data_saver: Opening file '/root/respiratory/1765472843_6_15' with size 225 bytes.
+[1765473746] <inf> mqtt_lib: AWS_IOT_EVT_CONNECTED
+[1765473746] <inf> data_bridge: Connection is up, go to Data Bridge connected state.
+[1765473746] <inf> conn_mngr: CONN_MNGR_HSM_EVT_GET_SHADOW!
+[1765473746] <inf> mqtt_lib: MQTT OUT  t=shadow len=0 msg_id=0
+[1765473746] <inf> conn_mngr: CONN_MNGR_HSM_EVT_GET_PENDING_JOBS!
+[1765473746] <inf> conn_mngr: Device with valid WiFi but not USB connected, skipping FOTA check
+[1765473746] <inf> mqtt_lib: MQTT  IN  t=$aws/things/05080101000008A7/shadow/get/accepted len=4156 msg_id=0
+[1765473746] <inf> mqtt_lib: Received shadow get accepted
+[1765473746] <inf> conn_mngr: Shadow: full
+[1765473746] <inf> conn_mngr_requests: (0xFFFFFFFF) -> CONNECTED
+[1765473746] <inf> conn_mngr_requests: 	 Last Comm: 1765473746
+[1765473746] <inf> conn_mngr_requests: 	 Rssi: -69dB
+[1765473746] <inf> conn_mngr_requests: 	 Batt Level: Discharging (100%)
+[1765473746] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/connection-status/05080101000008A7 len=191 msg_id=19
+[1765473746] <inf> mqtt_lib: MQTT ACK  msg_id: 19
+[1765473747] <inf> data_bridge: New offline data is available 4 file size 90
+[1765473747] <inf> data_bridge: No more data to fetch
+[1765473747] <inf> data_activity: Activity size to decode: 90
+[1765473747] <inf> data_activity: Decode Activity entry 0 of size 30
+[1765473747] <inf> data_activity: Decode Activity entry 1 of size 30
+[1765473747] <inf> data_activity: Decode Activity entry 2 of size 30
+[1765473747] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/telemetry/05080101000008A7 len=1059 msg_id=20
+[1765473747] <inf> mqtt_lib: MQTT ACK  msg_id: 20
+[1765473747] <inf> data_activity: Activity size to decode: 0
+[1765473747] <inf> data_activity: No more Activity data to decode.
+[1765473747] <inf> data_bridge: Send complete successful
+[1765473747] <inf> data_bridge: send data
+[1765473747] <inf> data_bridge: Offline data sent successfully
+[1765473747] <inf> data_saver: Removed File '/root/activity/1765473074_190_30'.
+[1765473748] <inf> data_saver: No more data of type 4 to synch.
+[1765473748] <inf> data_bridge: New offline data is available 3 file size 240
+[1765473748] <inf> data_bridge: No more data to fetch
+[1765473748] <inf> data_respiratory: Respiratory size to decode: 240
+[1765473748] <inf> data_respiratory: Respiratory entry size: 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 6 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 7 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 8 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 9 of size 15
+[1765473748] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1094 msg_id=21
+[1765473748] <inf> mqtt_lib: MQTT ACK  msg_id: 21
+[1765473748] <inf> data_respiratory: Respiratory size to decode: 90
+[1765473748] <inf> data_respiratory: Respiratory entry size: 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 0 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 1 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 2 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 3 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 4 of size 15
+[1765473748] <inf> data_respiratory: Decode Respiratory entry 5 of size 15
+[1765473748] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=674 msg_id=22
+[1765473748] <inf> mqtt_lib: MQTT ACK  msg_id: 22
+[1765473748] <inf> data_respiratory: Respiratory size to decode: 0
+[1765473748] <inf> data_respiratory: No more Respiratory data to decode.
+[1765473748] <inf> data_bridge: Send complete successful
+[1765473748] <inf> data_bridge: send data
+[1765473748] <inf> data_bridge: Offline data sent successfully
+[1765473748] <inf> data_saver: Removed File '/root/respiratory/1765472843_6_15'.
+[1765473749] <inf> data_saver: No more data of type 4 to synch.
+[1765473749] <inf> data_saver: No more data of type 3 to synch.
+[1765473749] <inf> data_saver: No more data of type 5 to synch.
+[1765473749] <inf> data_bridge: New offline data is available 7 file size 532
+[1765473749] <inf> data_bridge: No more data to fetch
+[1765473749] <inf> data_heart_rate: Heart rate size to decode: 532
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765473749] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=23
+[1765473749] <inf> mqtt_lib: MQTT ACK  msg_id: 23
+[1765473749] <inf> data_heart_rate: Heart rate size to decode: 342
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 8 of size 19
+[1765473749] <inf> data_heart_rate: Decode heart rate entry 9 of size 19
+[1765473749] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=1104 msg_id=24
+[1765473750] <inf> mqtt_lib: MQTT ACK  msg_id: 24
+[1765473750] <inf> data_heart_rate: Heart rate size to decode: 152
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 0 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 1 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 2 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 3 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 4 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 5 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 6 of size 19
+[1765473750] <inf> data_heart_rate: Decode heart rate entry 7 of size 19
+[1765473750] <inf> mqtt_lib: MQTT OUT  t=iotmqtt/vital-signs/05080101000008A7 len=891 msg_id=25
+[1765473750] <inf> mqtt_lib: MQTT ACK  msg_id: 25
+[1765473750] <inf> data_heart_rate: Heart rate size to decode: 0
+[1765473750] <inf> data_heart_rate: No more Heart rate data to decode.
+[1765473750] <inf> data_bridge: Send complete successful
+[1765473750] <inf> data_bridge: send data
+[1765473750] <inf> data_bridge: Offline data sent successfully
+[1765473750] <inf> data_saver: Removed File '/root/heart_rate/1765472843_3_19'.
+[1765473751] <inf> data_saver: No more data of type 4 to synch.
+[1765473751] <inf> data_saver: No more data of type 3 to synch.
+[1765473751] <inf> data_saver: No more data of type 5 to synch.
+[1765473751] <inf> data_saver: No more data of type 7 to synch.
+[1765473751] <inf> data_saver: No more data of type 2 to synch.
+[1765473751] <inf> data_saver: No more data to synch.
+[1765473751] <inf> data_bridge: Sync is complete!
+[1765473751] <inf> conn_mngr: All data synced!
+[1765473751] <inf> conn_mngr: Data sync complete on battery. Disconnecting WiFi to save power.
+[1765473751] <inf> mqtt_lib: AWS_IOT_EVT_DISCONNECTED
+[1765473751] <inf> conn_mngr: MQTT disconnected (intentional), error -> 10
+[1765473751] <inf> wifi_interface: Disconnection Result done (0), reason: 0
+[1765473751] <inf> conn_mngr: Wi-Fi disconnected (intentional), reason -> 4
+[1765473751] <inf> wifi_interface: Network connectivity lost
+[1765473751] <inf> wifi_supplicant: Network interface 1 (0x20002f28) down
+[1765473751] <inf> conn_mngr: Starting recover timer: 900 seconds.
+[1765473751] <wrn> data_bridge: Connection is down, go to Data Bridge disconnected state.
+[1765473767] <inf> device_mngr: Sending keep-alive request to slave
+[1765473767] <inf> device_mngr: Keep-alive response received from slave
