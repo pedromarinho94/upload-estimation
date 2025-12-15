@@ -69,6 +69,20 @@ export default function App() {
         battery: { label: 'Battery', syncIntervalHours: 0.25, icon: '🔋', description: '15 min intervals' }
     };
 
+    // Battery & Power Constants (from battery_tests.md)
+    const BATTERY_CAPACITY_MAH = 270;
+    const IDLE_CURRENT_MA = 1.55;
+
+    // Online Mode (15 min interval = 900s)
+    const ONLINE_CYCLE_S = 900;
+    const ONLINE_ACTIVE_S = 15.88;
+    const ONLINE_ACTIVE_MA = 26.00;
+
+    // Offline Mode (5 min interval = 300s)
+    const OFFLINE_CYCLE_S = 300;
+    const OFFLINE_ACTIVE_S = 4.21;
+    const OFFLINE_ACTIVE_MA = 42.13;
+
     // State
     const [days, setDays] = useState(2);
     const [networkLevel, setNetworkLevel] = useState('good');
@@ -76,6 +90,7 @@ export default function App() {
     const [petType, setPetType] = useState('dog');
     const [powerMode, setPowerMode] = useState('charging');
     const [offBodyPercent, setOffBodyPercent] = useState(10);
+    const [hoursOnline, setHoursOnline] = useState(24); // Default to always online
     const [enabledDataTypes, setEnabledDataTypes] = useState({
         activity: true,
         respiratory: true,
@@ -90,6 +105,8 @@ export default function App() {
         dataHours: 0,
         storageKB: 0,
         syncCycles: 0,
+        batteryLifeDays: 0,
+        batteryLifeHours: 0,
         breakdown: {}
     });
 
@@ -159,6 +176,24 @@ export default function App() {
         const overheadSeconds = syncCycles * CONNECTION_OVERHEAD_SECONDS;
         const uploadSeconds = baseUploadSeconds + overheadSeconds;
 
+        // --- Battery Life Calculation ---
+        // 1. Calculate weighted average current
+        const hoursOffline = 24 - hoursOnline;
+
+        // Online Avg Current (over 15 min cycle)
+        // I_online_avg = (I_active * t_active + I_idle * (T - t_active)) / T
+        const avgCurrentOnline = (ONLINE_ACTIVE_MA * ONLINE_ACTIVE_S + IDLE_CURRENT_MA * (ONLINE_CYCLE_S - ONLINE_ACTIVE_S)) / ONLINE_CYCLE_S;
+
+        // Offline Avg Current (over 5 min cycle)
+        const avgCurrentOffline = (OFFLINE_ACTIVE_MA * OFFLINE_ACTIVE_S + IDLE_CURRENT_MA * (OFFLINE_CYCLE_S - OFFLINE_ACTIVE_S)) / OFFLINE_CYCLE_S;
+
+        // Daily Weighted Average
+        const dailyAvgCurrent = (avgCurrentOnline * hoursOnline + avgCurrentOffline * hoursOffline) / 24;
+
+        // Battery Life = Capacity / I_avg
+        const batteryLifeHoursTotal = BATTERY_CAPACITY_MAH / dailyAvgCurrent;
+        const batteryLifeDays = batteryLifeHoursTotal / 24;
+
         // Round all values to avoid floating-point precision display issues
         setResults({
             totalFiles: Math.round(totalFiles),
@@ -168,9 +203,11 @@ export default function App() {
             dataHours: Math.round(hours * 100) / 100,  // 2 decimal places
             storageKB: Math.round(storageKB * 100) / 100,
             syncCycles: Math.round(syncCycles),
+            batteryLifeDays: Math.round(batteryLifeDays * 10) / 10,
+            batteryLifeHours: Math.round(batteryLifeHoursTotal),
             breakdown
         });
-    }, [days, networkLevel, activityLevel, petType, powerMode, offBodyPercent, enabledDataTypes]);
+    }, [days, networkLevel, activityLevel, petType, powerMode, offBodyPercent, enabledDataTypes, hoursOnline]);
 
     const formatTime = (seconds) => {
         if (seconds < 60) return `${seconds}s`;
@@ -356,6 +393,50 @@ export default function App() {
                                         <div className="text-sm font-medium">{label}</div>
                                     </button>
                                 ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Battery Life Section */}
+                    <div className="mb-8 p-6 bg-green-50 rounded-xl border border-green-200">
+                        <div className="flex items-center gap-2 mb-4">
+                            <Battery className="w-6 h-6 text-green-600" />
+                            <h2 className="text-xl font-bold text-green-800">Battery Life Estimator</h2>
+                        </div>
+
+                        <div className="mb-6">
+                            <label className="flex items-center justify-between text-gray-700 font-medium mb-2">
+                                <span>Daily WiFi Availability</span>
+                                <span className="text-sm bg-white px-2 py-1 rounded border">
+                                    {hoursOnline}h Online / {24 - hoursOnline}h Offline
+                                </span>
+                            </label>
+                            <input
+                                type="range"
+                                min="0"
+                                max="24"
+                                step="1"
+                                value={hoursOnline}
+                                onChange={(e) => setHoursOnline(parseInt(e.target.value))}
+                                className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+                            />
+                            <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>Always Offline</span>
+                                <span>Always Online</span>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center justify-between bg-white bg-opacity-60 p-4 rounded-lg">
+                            <div>
+                                <div className="text-sm text-gray-600 mb-1">Estimated Battery Life</div>
+                                <div className="text-3xl font-bold text-green-700">
+                                    {results.batteryLifeDays} Days <span className="text-lg font-normal text-gray-500">({results.batteryLifeHours} hours)</span>
+                                </div>
+                            </div>
+                            <div className="text-right text-xs text-gray-500">
+                                <div>Capacity: {BATTERY_CAPACITY_MAH} mAh</div>
+                                <div>Online Cycle: 15 min</div>
+                                <div>Offline Cycle: 5 min</div>
                             </div>
                         </div>
                     </div>
