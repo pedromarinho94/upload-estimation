@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Clock, Database, Wifi, Calendar, Battery, Zap, Activity, Heart, Dog, Cat, Settings, Edit2 } from 'lucide-react';
+import { Clock, Database, Wifi, Calendar, Battery, Zap, Activity, Heart, Dog, Settings, Edit2 } from 'lucide-react';
 
 export default function App() {
     // File size from Kconfig: DATA_SAVER_MAX_FILE_SIZE = 1024 bytes
@@ -27,11 +27,6 @@ export default function App() {
         veryActive: { label: 'Very Active', multiplier: 1.8, icon: '⚡' }
     };
 
-    const petTypes = {
-        dog: { label: 'Dog', activityMultiplier: 1.0, icon: '🐕' },
-        cat: { label: 'Cat', activityMultiplier: 0.7, icon: '🐱' }
-    };
-
     const powerModes = {
         charging: { label: 'Charging', syncIntervalHours: 0, icon: '🔌', description: 'Continuous sync' },
         battery: { label: 'Battery', syncIntervalHours: 0.25, icon: '🔋', description: '15 min intervals' }
@@ -44,7 +39,7 @@ export default function App() {
     const [days, setDays] = useState(2);
     const [networkLevel, setNetworkLevel] = useState('good');
     const [activityLevel, setActivityLevel] = useState('normal');
-    const [petType, setPetType] = useState('dog');
+    // Removed petType state, defaulting to Dog logic (multiplier 1.0)
     const [powerMode, setPowerMode] = useState('charging');
     const [offBodyPercent, setOffBodyPercent] = useState(10);
     const [enabledDataTypes, setEnabledDataTypes] = useState({
@@ -84,7 +79,7 @@ export default function App() {
     useEffect(() => {
         const hours = days * 24;
         const activityMult = activityLevels[activityLevel].multiplier;
-        const petMult = petTypes[petType].activityMultiplier;
+        // const petMult = petTypes[petType].activityMultiplier; // Removed, always 1.0 for Dog
         const onBodyPercent = (100 - offBodyPercent) / 100;
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
 
@@ -97,7 +92,7 @@ export default function App() {
                 return;
             }
             let rate = config.baseRate;
-            if (config.activityScales) rate *= activityMult * petMult;
+            if (config.activityScales) rate *= activityMult; // Removed petMult
             if (config.sleepBoost) rate = rate * 0.67 + (rate * config.sleepBoost) * 0.33;
 
             let files = Math.round(rate * hours * (type === 'activity' ? 1 : onBodyPercent));
@@ -121,7 +116,7 @@ export default function App() {
             syncCycles,
             breakdown
         });
-    }, [days, networkLevel, activityLevel, petType, powerMode, offBodyPercent, enabledDataTypes]);
+    }, [days, networkLevel, activityLevel, powerMode, offBodyPercent, enabledDataTypes]);
 
     // 2. Calculate Battery Life
     useEffect(() => {
@@ -227,19 +222,8 @@ export default function App() {
 
                             {/* Right Column: Key Settings */}
                             <div className="space-y-4">
-                                <div>
-                                    <label className="text-sm font-medium text-gray-700">Pet Profile</label>
-                                    <div className="flex gap-2 mt-1">
-                                        {Object.entries(petTypes).map(([type, config]) => (
-                                            <button
-                                                key={type} onClick={() => setPetType(type)}
-                                                className={`flex-1 p-2 border rounded-md text-sm ${petType === type ? 'bg-indigo-600 text-white' : 'bg-white text-gray-600'}`}
-                                            >
-                                                {config.icon} {config.label}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
+                                {/* Pet Profile Removed */}
+
                                 <div>
                                     <label className="text-sm font-medium text-gray-700">Network Speed</label>
                                     <div className="flex gap-2 mt-1">
@@ -399,10 +383,7 @@ export default function App() {
                                         <span>Activity Multiplier:</span>
                                         <span className="font-mono">{activityLevels[activityLevel].multiplier}x</span>
                                     </li>
-                                    <li className="flex justify-between">
-                                        <span>Pet Multiplier:</span>
-                                        <span className="font-mono">{petTypes[petType].activityMultiplier}x</span>
-                                    </li>
+                                    {/* Removed Pet Multiplier from details */}
                                     <li className="flex justify-between pt-2 border-t border-gray-200">
                                         <span>Connection Overhead:</span>
                                         <span className="font-mono">5s / cycle</span>
