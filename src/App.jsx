@@ -6,12 +6,13 @@ export default function App() {
     const FILE_SIZE_BYTES = 1024;
 
     // Per-data-type file rates (only used in Upload Calculator)
+    // Updated to Bytes Per Hour based on Log Analysis
     const dataTypeConfigs = {
-        activity: { label: 'Activity', icon: '🏃', baseRate: 1.0, activityScales: true, color: 'bg-blue-500' },
-        respiratory: { label: 'Respiratory', icon: '🫁', baseRate: 0.29, sleepBoost: 1.5, color: 'bg-green-500' },
-        behaviors: { label: 'Behaviors', icon: '🐕', baseRate: 0.29, activityScales: true, color: 'bg-yellow-500' },
-        heartRate: { label: 'Heart Rate', icon: '❤️', baseRate: 0.71, sleepBoost: 1.5, color: 'bg-red-500' },
-        notifications: { label: 'Notifications', icon: '🔔', baseRate: 0.07, color: 'bg-purple-500' }
+        activity: { label: 'Activity', icon: '🏃', bytesPerHour: 480, activityScales: true, color: 'bg-blue-500' },
+        respiratory: { label: 'Respiratory', icon: '🫁', bytesPerHour: 855, isRespiratory: true, color: 'bg-green-500' },
+        behaviors: { label: 'Behaviors', icon: '🐕', bytesPerHour: 200, activityScales: true, color: 'bg-yellow-500' },
+        heartRate: { label: 'Heart Rate', icon: '❤️', bytesPerHour: 500, color: 'bg-red-500' },
+        notifications: { label: 'Notifications', icon: '🔔', bytesPerHour: 50, color: 'bg-purple-500' }
     };
 
     // Simplified Network Levels (Good & Poor only)
@@ -76,41 +77,70 @@ export default function App() {
     // --- Effects ---
 
     // 1. Calculate Upload Stats
+    // 1. Calculate Upload Stats
     useEffect(() => {
         const hours = days * 24;
         const activityMult = activityLevels[activityLevel].multiplier;
-        // const petMult = petTypes[petType].activityMultiplier; // Removed, always 1.0 for Dog
-        const onBodyPercent = (100 - offBodyPercent) / 100;
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
+        // Firmware Limitation/Bug: Overhead is per FILE, not per sync. 
+        // We assume valid packing (ideal state) but file overhead is significant.
+        const fileOverheadSeconds = 0.5;
 
         const breakdown = {};
-        let totalFiles = 0;
+        let totalBytes = 0;
+
+        // Inverse Logic: High Activity SUPPRESSES Respiratory Data
+        let respiratoryFactor = 1.0;
+        if (activityLevel === 'active') respiratoryFactor = 0.5;
+        if (activityLevel === 'veryActive') respiratoryFactor = 0.1;
 
         Object.entries(dataTypeConfigs).forEach(([type, config]) => {
             if (!enabledDataTypes[type]) {
-                breakdown[type] = { files: 0, seconds: 0 };
+                breakdown[type] = { files: 0, seconds: 0, bytes: 0 };
                 return;
             }
-            let rate = config.baseRate;
-            if (config.activityScales) rate *= activityMult; // Removed petMult
-            if (config.sleepBoost) rate = rate * 0.67 + (rate * config.sleepBoost) * 0.33;
 
-            let files = Math.round(rate * hours * (type === 'activity' ? 1 : onBodyPercent));
-            const uploadTime = Math.round(files * secondsPerFile);
-            breakdown[type] = { files, seconds: uploadTime };
-            totalFiles += files;
+            let typeBytesPerHour = config.bytesPerHour;
+
+            // Apply Multipliers
+            if (config.activityScales) typeBytesPerHour *= activityMult;
+            if (config.isRespiratory) typeBytesPerHour *= respiratoryFactor;
+
+            const totalTypeBytes = Math.round(typeBytesPerHour * hours);
+            totalBytes += totalTypeBytes;
+
+            breakdown[type] = {
+                bytes: totalTypeBytes,
+                // Proportional estimates for UI visualization only
+                files: 0,
+                seconds: 0
+            };
+        });
+
+        // "Byte Packing" Model: The device packs data into 1024-byte chunks
+        const totalFiles = Math.ceil(totalBytes / FILE_SIZE_BYTES);
+
+        // Recalculate breakdown "files" purely for visual weighting
+        Object.keys(breakdown).forEach(type => {
+            if (totalBytes > 0) {
+                const ratio = breakdown[type].bytes / totalBytes;
+                breakdown[type].files = ratio * totalFiles; // Virtual fractional file count
+                breakdown[type].seconds = (ratio * totalFiles) * (secondsPerFile + fileOverheadSeconds);
+            }
         });
 
         const baseUploadSeconds = Math.round(totalFiles * secondsPerFile);
-        const storageKB = Math.round((totalFiles * FILE_SIZE_BYTES) / 1024);
+        const fileOverheadTotal = Math.round(totalFiles * fileOverheadSeconds);
+        const storageKB = Math.round(totalBytes / 1024);
+
         const syncCycles = powerMode === 'battery' ? Math.ceil(hours / 0.25) : 1;
-        const overheadSeconds = syncCycles * 5; // 5s connection overhead
+        const connectionOverhead = syncCycles * 5; // 5s WiFi connection overhead
 
         setResults({
             totalFiles,
-            uploadSeconds: baseUploadSeconds + overheadSeconds,
+            uploadSeconds: baseUploadSeconds + fileOverheadTotal + connectionOverhead,
             baseUploadSeconds,
-            overheadSeconds,
+            overheadSeconds: connectionOverhead + fileOverheadTotal,
             dataHours: hours,
             storageKB,
             syncCycles,
@@ -172,8 +202,8 @@ export default function App() {
                         <button
                             onClick={() => setActiveTab('upload')}
                             className={`pb-4 px-2 font-medium border-b-2 transition-colors ${activeTab === 'upload'
-                                    ? 'border-indigo-600 text-indigo-600'
-                                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                                ? 'border-indigo-600 text-indigo-600'
+                                : 'border-transparent text-gray-500 hover:text-gray-700'
                                 }`}
                         >
                             <span className="flex items-center gap-2"><Wifi className="w-4 h-4" /> Upload Calculator</span>
@@ -181,8 +211,8 @@ export default function App() {
                         <button
                             onClick={() => setActiveTab('battery')}
                             className={`pb-4 px-2 font-medium border-b-2 transition-colors ${activeTab === 'battery'
-                                    ? 'border-green-600 text-green-600'
-                                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                                ? 'border-green-600 text-green-600'
+                                : 'border-transparent text-gray-500 hover:text-gray-700'
                                 }`}
                         >
                             <span className="flex items-center gap-2"><Battery className="w-4 h-4" /> Battery Life</span>
@@ -352,7 +382,7 @@ export default function App() {
                                                 <div className="flex justify-between text-xs mb-1">
                                                     <span className="font-medium text-gray-600">{config.icon} {config.label}</span>
                                                     <span className="text-gray-500">
-                                                        {data.files} files ({formatTime(data.seconds)})
+                                                        {Math.round(data.bytes / 1024)} KB ({formatTime(data.seconds)})
                                                     </span>
                                                 </div>
                                                 <div className="w-full bg-gray-200 rounded-full h-1.5">
@@ -385,8 +415,11 @@ export default function App() {
                                     </li>
                                     {/* Removed Pet Multiplier from details */}
                                     <li className="flex justify-between pt-2 border-t border-gray-200">
-                                        <span>Connection Overhead:</span>
-                                        <span className="font-mono">5s / cycle</span>
+                                        <span>Total Overhead:</span>
+                                        <span className="font-mono">{formatTime(results.overheadSeconds)}</span>
+                                    </li>
+                                    <li className="text-xs text-indigo-800 mt-2 bg-indigo-100 p-2 rounded">
+                                        <strong>Note:</strong> Estimation now uses "Byte Packing" and decreases Respiratory data during high activity.
                                     </li>
                                 </ul>
                             </div>

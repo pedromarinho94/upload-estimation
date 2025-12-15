@@ -117,3 +117,16 @@ Battery life (hours):
 | :--- | :--- | :--- | :--- |
 | 15 min | 1.55 mA | 15.88 s @ 26.00 mA | Window when we are in range of our wifi network and we are able to sync the sensor data every 15 minutes |
 | 5 min | 1.55 mA | 4.214 s @ 42.13 mA | Window where we are out of range of our wifi network and we try to find it on our 3 scan attempts, without success, every 5 minutes |
+
+---
+
+# 16/12/2025 Tests
+
+*(Master FW: dfc03f16, Slave FW: c67df4b1)*
+
+### New Calculations
+
+| Interval | Idle Current | WiFi driver on window | Notes |
+| :--- | :--- | :--- | :--- |
+| 15 min | 1.52 mA | 16.51 s @ 25.52 mA | Window when we are in range of our wifi network and we are able to sync the sensor data every 15 minutes |
+| 5 min | 1.52 mA | 4.071 s @ 42.26 mA | Window where we are out of range of our wifi network and we try to find it on our 3 scan attempts, without success, every 5 minutes |
