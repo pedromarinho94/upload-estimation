@@ -21,13 +21,6 @@ export default function App() {
         poor: { label: 'Poor', secondsPerFile: 4.7, icon: '🐌' }
     };
 
-    const activityLevels = {
-        low: { label: 'Low', multiplier: 0.6, icon: '😴' },
-        normal: { label: 'Normal', multiplier: 1.0, icon: '🐕' },
-        active: { label: 'Active', multiplier: 1.4, icon: '🏃' },
-        veryActive: { label: 'Very Active', multiplier: 1.8, icon: '⚡' }
-    };
-
     const powerModes = {
         charging: { label: 'Charging', syncIntervalHours: 0, icon: '🔌', description: 'Continuous sync' },
         battery: { label: 'Battery', syncIntervalHours: 0.25, icon: '🔋', description: '15 min intervals' }
@@ -39,7 +32,6 @@ export default function App() {
     // Upload Calculator State
     const [days, setDays] = useState(2);
     const [networkLevel, setNetworkLevel] = useState('good');
-    const [activityLevel, setActivityLevel] = useState('normal');
     // Removed petType state, defaulting to Dog logic (multiplier 1.0)
     const [powerMode, setPowerMode] = useState('charging');
     const [offBodyPercent, setOffBodyPercent] = useState(10);
@@ -119,7 +111,7 @@ export default function App() {
             const totalTypeBytes = Math.round(typeBytesPerHour * hours);
             totalBytes += totalTypeBytes;
 
-            // Firmware Reality: 
+            // Firmware Reality:
             // 1. Data Saver saves PER TYPE (separate files).
             // 2. Device resets every ~1 hour when offline, forcing a NEW file for each type.
             // Therefore, files = Max(Hours, Bytes/1024), not just Bytes/1024.
@@ -150,6 +142,7 @@ export default function App() {
 
         setResults({
             totalFiles: calculatedTotalFiles,
+            totalBytes,
             uploadSeconds: baseUploadSeconds + fileOverheadTotal + connectionOverhead,
             baseUploadSeconds,
             overheadSeconds: connectionOverhead + fileOverheadTotal,
@@ -158,7 +151,7 @@ export default function App() {
             syncCycles,
             breakdown
         });
-    }, [days, networkLevel, activityLevel, powerMode, offBodyPercent, enabledDataTypes]);
+    }, [days, networkLevel, powerMode, offBodyPercent, enabledDataTypes]);
 
     // 2. Calculate Battery Life
     useEffect(() => {
@@ -190,9 +183,9 @@ export default function App() {
 
 
     const formatTime = (seconds) => {
-        if (seconds < 60) return `${seconds}s`;
+        if (seconds < 60) return `${Math.round(seconds)}s`;
         const mins = Math.floor(seconds / 60);
-        const secs = seconds % 60;
+        const secs = Math.round(seconds % 60);
         if (mins < 60) return `${mins}m ${secs}s`;
         const hours = Math.floor(mins / 60);
         const remainMins = mins % 60;
@@ -207,7 +200,7 @@ export default function App() {
                 <div className="bg-white rounded-t-2xl shadow-sm border-b p-6 pb-0">
                     <div className="flex items-center gap-3 mb-6">
                         <Database className="w-8 h-8 text-indigo-600" />
-                        <h1 className="text-2xl font-bold text-gray-900">Device Estimator</h1>
+                        <h1 className="text-2xl font-bold text-gray-900">Maven Smart Collar Simulation</h1>
                     </div>
 
                     <div className="flex gap-6">
@@ -218,7 +211,7 @@ export default function App() {
                                 : 'border-transparent text-gray-500 hover:text-gray-700'
                                 }`}
                         >
-                            <span className="flex items-center gap-2"><Wifi className="w-4 h-4" /> Upload Calculator</span>
+                            <span className="flex items-center gap-2"><Wifi className="w-4 h-4" /> Data Upload</span>
                         </button>
                         <button
                             onClick={() => setActiveTab('battery')}
@@ -325,27 +318,6 @@ export default function App() {
                                     onChange={(e) => setOffBodyPercent(parseInt(e.target.value))}
                                     className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-indigo-600" />
                             </div>
-                            <div>
-                                <div className="flex justify-between mb-2">
-                                    <label className="font-medium text-gray-700">Activity Level</label>
-                                    <span className="text-indigo-600 font-bold">{activityLevels[activityLevel].label} ({activityLevels[activityLevel].multiplier}x)</span>
-                                </div>
-                                <div className="flex gap-2">
-                                    {Object.entries(activityLevels).map(([key, { label, icon }]) => (
-                                        <button
-                                            key={key}
-                                            onClick={() => setActivityLevel(key)}
-                                            className={`flex-1 p-2 border rounded-md text-sm transition-all ${activityLevel === key
-                                                ? 'bg-indigo-600 text-white shadow-md'
-                                                : 'bg-white text-gray-600 hover:bg-gray-50'
-                                                }`}
-                                        >
-                                            <div className="text-lg">{icon}</div>
-                                            <div className="text-xs">{label}</div>
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
                         </div>
 
                         {/* Results */}
@@ -384,9 +356,10 @@ export default function App() {
                                 <h3 className="font-semibold text-gray-700 mb-3 text-sm">Breakdown by Data Type</h3>
                                 <div className="space-y-3">
                                     {Object.entries(dataTypeConfigs).map(([type, config]) => {
-                                        const data = results.breakdown[type] || { files: 0, seconds: 0 };
-                                        const widthPercent = results.totalFiles > 0
-                                            ? (data.files / results.totalFiles) * 100
+                                        const data = results.breakdown[type] || { files: 0, seconds: 0, bytes: 0 };
+                                        // Use BYTES for visual weight so bars respond to off-body changes
+                                        const widthPercent = results.totalBytes > 0
+                                            ? (data.bytes / results.totalBytes) * 100
                                             : 0;
 
                                         return (
@@ -421,17 +394,13 @@ export default function App() {
                                         <span>Network Speed:</span>
                                         <span className="font-mono">{networkLevels[networkLevel].secondsPerFile}s / file</span>
                                     </li>
-                                    <li className="flex justify-between">
-                                        <span>Activity Multiplier:</span>
-                                        <span className="font-mono">{activityLevels[activityLevel].multiplier}x</span>
-                                    </li>
                                     {/* Removed Pet Multiplier from details */}
                                     <li className="flex justify-between pt-2 border-t border-gray-200">
                                         <span>Total Overhead:</span>
                                         <span className="font-mono">{formatTime(results.overheadSeconds)}</span>
                                     </li>
                                     <li className="text-xs text-indigo-800 mt-2 bg-indigo-100 p-2 rounded">
-                                        <strong>Note:</strong> Estimation now uses "Byte Packing" and decreases Respiratory data during high activity.
+                                        <strong>Note:</strong> Estimation now uses "Byte Packing" and accounts for off-body algorithm shutdown.
                                     </li>
                                 </ul>
                             </div>
