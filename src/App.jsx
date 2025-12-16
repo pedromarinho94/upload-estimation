@@ -114,21 +114,22 @@ export default function App() {
 
             // Firmware Reality:
             // 1. Data Saver saves PER TYPE (separate files).
-            // 2. Continuous types (Activity, HeartRate) reset every hour -> New File.
-            // 3. Sparse types (Respiratory, Behaviors) only create files when data accumulates.
+            // 2. Device resets every ~1 hour when offline, forcing a NEW file for each type.
+            // Therefore, files = Max(Hours, Bytes/1024), not just Bytes/1024.
+            // We assume at least 1 file per hour if there is data.
+            // If Off-Body, no data is generated -> no files created for that period.
             let typeFiles = 0;
             if (totalTypeBytes > 0) {
                 const sizeBasedFiles = Math.ceil(totalTypeBytes / FILE_SIZE_BYTES);
 
-                let timeBasedFiles;
-                if (config.isContinuous) {
-                    // Continuous types force a file rotation every hour
-                    timeBasedFiles = Math.ceil(hours);
-                } else {
-                    // Sparse types rotate less frequently (approx every 4 hours based on logs)
-                    timeBasedFiles = Math.ceil(hours * 0.25);
+                // Required Files is based on ACTIVE hours, not total hours.
+                // If off-body 50% of the time, we only have 12 hours of data generation = 12 files.
+                let activeHours = hours;
+                if (['behaviors', 'respiratory', 'heartRate'].includes(type)) {
+                    activeHours = hours * onBodyFactor;
                 }
 
+                const timeBasedFiles = Math.ceil(activeHours);
                 typeFiles = Math.max(sizeBasedFiles, timeBasedFiles);
             }
 
@@ -243,9 +244,15 @@ export default function App() {
                 {activeTab === 'upload' && (
                     <div className="bg-white rounded-b-2xl shadow-xl p-6 md:p-8 animate-in fade-in zoom-in duration-300">
                         {/* Reference Data */}
-                        <div className="bg-indigo-50 rounded-lg p-4 mb-6 text-sm text-indigo-800 flex gap-6">
-                            <span><strong>Reference Log (14h offline):</strong> 33 files total (14 Act, 4 Resp, 4 Beh, 10 HR, 1 Notif)</span>
-                            <span><strong>Avg Upload:</strong> 1.88s/file (Good Network)</span>
+                        <div className="bg-indigo-50 rounded-lg p-4 mb-6 text-sm text-indigo-800 flex flex-col gap-2">
+                            <div className="flex gap-6">
+                                <span><strong>Reference Log 1 (14h, ~70% Off-Body):</strong> 33 files (14 Act, 4 Resp, 4 Beh, 10 HR, 1 Notif)</span>
+                                <span><strong>Time:</strong> ~62s (1.88s/file)</span>
+                            </div>
+                            <div className="flex gap-6 border-t border-indigo-200 pt-2">
+                                <span><strong>Reference Log 2 (15m Periodic):</strong> 3 files/sync (1 Act, 1 Resp, 1 HR)</span>
+                                <span><strong>Time:</strong> ~5s (1.67s/file)</span>
+                            </div>
                         </div>
 
                         {/* Top Controls Grid */}

@@ -85,7 +85,7 @@ Battery life (hours):
 
 | Pet | Battery Life (hours) | Battery Life (days) |
 | :--- | :--- | :--- |
-| Zesty | >168 h | >7 d |
+| Zesty | 174 h | >7 d |
 
 ---
 
