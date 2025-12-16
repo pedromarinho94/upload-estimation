@@ -6,13 +6,13 @@ export default function App() {
     const FILE_SIZE_BYTES = 1024;
 
     // Per-data-type file rates (only used in Upload Calculator)
-    // Updated to Bytes Per Hour based on Log Analysis
+    // Updated to Bytes Per Hour based on Log Analysis (14h log)
     const dataTypeConfigs = {
-        activity: { label: 'Activity', icon: '🏃', bytesPerHour: 480, color: 'bg-blue-500' },
-        respiratory: { label: 'Respiratory', icon: '🫁', bytesPerHour: 855, color: 'bg-green-500' },
-        behaviors: { label: 'Behaviors', icon: '🐕', bytesPerHour: 200, color: 'bg-yellow-500' },
-        heartRate: { label: 'Heart Rate', icon: '❤️', bytesPerHour: 500, color: 'bg-red-500' },
-        notifications: { label: 'Notifications', icon: '🔔', bytesPerHour: 50, color: 'bg-purple-500' }
+        activity: { label: 'Activity', icon: '🏃', bytesPerHour: 380, color: 'bg-blue-500', isContinuous: true },
+        respiratory: { label: 'Respiratory', icon: '🫁', bytesPerHour: 105, color: 'bg-green-500', isContinuous: false },
+        behaviors: { label: 'Behaviors', icon: '🐕', bytesPerHour: 25, color: 'bg-yellow-500', isContinuous: false },
+        heartRate: { label: 'Heart Rate', icon: '❤️', bytesPerHour: 600, color: 'bg-red-500', isContinuous: true },
+        notifications: { label: 'Notifications', icon: '🔔', bytesPerHour: 5, color: 'bg-purple-500', isContinuous: false }
     };
 
     // Simplified Network Levels (Good & Poor only)
@@ -80,7 +80,8 @@ export default function App() {
 
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
         // Firmware Limitation: Overhead is per FILE.
-        const fileOverheadSeconds = 0.5;
+        // Log analysis showed 1.88s/file captures all overheads.
+        const fileOverheadSeconds = 0;
 
         // Firmware Reality: Off-Body suppresses specific algorithms
         const onBodyFactor = 1.0 - (offBodyPercent / 100.0);
@@ -113,13 +114,21 @@ export default function App() {
 
             // Firmware Reality:
             // 1. Data Saver saves PER TYPE (separate files).
-            // 2. Device resets every ~1 hour when offline, forcing a NEW file for each type.
-            // Therefore, files = Max(Hours, Bytes/1024), not just Bytes/1024.
-            // We assume at least 1 file per hour if there is data.
+            // 2. Continuous types (Activity, HeartRate) reset every hour -> New File.
+            // 3. Sparse types (Respiratory, Behaviors) only create files when data accumulates.
             let typeFiles = 0;
             if (totalTypeBytes > 0) {
                 const sizeBasedFiles = Math.ceil(totalTypeBytes / FILE_SIZE_BYTES);
-                const timeBasedFiles = Math.ceil(hours); // 1 reset per hour
+
+                let timeBasedFiles;
+                if (config.isContinuous) {
+                    // Continuous types force a file rotation every hour
+                    timeBasedFiles = Math.ceil(hours);
+                } else {
+                    // Sparse types rotate less frequently (approx every 4 hours based on logs)
+                    timeBasedFiles = Math.ceil(hours * 0.25);
+                }
+
                 typeFiles = Math.max(sizeBasedFiles, timeBasedFiles);
             }
 
@@ -132,20 +141,25 @@ export default function App() {
             };
         });
 
+        // 1.88s/file already includes the connect/ack overheads averaged out.
+        // We do not add extra overheads to match the observed 62s / 33files.
         const baseUploadSeconds = Math.round(calculatedTotalFiles * secondsPerFile);
-        const fileOverheadTotal = Math.round(calculatedTotalFiles * fileOverheadSeconds);
+        const fileOverheadTotal = 0;
         const storageKB = Math.round(totalBytes / 1024);
 
         const syncCycles = powerMode === 'battery' ? Math.ceil(hours / 0.25) : 1;
-        // Connection overhead: connecting to wifi
-        const connectionOverhead = syncCycles * 5;
+
+        // Connection Overhead Logic:
+        // 1. Charging (Continuous): Device stays active, overhead is negligible (0s).
+        // 2. Battery (Periodic): Device connects every cycle. Log shows ~10s setup time (Scan->MQTT).
+        const connectionOverhead = powerMode === 'battery' ? syncCycles * 10 : 0;
 
         setResults({
             totalFiles: calculatedTotalFiles,
             totalBytes,
-            uploadSeconds: baseUploadSeconds + fileOverheadTotal + connectionOverhead,
+            uploadSeconds: baseUploadSeconds + connectionOverhead,
             baseUploadSeconds,
-            overheadSeconds: connectionOverhead + fileOverheadTotal,
+            overheadSeconds: connectionOverhead,
             dataHours: hours,
             storageKB,
             syncCycles,
@@ -400,7 +414,7 @@ export default function App() {
                                         <span className="font-mono">{formatTime(results.overheadSeconds)}</span>
                                     </li>
                                     <li className="text-xs text-indigo-800 mt-2 bg-indigo-100 p-2 rounded">
-                                        <strong>Note:</strong> Estimation now uses "Byte Packing" and accounts for off-body algorithm shutdown.
+                                        <strong>Note:</strong> Estimation uses "Byte Packing" and comprehensive per-file timing (1.88s) that includes overheads.
                                     </li>
                                 </ul>
                             </div>
