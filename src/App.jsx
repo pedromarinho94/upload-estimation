@@ -8,9 +8,9 @@ export default function App() {
     // Per-data-type file rates (only used in Upload Calculator)
     // Updated to Bytes Per Hour based on Log Analysis
     const dataTypeConfigs = {
-        activity: { label: 'Activity', icon: '🏃', bytesPerHour: 480, activityScales: true, color: 'bg-blue-500' },
-        respiratory: { label: 'Respiratory', icon: '🫁', bytesPerHour: 855, isRespiratory: true, color: 'bg-green-500' },
-        behaviors: { label: 'Behaviors', icon: '🐕', bytesPerHour: 200, activityScales: true, color: 'bg-yellow-500' },
+        activity: { label: 'Activity', icon: '🏃', bytesPerHour: 480, color: 'bg-blue-500' },
+        respiratory: { label: 'Respiratory', icon: '🫁', bytesPerHour: 855, color: 'bg-green-500' },
+        behaviors: { label: 'Behaviors', icon: '🐕', bytesPerHour: 200, color: 'bg-yellow-500' },
         heartRate: { label: 'Heart Rate', icon: '❤️', bytesPerHour: 500, color: 'bg-red-500' },
         notifications: { label: 'Notifications', icon: '🔔', bytesPerHour: 50, color: 'bg-purple-500' }
     };
@@ -48,15 +48,16 @@ export default function App() {
     });
 
     // Battery Estimator State (Configurable Inputs)
+    // Updated defaults based on 16/12/2025 Benchmarks
     const [batteryCapacity, setBatteryCapacity] = useState(270);
-    const [idleCurrent, setIdleCurrent] = useState(1.55);
+    const [idleCurrent, setIdleCurrent] = useState(1.52);
 
-    const [onlineActiveMa, setOnlineActiveMa] = useState(26.00);
-    const [onlineActiveS, setOnlineActiveS] = useState(15.88);
+    const [onlineActiveMa, setOnlineActiveMa] = useState(25.52);
+    const [onlineActiveS, setOnlineActiveS] = useState(16.51);
     const [onlineIntervalS, setOnlineIntervalS] = useState(900); // 15 min
 
-    const [offlineActiveMa, setOfflineActiveMa] = useState(42.13);
-    const [offlineActiveS, setOfflineActiveS] = useState(4.21);
+    const [offlineActiveMa, setOfflineActiveMa] = useState(42.26);
+    const [offlineActiveS, setOfflineActiveS] = useState(4.07);
     const [offlineIntervalS, setOfflineIntervalS] = useState(300); // 5 min
 
     const [hoursOnline, setHoursOnline] = useState(24);
@@ -80,19 +81,22 @@ export default function App() {
     // 1. Calculate Upload Stats
     useEffect(() => {
         const hours = days * 24;
-        const activityMult = activityLevels[activityLevel].multiplier;
+
+        // Firmware Reality: Activity packet size is fixed regardless of movement intensity.
+        // We remove the multiplier logic (or set to 1.0) to match fixed struct size.
+        const activityMult = 1.0;
+
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
-        // Firmware Limitation/Bug: Overhead is per FILE, not per sync. 
-        // We assume valid packing (ideal state) but file overhead is significant.
+        // Firmware Limitation: Overhead is per FILE.
         const fileOverheadSeconds = 0.5;
 
-        const breakdown = {};
-        let totalBytes = 0;
+        // Firmware Reality: Off-Body suppresses specific algorithms
+        const onBodyFactor = 1.0 - (offBodyPercent / 100.0);
 
-        // Inverse Logic: High Activity SUPPRESSES Respiratory Data
-        let respiratoryFactor = 1.0;
-        if (activityLevel === 'active') respiratoryFactor = 0.5;
-        if (activityLevel === 'veryActive') respiratoryFactor = 0.1;
+        let totalBytes = 0;
+        let calculatedTotalFiles = 0;
+
+        const breakdown = {};
 
         Object.entries(dataTypeConfigs).forEach(([type, config]) => {
             if (!enabledDataTypes[type]) {
@@ -102,42 +106,50 @@ export default function App() {
 
             let typeBytesPerHour = config.bytesPerHour;
 
-            // Apply Multipliers
-            if (config.activityScales) typeBytesPerHour *= activityMult;
-            if (config.isRespiratory) typeBytesPerHour *= respiratoryFactor;
+            // Apply Specific Logic per Type
+            if (type === 'activity') {
+                // Activity runs even off-body (usually 100%) but bytes are constant
+                typeBytesPerHour *= activityMult;
+            } else if (['behaviors', 'respiratory', 'heartRate'].includes(type)) {
+                // These algorithms stop when off-body
+                typeBytesPerHour *= onBodyFactor;
+            }
+            // Notifications (type='notifications') are independent of body status
 
             const totalTypeBytes = Math.round(typeBytesPerHour * hours);
             totalBytes += totalTypeBytes;
 
+            // Firmware Reality: 
+            // 1. Data Saver saves PER TYPE (separate files).
+            // 2. Device resets every ~1 hour when offline, forcing a NEW file for each type.
+            // Therefore, files = Max(Hours, Bytes/1024), not just Bytes/1024.
+            // We assume at least 1 file per hour if there is data.
+            let typeFiles = 0;
+            if (totalTypeBytes > 0) {
+                const sizeBasedFiles = Math.ceil(totalTypeBytes / FILE_SIZE_BYTES);
+                const timeBasedFiles = Math.ceil(hours); // 1 reset per hour
+                typeFiles = Math.max(sizeBasedFiles, timeBasedFiles);
+            }
+
+            calculatedTotalFiles += typeFiles;
+
             breakdown[type] = {
                 bytes: totalTypeBytes,
-                // Proportional estimates for UI visualization only
-                files: 0,
-                seconds: 0
+                files: typeFiles,
+                seconds: typeFiles * (secondsPerFile + fileOverheadSeconds)
             };
         });
 
-        // "Byte Packing" Model: The device packs data into 1024-byte chunks
-        const totalFiles = Math.ceil(totalBytes / FILE_SIZE_BYTES);
-
-        // Recalculate breakdown "files" purely for visual weighting
-        Object.keys(breakdown).forEach(type => {
-            if (totalBytes > 0) {
-                const ratio = breakdown[type].bytes / totalBytes;
-                breakdown[type].files = ratio * totalFiles; // Virtual fractional file count
-                breakdown[type].seconds = (ratio * totalFiles) * (secondsPerFile + fileOverheadSeconds);
-            }
-        });
-
-        const baseUploadSeconds = Math.round(totalFiles * secondsPerFile);
-        const fileOverheadTotal = Math.round(totalFiles * fileOverheadSeconds);
+        const baseUploadSeconds = Math.round(calculatedTotalFiles * secondsPerFile);
+        const fileOverheadTotal = Math.round(calculatedTotalFiles * fileOverheadSeconds);
         const storageKB = Math.round(totalBytes / 1024);
 
         const syncCycles = powerMode === 'battery' ? Math.ceil(hours / 0.25) : 1;
-        const connectionOverhead = syncCycles * 5; // 5s WiFi connection overhead
+        // Connection overhead: connecting to wifi
+        const connectionOverhead = syncCycles * 5;
 
         setResults({
-            totalFiles,
+            totalFiles: calculatedTotalFiles,
             uploadSeconds: baseUploadSeconds + fileOverheadTotal + connectionOverhead,
             baseUploadSeconds,
             overheadSeconds: connectionOverhead + fileOverheadTotal,
