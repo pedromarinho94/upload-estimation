@@ -17,8 +17,8 @@ export default function App() {
 
     // Simplified Network Levels (Good & Poor only)
     const networkLevels = {
-        good: { label: 'Good', secondsPerFile: 1.88, icon: '✅' },
-        poor: { label: 'Poor', secondsPerFile: 4.7, icon: '🐌' }
+        good: { label: 'Good', secondsPerFile: 1.7, icon: '✅' },
+        poor: { label: 'Poor', secondsPerFile: 3.4, icon: '🐌' }
     };
 
     const powerModes = {
@@ -80,7 +80,7 @@ export default function App() {
 
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
         // Firmware Limitation: Overhead is per FILE.
-        // Log analysis showed 1.88s/file captures all overheads.
+        // Log analysis showed 1.7s/file captures all overheads.
         const fileOverheadSeconds = 0;
 
         // Firmware Reality: Off-Body suppresses specific algorithms
@@ -142,7 +142,7 @@ export default function App() {
             };
         });
 
-        // 1.88s/file already includes the connect/ack overheads averaged out.
+        // 1.7s/file already includes the connect/ack overheads averaged out.
         // We do not add extra overheads to match the observed 62s / 33files.
         const baseUploadSeconds = Math.round(calculatedTotalFiles * secondsPerFile);
         const fileOverheadTotal = 0;
@@ -247,7 +247,7 @@ export default function App() {
                         <div className="bg-indigo-50 rounded-lg p-4 mb-6 text-sm text-indigo-800 flex flex-col gap-2">
                             <div className="flex gap-6">
                                 <span><strong>Reference Log 1 (14h, ~70% Off-Body):</strong> 33 files (14 Act, 4 Resp, 4 Beh, 10 HR, 1 Notif)</span>
-                                <span><strong>Time:</strong> ~62s (1.88s/file)</span>
+                                <span><strong>Time:</strong> ~56s (1.7s/file)</span>
                             </div>
                             <div className="flex gap-6 border-t border-indigo-200 pt-2">
                                 <span><strong>Reference Log 2 (15m Periodic):</strong> 3 files/sync (1 Act, 1 Resp, 1 HR)</span>
@@ -421,7 +421,7 @@ export default function App() {
                                         <span className="font-mono">{formatTime(results.overheadSeconds)}</span>
                                     </li>
                                     <li className="text-xs text-indigo-800 mt-2 bg-indigo-100 p-2 rounded">
-                                        <strong>Note:</strong> Estimation uses "Byte Packing" and comprehensive per-file timing (1.88s) that includes overheads.
+                                        <strong>Note:</strong> Estimation uses "Byte Packing" and comprehensive per-file timing (1.7s) that includes overheads.
                                     </li>
                                 </ul>
                             </div>
