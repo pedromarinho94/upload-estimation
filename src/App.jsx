@@ -43,10 +43,10 @@ export default function App() {
     const [days, setDays] = useState(1);
     const [hours, setHours] = useState(0);
     const [networkLevel, setNetworkLevel] = useState('good');
-    const [powerMode, setPowerMode] = useState('battery');
+    const [powerMode, setPowerMode] = useState('charging');
     const [offBodyPercent, setOffBodyPercent] = useState(10);
     const [enabledDataTypes, setEnabledDataTypes] = useState({
-        activity: true, respiratory: true, behaviors: true, heartRate: true, notifications: true
+        activity: true, respiratory: true, behaviors: false, heartRate: true, notifications: false
     });
 
     // Detailed Hardware Params (Restored)
@@ -61,7 +61,7 @@ export default function App() {
     const [offlineActiveS, setOfflineActiveS] = useState(4.07);
     const [offlineIntervalS, setOfflineIntervalS] = useState(300);
 
-    const [hoursOnline, setHoursOnline] = useState(24);
+    const [hoursOnline, setHoursOnline] = useState(12);
 
     // --- Sync Logic (Professional useMemo) ---
     const results = useMemo(() => {
