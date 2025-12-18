@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import mavenLogo from './assets/mavenpet_logo.jpeg';
 import {
     Clock, Database, Wifi, Battery, Activity, Heart,
     Dog, Settings, RefreshCw, Shield, Info, Gauge,
@@ -147,7 +148,7 @@ export default function App() {
             <div className="max-w-6xl mx-auto">
                 <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div className="flex items-center gap-4">
-                        <img src="/mavenpet_logo.jpeg" alt="Maven Logo" className="w-10 h-10 rounded-xl object-cover shadow-sm border border-slate-100" />
+                        <img src={mavenLogo} alt="Maven Logo" className="w-10 h-10 rounded-xl object-cover shadow-sm border border-slate-100" />
                         <div>
                             <h1 className="text-xl font-black tracking-tight text-slate-900">Workbench</h1>
                             <p className="text-slate-500 text-[10px] font-black uppercase tracking-widest">Calibration & Estimations</p>
