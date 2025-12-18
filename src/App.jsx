@@ -74,7 +74,7 @@ export default function App() {
         const breakdown = {};
 
         const syncCycles = powerMode === 'battery' ? Math.ceil(totalHours / 0.25) : 1;
-        const connectionOverhead = powerMode === 'battery' ? syncCycles * 10 : 0;
+        const connectionOverhead = syncCycles * 10;
 
         Object.entries(dataTypeConfigs).forEach(([type, config]) => {
             if (!enabledDataTypes[type]) {
