@@ -24,12 +24,12 @@ export default function App() {
         respiratory: { label: 'Respiratory', icon: <RefreshCw />, bytesPerHour: 105, color: 'text-emerald-600', bg: 'bg-emerald-100', bar: 'bg-emerald-500' },
         behaviors: { label: 'Behaviors', icon: <Dog />, bytesPerHour: 25, color: 'text-amber-600', bg: 'bg-amber-100', bar: 'bg-amber-500' },
         heartRate: { label: 'Heart Rate', icon: <Heart />, bytesPerHour: 600, color: 'text-rose-600', bg: 'bg-rose-100', bar: 'bg-rose-500' },
-        notifications: { label: 'Alerts', icon: <Shield />, bytesPerHour: 5, color: 'text-purple-600', bg: 'bg-purple-100', bar: 'bg-purple-500' }
+        notifications: { label: 'Notifications', icon: <Shield />, bytesPerHour: 5, color: 'text-purple-600', bg: 'bg-purple-100', bar: 'bg-purple-500' }
     };
 
     const networkLevels = {
-        good: { label: 'Good (5GHz/Strong)', secondsPerFile: 1.7, icon: <Wifi className="w-4 h-4" /> },
-        poor: { label: 'Poor (2.4GHz/Weak)', secondsPerFile: 3.4, icon: <Wifi className="w-4 h-4 opacity-50" /> }
+        good: { label: 'Strong Signal (2.4GHz)', secondsPerFile: 1.7, icon: <Wifi className="w-4 h-4" /> },
+        poor: { label: 'Weak Signal (2.4GHz)', secondsPerFile: 3.4, icon: <Wifi className="w-4 h-4 opacity-50" /> }
     };
 
     const powerModes = {
@@ -147,12 +147,10 @@ export default function App() {
             <div className="max-w-6xl mx-auto">
                 <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                     <div className="flex items-center gap-4">
-                        <div className="bg-emerald-600 p-2.5 rounded-xl text-white">
-                            <Gauge className="w-6 h-6" />
-                        </div>
+                        <img src="/mavenpet_logo.jpeg" alt="Maven Logo" className="w-10 h-10 rounded-xl object-cover shadow-sm border border-slate-100" />
                         <div>
-                            <h1 className="text-xl font-bold tracking-tight">Maven Workbench</h1>
-                            <p className="text-slate-500 text-xs font-medium uppercase tracking-wider">Metrics Simulation Tool</p>
+                            <h1 className="text-xl font-black tracking-tight text-slate-900">Workbench</h1>
+                            <p className="text-slate-500 text-[10px] font-black uppercase tracking-widest">Calibration & Estimations</p>
                         </div>
                     </div>
 
@@ -165,8 +163,8 @@ export default function App() {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex items-center gap-2 px-6 py-2 rounded-lg font-bold text-sm transition-all ${activeTab === tab.id
-                                        ? 'bg-white text-emerald-700 shadow-sm border border-slate-200'
-                                        : 'text-slate-500 hover:text-slate-700'
+                                    ? 'bg-white text-emerald-700 shadow-sm border border-slate-200'
+                                    : 'text-slate-500 hover:text-slate-700'
                                     }`}
                             >
                                 {tab.icon} {tab.label}
@@ -256,8 +254,8 @@ export default function App() {
                                         <button
                                             key={type} onClick={() => setEnabledDataTypes(p => ({ ...p, [type]: !p[type] }))}
                                             className={`px-4 py-2.5 rounded-xl border-2 flex items-center gap-3 transition-all ${enabledDataTypes[type]
-                                                    ? `bg-white ${config.color.replace('text-', 'border-')} shadow-sm`
-                                                    : 'border-slate-100 bg-slate-50 text-slate-300'
+                                                ? `bg-white ${config.color.replace('text-', 'border-')} shadow-sm`
+                                                : 'border-slate-100 bg-slate-50 text-slate-300'
                                                 }`}
                                         >
                                             <span className={`${enabledDataTypes[type] ? config.color : 'text-slate-300'}`}>{config.icon}</span>
@@ -427,7 +425,6 @@ export default function App() {
             </div>
 
             <footer className="max-w-6xl mx-auto py-12 px-4 text-center">
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Engineering Specification Version 3.1.2</p>
             </footer>
         </div>
     );
