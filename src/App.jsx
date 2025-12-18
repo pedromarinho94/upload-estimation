@@ -352,7 +352,7 @@ export default function App() {
                         <div className="space-y-6">
                             <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
                                 <h2 className="text-lg font-bold mb-8 flex items-center gap-2">
-                                    <Settings className="w-5 h-5 text-emerald-600" /> Granular Hardware Parameters
+                                    <Settings className="w-5 h-5 text-emerald-600" /> Parameters
                                 </h2>
 
                                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
@@ -364,7 +364,7 @@ export default function App() {
                                                 <input type="number" value={batteryCapacity} onChange={e => setBatteryCapacity(Number(e.target.value))} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl font-bold" />
                                             </div>
                                             <div>
-                                                <label className="text-[10px] font-bold text-slate-500 block mb-2 uppercase">Deep Sleep (mA)</label>
+                                                <label className="text-[10px] font-bold text-slate-500 block mb-2 uppercase">Idle Current (mA)</label>
                                                 <input type="number" step="0.01" value={idleCurrent} onChange={e => setIdleCurrent(Number(e.target.value))} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl font-bold" />
                                             </div>
                                         </div>
@@ -381,7 +381,7 @@ export default function App() {
                                     <section className="space-y-10">
                                         <div className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
                                             <div className="flex items-center gap-2 text-emerald-700 font-black uppercase text-[10px] tracking-widest mb-4">
-                                                <RefreshCw className="w-3 h-3" /> Online Profile (Sync active)
+                                                <RefreshCw className="w-3 h-3" /> Online Profile
                                             </div>
                                             <div className="grid grid-cols-3 gap-4">
                                                 <div>
@@ -401,7 +401,7 @@ export default function App() {
 
                                         <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
                                             <div className="flex items-center gap-2 text-slate-500 font-black uppercase text-[10px] tracking-widest mb-4">
-                                                <Battery className="w-3 h-3" /> Offline Profile (Sampling only)
+                                                <Battery className="w-3 h-3" /> Offline Profile
                                             </div>
                                             <div className="grid grid-cols-3 gap-4">
                                                 <div>
@@ -447,8 +447,7 @@ export default function App() {
                                 <h4 className="font-bold text-slate-600 mb-2 uppercase tracking-widest text-[10px]">Simulation Notes</h4>
                                 <ul className="space-y-2 text-slate-500 font-medium">
                                     <li className="flex gap-2"><span className="text-emerald-500">●</span> Weighted average calculation based on WiFi availability.</li>
-                                    <li className="flex gap-2"><span className="text-emerald-500">●</span> Pulse active current included in interval averages.</li>
-                                    <li className="flex gap-2"><span className="text-emerald-500">●</span> Assumes ideal temperature conditions.</li>
+                                    <li className="flex gap-2"><span className="text-emerald-500">●</span> Assumes only 15 minutes syncs.</li>
                                 </ul>
                             </div>
                         </aside>
