@@ -41,6 +41,7 @@ export default function App() {
     // --- Developer State (Inputs) ---
     const [activeTab, setActiveTab] = useState('upload');
     const [days, setDays] = useState(1);
+    const [hours, setHours] = useState(0);
     const [networkLevel, setNetworkLevel] = useState('good');
     const [powerMode, setPowerMode] = useState('battery');
     const [offBodyPercent, setOffBodyPercent] = useState(10);
@@ -64,7 +65,7 @@ export default function App() {
 
     // --- Sync Logic (Professional useMemo) ---
     const results = useMemo(() => {
-        const hours = days * 24;
+        const totalHours = (days * 24) + hours;
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
         const onBodyFactor = 1.0 - (offBodyPercent / 100.0);
 
@@ -83,15 +84,15 @@ export default function App() {
                 typeBytesPerHour *= onBodyFactor;
             }
 
-            const totalTypeBytes = Math.round(typeBytesPerHour * hours);
+            const totalTypeBytes = Math.round(typeBytesPerHour * totalHours);
             totalBytes += totalTypeBytes;
 
             let typeFiles = 0;
             if (totalTypeBytes > 0) {
                 const sizeBasedFiles = Math.ceil(totalTypeBytes / FILE_SIZE_BYTES);
-                let activeHours = hours;
+                let activeHours = totalHours;
                 if (['behaviors', 'respiratory', 'heartRate'].includes(type)) {
-                    activeHours = hours * onBodyFactor;
+                    activeHours = totalHours * onBodyFactor;
                 }
                 const timeBasedFiles = Math.ceil(activeHours);
                 typeFiles = Math.max(sizeBasedFiles, timeBasedFiles);
@@ -106,7 +107,7 @@ export default function App() {
         });
 
         const baseUploadSeconds = calculatedTotalFiles * secondsPerFile;
-        const syncCycles = powerMode === 'battery' ? Math.ceil(hours / 0.25) : 1;
+        const syncCycles = powerMode === 'battery' ? Math.ceil(totalHours / 0.25) : 1;
         const connectionOverhead = powerMode === 'battery' ? syncCycles * 10 : 0;
         const totalUploadSeconds = baseUploadSeconds + connectionOverhead;
 
@@ -150,7 +151,7 @@ export default function App() {
                     <div className="flex items-center gap-4">
                         <img src={mavenLogo} alt="Maven Logo" className="w-10 h-10 rounded-xl object-cover shadow-sm border border-slate-100" />
                         <div>
-                            <h1 className="text-xl font-black tracking-tight text-slate-900">Workbench</h1>
+                            <h1 className="text-xl font-black tracking-tight text-slate-900">Wifi Sensor</h1>
                             <p className="text-slate-500 text-[10px] font-black uppercase tracking-widest">Calibration & Estimations</p>
                         </div>
                     </div>
@@ -202,10 +203,30 @@ export default function App() {
                                         <div>
                                             <div className="flex justify-between items-end mb-4">
                                                 <label className="text-sm font-bold text-slate-600 uppercase tracking-widest">Collection Window</label>
-                                                <span className="text-3xl font-black text-slate-900 tracking-tighter">{days} <span className="text-xs text-slate-400">Days</span></span>
+                                                <div className="flex flex-col items-end">
+                                                    <span className="text-3xl font-black text-slate-900 tracking-tighter">
+                                                        {days} <span className="text-xs text-slate-400 uppercase">Days</span> {hours} <span className="text-xs text-slate-400 uppercase">Hours</span>
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <input type="range" min="0.2" max="7" step="0.2" value={days} onChange={e => setDays(parseFloat(e.target.value))}
-                                                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
+                                            <div className="space-y-4">
+                                                <div>
+                                                    <div className="flex justify-between text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">
+                                                        <span>Days</span>
+                                                        <span>{days}</span>
+                                                    </div>
+                                                    <input type="range" min="0" max="14" step="1" value={days} onChange={e => setDays(parseInt(e.target.value))}
+                                                        className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
+                                                </div>
+                                                <div>
+                                                    <div className="flex justify-between text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">
+                                                        <span>Hours</span>
+                                                        <span>{hours}</span>
+                                                    </div>
+                                                    <input type="range" min="0" max="23" step="1" value={hours} onChange={e => setHours(parseInt(e.target.value))}
+                                                        className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div>
