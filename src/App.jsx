@@ -121,7 +121,7 @@ export default function App() {
             overheadSeconds: connectionOverhead,
             baseUploadSeconds
         };
-    }, [days, networkLevel, powerMode, offBodyPercent, enabledDataTypes]);
+    }, [days, hours, networkLevel, powerMode, offBodyPercent, enabledDataTypes]);
 
     const batteryResults = useMemo(() => {
         const hoursOffline = 24 - hoursOnline;
