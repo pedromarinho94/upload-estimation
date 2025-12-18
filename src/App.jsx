@@ -201,12 +201,13 @@ export default function App() {
                                 <div className="grid md:grid-cols-2 gap-12">
                                     <section className="space-y-10">
                                         <div>
-                                            <div className="flex justify-between items-end mb-4">
-                                                <label className="text-sm font-bold text-slate-600 uppercase tracking-widest">Collection Window</label>
-                                                <div className="flex flex-col items-end">
-                                                    <span className="text-3xl font-black text-slate-900 tracking-tighter">
-                                                        {days} <span className="text-xs text-slate-400 uppercase">Days</span> {hours} <span className="text-xs text-slate-400 uppercase">Hours</span>
-                                                    </span>
+                                            <div className="flex justify-between items-end mb-4 gap-4">
+                                                <label className="text-sm font-bold text-slate-600 uppercase tracking-widest whitespace-nowrap">Collection Window</label>
+                                                <div className="flex items-baseline gap-1 tabular-nums">
+                                                    <span className="text-3xl font-black text-slate-900 tracking-tighter">{days}</span>
+                                                    <span className="text-[10px] font-black text-slate-400 uppercase mr-2 tracking-widest">Days</span>
+                                                    <span className="text-3xl font-black text-slate-900 tracking-tighter">{hours}</span>
+                                                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Hours</span>
                                                 </div>
                                             </div>
                                             <div className="space-y-4">
@@ -215,7 +216,7 @@ export default function App() {
                                                         <span>Days</span>
                                                         <span>{days}</span>
                                                     </div>
-                                                    <input type="range" min="0" max="14" step="1" value={days} onChange={e => setDays(parseInt(e.target.value))}
+                                                    <input type="range" min="0" max="7" step="1" value={days} onChange={e => setDays(parseInt(e.target.value))}
                                                         className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
                                                 </div>
                                                 <div>
