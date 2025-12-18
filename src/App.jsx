@@ -44,7 +44,7 @@ export default function App() {
     const [hours, setHours] = useState(0);
     const [networkLevel, setNetworkLevel] = useState('good');
     const [powerMode, setPowerMode] = useState('charging');
-    const [offBodyPercent, setOffBodyPercent] = useState(10);
+    const [offBodyPercent, setOffBodyPercent] = useState(0);
     const [enabledDataTypes, setEnabledDataTypes] = useState({
         activity: true, respiratory: true, behaviors: false, heartRate: true, notifications: false
     });
