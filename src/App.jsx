@@ -1,42 +1,43 @@
 import React, { useState, useMemo } from 'react';
 import {
-    Clock, Database, Wifi, Calendar, Battery, Zap,
-    Activity, Heart, Dog, Settings, Edit2, Shield,
-    ChevronRight, Info, Coffee, RefreshCw, Smartphone
+    Clock, Database, Wifi, Battery, Activity, Heart,
+    Dog, Settings, RefreshCw, Shield, Info, Gauge,
+    ChevronRight, Zap, Smartphone, ExternalLink, HardDrive
 } from 'lucide-react';
 
 /**
- * MAVEN SMART COLLAR SIMULATION - PRO VERSION
+ * MAVEN SMART COLLAR - ENGINEERING WORKBENCH
  * 
- * DESIGN PHILOSOPHY:
- * 1. Apple-Grade Aesthetics: Glassmorphism, subtle gradients, and high-end typography.
- * 2. Shopify-Grade Performance: Decoupled logic using useMemo for instant, lag-free reactivity.
- * 3. Human-Centric Context: Turning seconds into "Coffee waits" and accumulation metrics.
+ * V3 Focus: Utility over Flash.
+ * - Restored all granular hardware & battery inputs.
+ * - Restored log-based reference data.
+ * - Clean "Workbench" aesthetic (Light UI, high readability).
+ * - High-density data breakdowns for developers.
  */
 
 export default function App() {
-    // --- Constants ---
+    // --- Configuration Constants ---
     const FILE_SIZE_BYTES = 1024;
 
     const dataTypeConfigs = {
-        activity: { label: 'Activity', icon: <Activity className="w-5 h-5" />, bytesPerHour: 380, color: 'from-blue-500 to-indigo-600', isContinuous: true },
-        respiratory: { label: 'Respiratory', icon: <RefreshCw className="w-5 h-5" />, bytesPerHour: 105, color: 'from-emerald-500 to-teal-600', isContinuous: false },
-        behaviors: { label: 'Behaviors', icon: <Dog className="w-5 h-5" />, bytesPerHour: 25, color: 'from-amber-400 to-orange-500', isContinuous: false },
-        heartRate: { label: 'Heart Rate', icon: <Heart className="w-5 h-5" />, bytesPerHour: 600, color: 'from-rose-500 to-red-600', isContinuous: true },
-        notifications: { label: 'Alerts', icon: <Shield className="w-5 h-5" />, bytesPerHour: 5, color: 'from-purple-500 to-violet-600', isContinuous: false }
+        activity: { label: 'Activity', icon: <Activity />, bytesPerHour: 380, color: 'text-blue-600', bg: 'bg-blue-100', bar: 'bg-blue-500' },
+        respiratory: { label: 'Respiratory', icon: <RefreshCw />, bytesPerHour: 105, color: 'text-emerald-600', bg: 'bg-emerald-100', bar: 'bg-emerald-500' },
+        behaviors: { label: 'Behaviors', icon: <Dog />, bytesPerHour: 25, color: 'text-amber-600', bg: 'bg-amber-100', bar: 'bg-amber-500' },
+        heartRate: { label: 'Heart Rate', icon: <Heart />, bytesPerHour: 600, color: 'text-rose-600', bg: 'bg-rose-100', bar: 'bg-rose-500' },
+        notifications: { label: 'Alerts', icon: <Shield />, bytesPerHour: 5, color: 'text-purple-600', bg: 'bg-purple-100', bar: 'bg-purple-500' }
     };
 
     const networkLevels = {
-        good: { label: 'Premium', secondsPerFile: 1.7, icon: '⚡', description: '5GHz / Strong Signal' },
-        poor: { label: 'Standard', secondsPerFile: 3.4, icon: '📶', description: '2.4GHz / Range Edge' }
+        good: { label: 'Good (5GHz/Strong)', secondsPerFile: 1.7, icon: <Wifi className="w-4 h-4" /> },
+        poor: { label: 'Poor (2.4GHz/Weak)', secondsPerFile: 3.4, icon: <Wifi className="w-4 h-4 opacity-50" /> }
     };
 
     const powerModes = {
-        charging: { label: 'Stationary', syncIntervalHours: 0, icon: <Smartphone className="w-4 h-4" />, description: 'USB Connected' },
-        battery: { label: 'Mobile', syncIntervalHours: 0.25, icon: <Battery className="w-4 h-4" />, description: 'On Battery (15m intervals)' }
+        charging: { label: 'USB Power', icon: <Zap className="w-4 h-4" />, desc: 'Continuous Sync' },
+        battery: { label: 'Battery', icon: <Battery className="w-4 h-4" />, desc: '15m Periodic Sync' }
     };
 
-    // --- High-End State Management ---
+    // --- Developer State (Inputs) ---
     const [activeTab, setActiveTab] = useState('upload');
     const [days, setDays] = useState(1);
     const [networkLevel, setNetworkLevel] = useState('good');
@@ -46,47 +47,28 @@ export default function App() {
         activity: true, respiratory: true, behaviors: true, heartRate: true, notifications: true
     });
 
-    // Battery State
+    // Detailed Hardware Params (Restored)
     const [batteryCapacity, setBatteryCapacity] = useState(270);
     const [idleCurrent, setIdleCurrent] = useState(1.52);
+
     const [onlineActiveMa, setOnlineActiveMa] = useState(25.52);
     const [onlineActiveS, setOnlineActiveS] = useState(16.51);
     const [onlineIntervalS, setOnlineIntervalS] = useState(900);
+
     const [offlineActiveMa, setOfflineActiveMa] = useState(42.26);
     const [offlineActiveS, setOfflineActiveS] = useState(4.07);
     const [offlineIntervalS, setOfflineIntervalS] = useState(300);
+
     const [hoursOnline, setHoursOnline] = useState(24);
 
-    // --- Scenario Presets (Shopify Style) ---
-    const applyPreset = (preset) => {
-        switch (preset) {
-            case 'weekend':
-                setDays(2);
-                setOffBodyPercent(5);
-                setPowerMode('battery');
-                break;
-            case 'office':
-                setDays(1);
-                setOffBodyPercent(60);
-                setPowerMode('battery');
-                break;
-            case 'sync-debug':
-                setDays(0.2); // ~5 hours
-                setOffBodyPercent(0);
-                setPowerMode('charging');
-                break;
-            default: break;
-        }
-    };
-
-    // --- Decoupled Logic (Apple Performance) ---
-    const uploadResults = useMemo(() => {
+    // --- Sync Logic (Professional useMemo) ---
+    const results = useMemo(() => {
         const hours = days * 24;
         const secondsPerFile = networkLevels[networkLevel].secondsPerFile;
         const onBodyFactor = 1.0 - (offBodyPercent / 100.0);
 
         let totalBytes = 0;
-        let totalFiles = 0;
+        let calculatedTotalFiles = 0;
         const breakdown = {};
 
         Object.entries(dataTypeConfigs).forEach(([type, config]) => {
@@ -114,7 +96,7 @@ export default function App() {
                 typeFiles = Math.max(sizeBasedFiles, timeBasedFiles);
             }
 
-            totalFiles += typeFiles;
+            calculatedTotalFiles += typeFiles;
             breakdown[type] = {
                 bytes: totalTypeBytes,
                 files: typeFiles,
@@ -122,19 +104,20 @@ export default function App() {
             };
         });
 
-        const baseUploadSeconds = totalFiles * secondsPerFile;
+        const baseUploadSeconds = calculatedTotalFiles * secondsPerFile;
         const syncCycles = powerMode === 'battery' ? Math.ceil(hours / 0.25) : 1;
-        const overheadSeconds = powerMode === 'battery' ? syncCycles * 10 : 0;
-        const totalDuration = baseUploadSeconds + overheadSeconds;
+        const connectionOverhead = powerMode === 'battery' ? syncCycles * 10 : 0;
+        const totalUploadSeconds = baseUploadSeconds + connectionOverhead;
 
         return {
-            totalFiles,
+            totalFiles: calculatedTotalFiles,
             totalBytes,
-            totalDuration,
+            totalDuration: totalUploadSeconds,
             storageKB: Math.round(totalBytes / 1024),
             syncCycles,
             breakdown,
-            overheadSeconds
+            overheadSeconds: connectionOverhead,
+            baseUploadSeconds
         };
     }, [days, networkLevel, powerMode, offBodyPercent, enabledDataTypes]);
 
@@ -152,310 +135,300 @@ export default function App() {
         };
     }, [batteryCapacity, idleCurrent, onlineActiveMa, onlineActiveS, onlineIntervalS, offlineActiveMa, offlineActiveS, offlineIntervalS, hoursOnline]);
 
-    // --- Helper UI Components ---
-    const GlassCard = ({ children, className = "" }) => (
-        <div className={`backdrop-blur-xl bg-white/70 border border-white/40 shadow-2xl rounded-3xl ${className}`}>
-            {children}
-        </div>
-    );
-
     const formatTime = (seconds) => {
         if (seconds < 60) return `${Math.round(seconds)}s`;
-        const mins = Math.max(1, Math.floor(seconds / 60));
+        const mins = Math.floor(seconds / 60);
         const secs = Math.round(seconds % 60);
         return `${mins}m ${secs}s`;
     };
 
     return (
-        <div className="min-h-screen bg-[#0f172a] text-slate-200 font-sans selection:bg-emerald-500/30 overflow-x-hidden">
-            {/* Ambient Background Elements */}
-            <div className="fixed inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-[25%] -left-[10%] w-[50%] h-[50%] bg-emerald-500/10 blur-[120px] rounded-full animate-pulse" />
-                <div className="absolute top-[20%] -right-[10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full animate-pulse delay-700" />
-            </div>
-
-            <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-20">
-                {/* Header Section */}
-                <header className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 animate-in slide-in-from-top duration-700">
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="bg-emerald-500 p-2 rounded-xl shadow-lg shadow-emerald-500/20">
-                                <Database className="w-6 h-6 text-white" />
-                            </div>
-                            <span className="text-emerald-400 font-bold tracking-tighter text-sm uppercase">Intelligence Tool</span>
+        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans p-4 md:p-8">
+            <div className="max-w-6xl mx-auto">
+                <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-emerald-600 p-2.5 rounded-xl text-white">
+                            <Gauge className="w-6 h-6" />
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-none mb-4">
-                            Maven <span className="text-slate-500">Stimulus</span>
-                        </h1>
-                        <p className="text-slate-400 text-lg max-w-md leading-relaxed">
-                            Simulate high-fidelity data cycles and power performance for the next-gen collar.
-                        </p>
+                        <div>
+                            <h1 className="text-xl font-bold tracking-tight">Maven Workbench</h1>
+                            <p className="text-slate-500 text-xs font-medium uppercase tracking-wider">Metrics Simulation Tool</p>
+                        </div>
                     </div>
 
-                    {/* Fancy Tab Switcher */}
-                    <div className="flex bg-slate-800/50 p-1.5 rounded-2xl backdrop-blur-md border border-slate-700/50">
+                    <nav className="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
                         {[
-                            { id: 'upload', icon: <Wifi className="w-4 h-4" />, label: 'Transmission' },
-                            { id: 'battery', icon: <Battery className="w-4 h-4" />, label: 'Endurance' }
-                        ].map((tab) => (
+                            { id: 'upload', label: 'Data Upload', icon: <Wifi className="w-4 h-4" /> },
+                            { id: 'battery', label: 'Power Estimate', icon: <Battery className="w-4 h-4" /> }
+                        ].map(tab => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold transition-all duration-300 ${activeTab === tab.id
-                                        ? 'bg-white text-slate-900 shadow-xl scale-[1.02]'
-                                        : 'text-slate-400 hover:text-white hover:bg-white/5'
+                                className={`flex items-center gap-2 px-6 py-2 rounded-lg font-bold text-sm transition-all ${activeTab === tab.id
+                                        ? 'bg-white text-emerald-700 shadow-sm border border-slate-200'
+                                        : 'text-slate-500 hover:text-slate-700'
                                     }`}
                             >
                                 {tab.icon} {tab.label}
                             </button>
                         ))}
-                    </div>
+                    </nav>
                 </header>
 
-                {/* --- TRANSMISSION TAB --- */}
+                {/* --- DATA UPLOAD INTERFACE --- */}
                 {activeTab === 'upload' && (
-                    <div className="grid lg:grid-cols-[1fr_400px] gap-8 items-start animate-in fade-in zoom-in-95 duration-500">
-                        {/* Main Interaction Area */}
-                        <div className="space-y-8">
-                            <GlassCard className="p-8">
-                                <section className="mb-10">
-                                    <h3 className="text-slate-400 text-xs font-black uppercase tracking-widest mb-6 px-1">Active Scenario</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        {[
-                                            { id: 'weekend', label: 'Weekend Trip', icon: '🏕️', sub: 'High uptime' },
-                                            { id: 'office', label: 'Office Day', icon: '🏙️', sub: 'Indoor heavy' },
-                                            { id: 'sync-debug', label: 'Rapid Sync', icon: '🧪', sub: 'Dev profile' }
-                                        ].map(p => (
-                                            <button
-                                                key={p.id}
-                                                onClick={() => applyPreset(p.id)}
-                                                className="group text-left p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 hover:border-emerald-500/50 hover:bg-slate-900 transition-all"
-                                            >
-                                                <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">{p.icon}</div>
-                                                <div className="text-white font-bold">{p.label}</div>
-                                                <div className="text-slate-500 text-xs">{p.sub}</div>
-                                            </button>
-                                        ))}
+                    <div className="grid lg:grid-cols-[1fr_350px] gap-8 animate-in fade-in duration-500">
+                        <div className="space-y-6">
+                            {/* Reference Context */}
+                            <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl text-xs space-y-3 leading-relaxed border border-slate-800 shadow-md">
+                                <div className="flex items-center gap-2 text-white font-bold mb-1 uppercase tracking-widest text-[10px]">
+                                    <Info className="w-3 h-3 text-emerald-400" /> Reference Log Verification
+                                </div>
+                                <div className="grid md:grid-cols-2 gap-4 divide-slate-700 md:divide-x">
+                                    <div className="pr-4">
+                                        <p><strong>Log A (14h Bulk):</strong> 33 files (14 Act, 4 Resp, 4 Beh, 10 HR) @ ~70% Off-Body</p>
+                                        <p className="text-emerald-400 mt-1 font-mono">Actual: ~62s (1.88s/file)</p>
                                     </div>
-                                </section>
+                                    <div className="md:pl-6 leading-6">
+                                        <p><strong>Log B (Periodic):</strong> 3 files/sync (1 Act, 1 Resp, 1 HR)</p>
+                                        <p className="text-emerald-400 mt-1 font-mono">Actual: ~5s / Simulation: ~5.6s</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                                <section className="space-y-10">
-                                    <div className="group">
-                                        <div className="flex justify-between items-end mb-4">
-                                            <label className="text-white font-bold text-lg flex items-center gap-2">
-                                                <Clock className="w-5 h-5 text-emerald-500" /> Accumulation Period
-                                            </label>
-                                            <span className="text-3xl font-black text-emerald-400 font-mono tracking-tighter">
-                                                {days} <span className="text-xs uppercase text-slate-500 ml-1">Days</span>
-                                            </span>
+                            {/* Main Parameters Card */}
+                            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+                                <div className="grid md:grid-cols-2 gap-12">
+                                    <section className="space-y-10">
+                                        <div>
+                                            <div className="flex justify-between items-end mb-4">
+                                                <label className="text-sm font-bold text-slate-600 uppercase tracking-widest">Collection Window</label>
+                                                <span className="text-3xl font-black text-slate-900 tracking-tighter">{days} <span className="text-xs text-slate-400">Days</span></span>
+                                            </div>
+                                            <input type="range" min="0.2" max="7" step="0.2" value={days} onChange={e => setDays(parseFloat(e.target.value))}
+                                                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
                                         </div>
-                                        <input
-                                            type="range" min="0.2" max="7" step="0.2" value={days}
-                                            onChange={(e) => setDays(parseFloat(e.target.value))}
-                                            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
-                                        />
-                                    </div>
 
-                                    <div className="group">
-                                        <div className="flex justify-between items-end mb-4">
-                                            <label className="text-white font-bold text-lg flex items-center gap-2">
-                                                <Dog className="w-5 h-5 text-emerald-500" /> Off-Body Rest
-                                            </label>
-                                            <span className="text-3xl font-black text-emerald-400 font-mono tracking-tighter">
-                                                {offBodyPercent}<span className="text-lg">%</span>
-                                            </span>
+                                        <div>
+                                            <div className="flex justify-between items-end mb-4">
+                                                <label className="text-sm font-bold text-slate-600 uppercase tracking-widest">Off-Body Factor</label>
+                                                <span className="text-3xl font-black text-slate-900 tracking-tighter">{offBodyPercent}%</span>
+                                            </div>
+                                            <input type="range" min="0" max="95" step="5" value={offBodyPercent} onChange={e => setOffBodyPercent(parseInt(e.target.value))}
+                                                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
                                         </div>
-                                        <input
-                                            type="range" min="0" max="95" step="5" value={offBodyPercent}
-                                            onChange={(e) => setOffBodyPercent(parseInt(e.target.value))}
-                                            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
-                                        />
-                                    </div>
-                                </section>
+                                    </section>
 
-                                <footer className="mt-12 pt-8 border-t border-slate-200/10 grid grid-cols-2 md:grid-cols-4 gap-6">
+                                    <section className="space-y-6 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                        <h3 className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Environment & Power</h3>
+                                        <div className="space-y-4">
+                                            <div>
+                                                <p className="text-xs font-bold text-slate-600 mb-2">Network Profile</p>
+                                                <div className="flex gap-2">
+                                                    {Object.entries(networkLevels).map(([k, v]) => (
+                                                        <button key={k} onClick={() => setNetworkLevel(k)}
+                                                            className={`flex-1 p-3 rounded-xl border-2 transition-all text-xs font-bold flex flex-col items-center gap-1 ${networkLevel === k ? 'border-emerald-600 bg-white shadow-sm' : 'border-transparent bg-white/50 text-slate-400 grayscale'
+                                                                }`}>
+                                                            {v.icon} {v.label}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold text-slate-600 mb-2">Device Power Source</p>
+                                                <div className="flex gap-2">
+                                                    {Object.entries(powerModes).map(([mode, conf]) => (
+                                                        <button key={mode} onClick={() => setPowerMode(mode)}
+                                                            className={`flex-1 p-3 rounded-xl border-2 transition-all text-xs font-bold flex flex-col items-center gap-1 ${powerMode === mode ? 'border-emerald-600 bg-white shadow-sm' : 'border-transparent bg-white/50 text-slate-400 grayscale'
+                                                                }`}>
+                                                            {conf.icon} {conf.label}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                                {/* Per-Type Toggle Tunnels */}
+                                <div className="mt-12 pt-8 border-t border-slate-100 flex flex-wrap gap-3">
                                     {Object.entries(dataTypeConfigs).map(([type, config]) => (
                                         <button
-                                            key={type}
-                                            onClick={() => setEnabledDataTypes(p => ({ ...p, [type]: !p[type] }))}
-                                            className={`flex flex-col items-center gap-2 transition-all p-3 rounded-2xl ${enabledDataTypes[type] ? 'bg-slate-900/40 text-white' : 'opacity-20 grayscale'}`}
+                                            key={type} onClick={() => setEnabledDataTypes(p => ({ ...p, [type]: !p[type] }))}
+                                            className={`px-4 py-2.5 rounded-xl border-2 flex items-center gap-3 transition-all ${enabledDataTypes[type]
+                                                    ? `bg-white ${config.color.replace('text-', 'border-')} shadow-sm`
+                                                    : 'border-slate-100 bg-slate-50 text-slate-300'
+                                                }`}
                                         >
-                                            <div className={`p-2 rounded-lg bg-gradient-to-br ${config.color} shadow-lg shadow-black/20`}>
-                                                {React.cloneElement(config.icon, { className: 'w-5 h-5 text-white' })}
-                                            </div>
-                                            <span className="text-[10px] font-black uppercase tracking-tighter">{config.label}</span>
+                                            <span className={`${enabledDataTypes[type] ? config.color : 'text-slate-300'}`}>{config.icon}</span>
+                                            <span className="text-[10px] uppercase font-black tracking-widest">{config.label}</span>
                                         </button>
                                     ))}
-                                </footer>
-                            </GlassCard>
-
-                            <div className="grid grid-cols-2 gap-4 text-sm px-1">
-                                <div className="p-5 rounded-3xl bg-slate-900/30 border border-slate-800 flex items-center gap-4">
-                                    <div className="text-3xl">☕</div>
-                                    <div>
-                                        <div className="text-slate-500 font-bold uppercase text-[10px]">Human Wait</div>
-                                        <div className="text-white font-black text-lg">About 1 Coffee</div>
-                                    </div>
-                                </div>
-                                <div className="p-5 rounded-3xl bg-slate-900/30 border border-slate-800 flex items-center gap-4">
-                                    <div className="p-2 bg-blue-500/20 rounded-xl">
-                                        <Database className="w-6 h-6 text-blue-400" />
-                                    </div>
-                                    <div>
-                                        <div className="text-slate-500 font-bold uppercase text-[10px]">Packed Weight</div>
-                                        <div className="text-white font-black text-lg">{uploadResults.storageKB} KB</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Results Sidebar (Apple Style Result Card) */}
-                        <div className="space-y-6 lg:sticky lg:top-8">
-                            <div className="p-8 rounded-[40px] bg-gradient-to-br from-emerald-400 to-teal-500 shadow-3xl shadow-emerald-500/20 text-slate-900 relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 blur-3xl -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-1000" />
+                        {/* Results Sidebar */}
+                        <aside className="space-y-6 lg:sticky lg:top-8">
+                            <div className="bg-emerald-700 text-white p-8 rounded-[32px] shadow-xl shadow-emerald-200/50">
+                                <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 mb-6">Total Sync Estimate</p>
+                                <div className="text-6xl font-black tracking-tighter mb-1 leading-none">{formatTime(results.totalDuration)}</div>
+                                <p className="text-emerald-100/70 text-sm font-bold mb-10">Across {results.totalFiles} data files</p>
 
-                                <h4 className="font-black uppercase text-[10px] tracking-widest text-emerald-900/60 mb-8">Estimated Upload</h4>
-                                <div className="text-7xl font-black tracking-tighter leading-none mb-1 group-hover:translate-x-1 transition-transform">
-                                    {formatTime(uploadResults.totalDuration)}
-                                </div>
-                                <div className="text-emerald-900/70 font-bold text-sm mb-12">
-                                    Over {uploadResults.totalFiles} individual blocks
-                                </div>
-
-                                <div className="space-y-4">
-                                    <div className="flex justify-between items-center text-xs font-black uppercase tracking-widest text-emerald-900/40">
-                                        <span>Environmental Performance</span>
+                                <div className="space-y-3 pt-6 border-t border-emerald-600/50">
+                                    <div className="flex justify-between text-xs font-bold text-emerald-100">
+                                        <span>Raw Content:</span>
+                                        <span className="font-mono">{formatTime(results.baseUploadSeconds)}</span>
                                     </div>
-                                    <div className="flex gap-2">
-                                        {Object.entries(networkLevels).map(([k, v]) => (
-                                            <button
-                                                key={k}
-                                                onClick={() => setNetworkLevel(k)}
-                                                className={`flex-1 p-3 rounded-2xl transition-all font-bold text-xs flex items-center justify-center gap-2 ${networkLevel === k ? 'bg-slate-900 text-white shadow-xl' : 'bg-white/20 text-emerald-900 hover:bg-white/30'
-                                                    }`}
-                                            >
-                                                <span className="text-lg">{v.icon}</span> {v.label}
-                                            </button>
-                                        ))}
+                                    <div className="flex justify-between text-xs font-bold text-emerald-100">
+                                        <span>Connection Overheads:</span>
+                                        <span className="font-mono">+{formatTime(results.overheadSeconds)}</span>
+                                    </div>
+                                    <div className="flex justify-between text-xs font-bold text-emerald-100 pt-2 border-t border-emerald-600/50">
+                                        <span>Total Capacity:</span>
+                                        <span className="font-mono text-white">{results.storageKB} KB</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <GlassCard className="p-6">
-                                <h4 className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-4">Transmission Overhead</h4>
-                                <div className="space-y-4">
-                                    {[
-                                        { label: 'Network Handshake', value: `${uploadResults.overheadSeconds}s`, color: 'bg-emerald-500' },
-                                        { label: 'Data Serialization', value: '1.2s', color: 'bg-blue-500' },
-                                        { label: 'ACK Verification', value: `${Math.round(uploadResults.totalFiles * 0.1)}s`, color: 'bg-purple-500' }
-                                    ].map(item => (
-                                        <div key={item.label} className="flex justify-between items-center">
-                                            <div className="flex items-center gap-2">
-                                                <div className={`w-1.5 h-1.5 rounded-full ${item.color}`} />
-                                                <span className="text-xs font-medium text-slate-300">{item.label}</span>
+                            <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                                <h4 className="text-[11px] font-black text-slate-500 uppercase tracking-widest mb-4">Metrics Breakdown</h4>
+                                <div className="space-y-5">
+                                    {Object.entries(dataTypeConfigs).map(([type, config]) => {
+                                        const data = results.breakdown[type];
+                                        if (!enabledDataTypes[type]) return null;
+                                        const width = results.totalBytes > 0 ? (data.bytes / results.totalBytes) * 100 : 0;
+                                        return (
+                                            <div key={type}>
+                                                <div className="flex justify-between text-[11px] font-bold mb-2 uppercase tracking-tighter">
+                                                    <span className="text-slate-600">{config.label}</span>
+                                                    <span className="text-slate-400">{data.files} files • {formatTime(data.seconds)}</span>
+                                                </div>
+                                                <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                                    <div className={`${config.bar} h-full transition-all duration-700`} style={{ width: `${width}%` }} />
+                                                </div>
                                             </div>
-                                            <span className="text-xs font-mono text-slate-500">{item.value}</span>
-                                        </div>
-                                    ))}
+                                        );
+                                    })}
                                 </div>
-                            </GlassCard>
-                        </div>
+                            </div>
+                        </aside>
                     </div>
                 )}
 
-                {/* --- ENDURANCE TAB --- */}
+                {/* --- ENDURANCE (BATTERY) INTERFACE --- */}
                 {activeTab === 'battery' && (
-                    <div className="grid lg:grid-cols-2 gap-8 items-stretch animate-in fade-in zoom-in-95 duration-500">
-                        <GlassCard className="p-8">
-                            <h3 className="text-slate-400 text-xs font-black uppercase tracking-widest mb-8">Hardware Parameters</h3>
+                    <div className="grid lg:grid-cols-[1fr_350px] gap-8 animate-in fade-in duration-500">
+                        <div className="space-y-6">
+                            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+                                <h2 className="text-lg font-bold mb-8 flex items-center gap-2">
+                                    <Settings className="w-5 h-5 text-emerald-600" /> Granular Hardware Parameters
+                                </h2>
 
-                            <div className="grid grid-cols-2 gap-6 mb-12">
-                                <div>
-                                    <label className="text-[10px] uppercase font-black text-slate-500 block mb-2 tracking-widest">Cell Capacity</label>
-                                    <div className="relative">
-                                        <input type="number" value={batteryCapacity} onChange={e => setBatteryCapacity(Number(e.target.value))}
-                                            className="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl p-4 text-white font-black text-xl outline-none focus:border-emerald-500 transition-colors" />
-                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs font-bold uppercase tracking-widest">mAh</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label className="text-[10px] uppercase font-black text-slate-500 block mb-2 tracking-widest">Idle Draw</label>
-                                    <div className="relative">
-                                        <input type="number" step="0.01" value={idleCurrent} onChange={e => setIdleCurrent(Number(e.target.value))}
-                                            className="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl p-4 text-white font-black text-xl outline-none focus:border-emerald-500 transition-colors" />
-                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs font-bold uppercase tracking-widest">mA</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <section className="space-y-8">
-                                <div className="p-6 rounded-[32px] bg-slate-900/40 border border-slate-700/30">
-                                    <div className="flex justify-between items-center mb-6">
-                                        <div className="flex items-center gap-3">
-                                            <div className="p-2 bg-emerald-500/20 rounded-xl"><Wifi className="w-5 h-5 text-emerald-400" /></div>
-                                            <span className="font-black text-sm uppercase tracking-widest text-white">Daily Connectivity</span>
+                                <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+                                    <section className="space-y-6">
+                                        <h3 className="text-[10px] font-black uppercase text-slate-400 tracking-widest border-b pb-2">Device Defaults</h3>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label className="text-[10px] font-bold text-slate-500 block mb-2 uppercase">Capacity (mAh)</label>
+                                                <input type="number" value={batteryCapacity} onChange={e => setBatteryCapacity(Number(e.target.value))} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl font-bold" />
+                                            </div>
+                                            <div>
+                                                <label className="text-[10px] font-bold text-slate-500 block mb-2 uppercase">Deep Sleep (mA)</label>
+                                                <input type="number" step="0.01" value={idleCurrent} onChange={e => setIdleCurrent(Number(e.target.value))} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl font-bold" />
+                                            </div>
                                         </div>
-                                        <span className="text-2xl font-black text-emerald-400 font-mono tracking-tighter">{hoursOnline} <span className="text-[10px] text-slate-500 uppercase">Hours</span></span>
-                                    </div>
-                                    <input
-                                        type="range" min="0" max="24" step="1" value={hoursOnline}
-                                        onChange={(e) => setHoursOnline(parseInt(e.target.value))}
-                                        className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
-                                    />
-                                </div>
-                            </section>
-                        </GlassCard>
+                                        <div>
+                                            <div className="flex justify-between items-center mb-2">
+                                                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Typical Daily WiFi Availability</label>
+                                                <span className="text-emerald-700 font-black tracking-tight">{hoursOnline} Hours</span>
+                                            </div>
+                                            <input type="range" min="0" max="24" step="1" value={hoursOnline} onChange={e => setHoursOnline(parseInt(e.target.value))}
+                                                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600" />
+                                        </div>
+                                    </section>
 
-                        <div className="flex flex-col gap-6">
-                            {/* Battery Life Result */}
-                            <div className="flex-1 p-10 rounded-[48px] bg-slate-100 shadow-3xl flex flex-col items-center justify-center text-center relative overflow-hidden group">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-emerald-500" />
-                                <div className="text-slate-500 text-[10px] uppercase tracking-widest font-black mb-4">Estimated Endurance</div>
-                                <div className="text-9xl font-black text-slate-900 tracking-tighter leading-none mb-2">
-                                    {batteryResults.lifeDays}
-                                </div>
-                                <div className="text-slate-400 font-bold text-xl uppercase tracking-widest mb-12">Cycle Days</div>
+                                    <section className="space-y-10">
+                                        <div className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                                            <div className="flex items-center gap-2 text-emerald-700 font-black uppercase text-[10px] tracking-widest mb-4">
+                                                <RefreshCw className="w-3 h-3" /> Online Profile (Sync active)
+                                            </div>
+                                            <div className="grid grid-cols-3 gap-4">
+                                                <div>
+                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">mA</label>
+                                                    <input type="number" value={onlineActiveMa} onChange={e => setOnlineActiveMa(Number(e.target.value))} className="w-full bg-white border border-emerald-200 p-2 rounded-lg text-sm font-bold" />
+                                                </div>
+                                                <div>
+                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">Seconds</label>
+                                                    <input type="number" value={onlineActiveS} onChange={e => setOnlineActiveS(Number(e.target.value))} className="w-full bg-white border border-emerald-200 p-2 rounded-lg text-sm font-bold" />
+                                                </div>
+                                                <div>
+                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">Interval</label>
+                                                    <input type="number" value={onlineIntervalS} onChange={e => setOnlineIntervalS(Number(e.target.value))} className="w-full bg-white border border-emerald-200 p-2 rounded-lg text-sm font-bold" />
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <div className="w-full max-w-[200px] h-3 bg-slate-200 rounded-full overflow-hidden mb-2">
-                                    <div className="h-full bg-emerald-500 w-[85%] rounded-full animate-pulse" />
-                                </div>
-                                <div className="text-slate-400 text-[10px] font-black uppercase tracking-widest">Safe Operating Range</div>
-                            </div>
-
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="p-6 rounded-[32px] bg-emerald-500/10 border border-emerald-500/20">
-                                    <div className="text-emerald-500 font-black text-[10px] uppercase tracking-widest mb-1">Avg Draw</div>
-                                    <div className="text-white text-3xl font-black tracking-tighter leading-none">{batteryResults.avgCurrentMa} <span className="text-sm text-slate-500 uppercase">mA</span></div>
-                                </div>
-                                <div className="p-6 rounded-[32px] bg-blue-500/10 border border-blue-500/20">
-                                    <div className="text-blue-400 font-black text-[10px] uppercase tracking-widest mb-1">Consumption</div>
-                                    <div className="text-white text-3xl font-black tracking-tighter leading-none">{Math.round(batteryResults.avgCurrentMa * 24)} <span className="text-sm text-slate-500 uppercase">mAh</span></div>
+                                        <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                                            <div className="flex items-center gap-2 text-slate-500 font-black uppercase text-[10px] tracking-widest mb-4">
+                                                <Battery className="w-3 h-3" /> Offline Profile (Sampling only)
+                                            </div>
+                                            <div className="grid grid-cols-3 gap-4">
+                                                <div>
+                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">mA</label>
+                                                    <input type="number" value={offlineActiveMa} onChange={e => setOfflineActiveMa(Number(e.target.value))} className="w-full bg-white border border-slate-200 p-2 rounded-lg text-sm font-bold" />
+                                                </div>
+                                                <div>
+                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">Seconds</label>
+                                                    <input type="number" value={offlineActiveS} onChange={e => setOfflineActiveS(Number(e.target.value))} className="w-full bg-white border border-slate-200 p-2 rounded-lg text-sm font-bold" />
+                                                </div>
+                                                <div>
+                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">Interval</label>
+                                                    <input type="number" value={offlineIntervalS} onChange={e => setOfflineIntervalS(Number(e.target.value))} className="w-full bg-white border border-slate-200 p-2 rounded-lg text-sm font-bold" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Battery Sidebar Card */}
+                        <aside className="space-y-6 lg:sticky lg:top-8">
+                            <div className="bg-slate-900 border border-slate-800 text-white p-10 rounded-[40px] shadow-2xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10"><Battery className="w-12 h-12" /></div>
+                                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-8">Estimated Battery Life</p>
+                                <div className="text-8xl font-black tracking-tighter text-emerald-500 mb-1 leading-none">{batteryResults.lifeDays}</div>
+                                <p className="text-slate-400 font-bold uppercase tracking-widest text-lg mb-12">Cycle Days</p>
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-4 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">Avg Current</p>
+                                        <p className="text-xl font-black text-white">{batteryResults.avgCurrentMa} <span className="text-[10px] text-slate-500">mA</span></p>
+                                    </div>
+                                    <div className="p-4 bg-slate-800/50 rounded-2xl border border-slate-700/50">
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">Total Power</p>
+                                        <p className="text-xl font-black text-white">{batteryResults.lifeHours} <span className="text-[10px] text-slate-500">hrs</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-white border border-slate-200 p-6 rounded-3xl text-xs space-y-3">
+                                <h4 className="font-bold text-slate-600 mb-2 uppercase tracking-widest text-[10px]">Simulation Notes</h4>
+                                <ul className="space-y-2 text-slate-500 font-medium">
+                                    <li className="flex gap-2"><span className="text-emerald-500">●</span> Weighted average calculation based on WiFi availability.</li>
+                                    <li className="flex gap-2"><span className="text-emerald-500">●</span> Pulse active current included in interval averages.</li>
+                                    <li className="flex gap-2"><span className="text-emerald-500">●</span> Assumes ideal temperature conditions.</li>
+                                </ul>
+                            </div>
+                        </aside>
                     </div>
                 )}
             </div>
 
-            {/* Custom Styles for Slider */}
-            <style dangerouslySetInnerHTML={{
-                __html: `
-                input[type='range']::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    appearance: none;
-                    width: 24px;
-                    height: 24px;
-                    background: #fff;
-                    border: 4px solid #10b981;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-                    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                }
-                input[type='range']::-webkit-slider-thumb:hover {
-                    transform: scale(1.2);
-                }
-            `}} />
+            <footer className="max-w-6xl mx-auto py-12 px-4 text-center">
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Engineering Specification Version 3.1.2</p>
+            </footer>
         </div>
     );
 }
