@@ -73,6 +73,9 @@ export default function App() {
         let calculatedTotalFiles = 0;
         const breakdown = {};
 
+        const syncCycles = powerMode === 'battery' ? Math.ceil(totalHours / 0.25) : 1;
+        const connectionOverhead = powerMode === 'battery' ? syncCycles * 10 : 0;
+
         Object.entries(dataTypeConfigs).forEach(([type, config]) => {
             if (!enabledDataTypes[type]) {
                 breakdown[type] = { files: 0, seconds: 0, bytes: 0 };
@@ -90,12 +93,19 @@ export default function App() {
             let typeFiles = 0;
             if (totalTypeBytes > 0) {
                 const sizeBasedFiles = Math.ceil(totalTypeBytes / FILE_SIZE_BYTES);
-                let activeHours = totalHours;
+
+                // Active hours for this data type
+                let typeActiveHours = totalHours;
                 if (['behaviors', 'respiratory', 'heartRate'].includes(type)) {
-                    activeHours = totalHours * onBodyFactor;
+                    typeActiveHours = totalHours * onBodyFactor;
                 }
-                const timeBasedFiles = Math.ceil(activeHours);
-                typeFiles = Math.max(sizeBasedFiles, timeBasedFiles);
+
+                // Minimum 1 file per sync cycle that occurs during active hours
+                // Sync cycle is 0.25h (15m). 
+                // We use the same syncCycles ratio for active time.
+                const typeSyncCycles = powerMode === 'battery' ? Math.ceil(typeActiveHours / 0.25) : Math.ceil(typeActiveHours);
+
+                typeFiles = Math.max(sizeBasedFiles, typeSyncCycles);
             }
 
             calculatedTotalFiles += typeFiles;
@@ -107,8 +117,6 @@ export default function App() {
         });
 
         const baseUploadSeconds = calculatedTotalFiles * secondsPerFile;
-        const syncCycles = powerMode === 'battery' ? Math.ceil(totalHours / 0.25) : 1;
-        const connectionOverhead = powerMode === 'battery' ? syncCycles * 10 : 0;
         const totalUploadSeconds = baseUploadSeconds + connectionOverhead;
 
         return {
@@ -318,7 +326,8 @@ export default function App() {
                                     {Object.entries(dataTypeConfigs).map(([type, config]) => {
                                         const data = results.breakdown[type];
                                         if (!enabledDataTypes[type]) return null;
-                                        const width = results.totalBytes > 0 ? (data.bytes / results.totalBytes) * 100 : 0;
+                                        // Visualize Time Contribution instead of Bytes
+                                        const width = results.totalDuration > 0 ? (data.seconds / results.totalDuration) * 100 : 0;
                                         return (
                                             <div key={type}>
                                                 <div className="flex justify-between text-[11px] font-bold mb-2 uppercase tracking-tighter">
