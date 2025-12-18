@@ -315,7 +315,7 @@ export default function App() {
                                     </div>
                                     <div className="flex justify-between text-xs font-bold text-emerald-100 pt-2 border-t border-emerald-600/50">
                                         <span>Total Capacity:</span>
-                                        <span className="font-mono text-white">{results.storageKB} KB</span>
+                                        <span className="font-mono text-white">{results.totalBytes.toLocaleString()} Bytes</span>
                                     </div>
                                 </div>
                             </div>
