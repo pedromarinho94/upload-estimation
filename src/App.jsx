@@ -194,12 +194,12 @@ export default function App() {
                                 </div>
                                 <div className="grid md:grid-cols-2 gap-4 divide-slate-700 md:divide-x">
                                     <div className="pr-4">
-                                        <p><strong>Log A (14h Bulk):</strong> 33 files (14 Act, 4 Resp, 4 Beh, 10 HR) @ ~70% Off-Body</p>
-                                        <p className="text-emerald-400 mt-1 font-mono">Actual: ~62s (1.88s/file)</p>
+                                        <p><strong>Log A (14h Bulk):</strong> 33 files (14 A, 4 R, 4 B, 10 H, 1 N) @ ~70% Off-Body</p>
+                                        <p className="text-emerald-400 mt-1 font-mono">Actual: ~62s (~1.7s/file)</p>
                                     </div>
                                     <div className="md:pl-6 leading-6">
-                                        <p><strong>Log B (Periodic):</strong> 3 files/sync (1 Act, 1 Resp, 1 HR)</p>
-                                        <p className="text-emerald-400 mt-1 font-mono">Actual: ~5s / Simulation: ~5.6s</p>
+                                        <p><strong>Log B (Periodic):</strong> 3 files (1 A, 1 R, 1 H @ ~0% Off-Body)</p>
+                                        <p className="text-emerald-400 mt-1 font-mono">Actual: ~5s (~1.7s/file)</p>
                                     </div>
                                 </div>
                             </div>
