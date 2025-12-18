@@ -389,11 +389,11 @@ export default function App() {
                                                     <input type="number" value={onlineActiveMa} onChange={e => setOnlineActiveMa(Number(e.target.value))} className="w-full bg-white border border-emerald-200 p-2 rounded-lg text-sm font-bold" />
                                                 </div>
                                                 <div>
-                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">Seconds</label>
+                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">Duration(s)</label>
                                                     <input type="number" value={onlineActiveS} onChange={e => setOnlineActiveS(Number(e.target.value))} className="w-full bg-white border border-emerald-200 p-2 rounded-lg text-sm font-bold" />
                                                 </div>
                                                 <div>
-                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">Interval</label>
+                                                    <label className="text-[10px] text-emerald-600 block mb-1 font-bold">Interval(s)</label>
                                                     <input type="number" value={onlineIntervalS} onChange={e => setOnlineIntervalS(Number(e.target.value))} className="w-full bg-white border border-emerald-200 p-2 rounded-lg text-sm font-bold" />
                                                 </div>
                                             </div>
@@ -409,11 +409,11 @@ export default function App() {
                                                     <input type="number" value={offlineActiveMa} onChange={e => setOfflineActiveMa(Number(e.target.value))} className="w-full bg-white border border-slate-200 p-2 rounded-lg text-sm font-bold" />
                                                 </div>
                                                 <div>
-                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">Seconds</label>
+                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">Duration(s)</label>
                                                     <input type="number" value={offlineActiveS} onChange={e => setOfflineActiveS(Number(e.target.value))} className="w-full bg-white border border-slate-200 p-2 rounded-lg text-sm font-bold" />
                                                 </div>
                                                 <div>
-                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">Interval</label>
+                                                    <label className="text-[10px] text-slate-500 block mb-1 font-bold">Interval(s)</label>
                                                     <input type="number" value={offlineIntervalS} onChange={e => setOfflineIntervalS(Number(e.target.value))} className="w-full bg-white border border-slate-200 p-2 rounded-lg text-sm font-bold" />
                                                 </div>
                                             </div>
